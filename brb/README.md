@@ -1,4 +1,4 @@
-# <a href="https://guerreroda.github.io/nwcst_jam">Introduction to Nowcasting</a>
+# <a href="https://CCBeconomics.github.io/nowcasting/brb">Introduction to Nowcasting</a>
 
 **Facilitators**: Jose L. Saboin, Diego Guerrero, Angelo Mazzocca
 
@@ -12,4 +12,4 @@
 
 <a href="https://github.com/CCBeconomics/nowcast/tree/main/activity" target="_blank">Find them all here.</a>
 
-- <a href="https://github.com/guerreroda/nwcst_jam/blob/main/activity/s1_env_check.ipynb" target="_blank">Notebook 1: Environment Check</a>
+- <a href="CCBeconomics/nowcasting/blob/main/brb/activity/s0_env_check.ipynb" target="_blank">Notebook 1: Environment Check</a>
