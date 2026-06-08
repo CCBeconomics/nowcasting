@@ -6,14 +6,14 @@
 
 **Slides**
 
-- <a href="https://CCBeconomics.github.io/CCBeconomics/slides/session_0.html" target="_blank">Session 0 – Installation and Environment</a>
-- <a href="https://CCBeconomics.github.io/CCBeconomics/slides/session_1.html" target="_blank">Session 1 – Python and R Fundamentals</a>
-- <a href="https://CCBeconomics.github.io/CCBeconomics/slides/session_2.html" target="_blank">Session 2 – Data Collection and Web Scraping</a>
+- <a href="https://CCBeconomics.github.io/CCBeconomics/brb/slides/session_0.html" target="_blank">Session 0 – Installation and Environment</a>
+- <a href="https://CCBeconomics.github.io/CCBeconomics/brb/slides/session_1.html" target="_blank">Session 1 – Python and R Fundamentals</a>
+- <a href="https://CCBeconomics.github.io/CCBeconomics/brb/slides/session_2.html" target="_blank">Session 2 – Data Collection and Web Scraping</a>
 
 
 **Activities**
 
 <a href="https://github.com/CCBeconomics/nowcast/tree/main/activity" target="_blank">Find them all here.</a>
 
-- <a href="CCBeconomics/nowcasting/blob/main/brb/activity/s0_env_check.ipynb" target="_blank">Notebook 0: Environment Check</a>
-- <a href="CCBeconomics/nowcasting/blob/main/brb/activity/s1_python_basics" target="_blank">Notebook 1: Python Basics</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s0_env_check.ipynb" target="_blank">Notebook 0: Environment Check</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s1_python_basics" target="_blank">Notebook 1: Python Basics</a>
