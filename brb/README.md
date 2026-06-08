@@ -16,4 +16,4 @@
 <a href="https://github.com/CCBeconomics/nowcast/tree/main/activity" target="_blank">Find them all here.</a>
 
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s0_env_check.ipynb" target="_blank">Notebook 0: Environment Check</a>
-- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s1_python_basics" target="_blank">Notebook 1: Python Basics</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s1_python_basics.ipynb" target="_blank">Notebook 1: Python Basics</a>
