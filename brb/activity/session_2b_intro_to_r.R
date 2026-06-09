@@ -7,7 +7,7 @@
 # =============================================================================
 
 # Install packages (run this once manually in console)
-#install.packages(c("tidyverse", "lubridate", "openxlsx"))
+install.packages(c("tidyverse", "lubridate", "openxlsx"))
 
 # Load required packages
 library(tidyverse)
@@ -63,6 +63,22 @@ df <- data.frame(
 )
 df
 
+# Check structure of data frame
+str(df)
+
+
+# =============================================================================
+# DATA SELECTION AND MANIPULATION
+# =============================================================================
+
+# Selecting values with $ operator
+df$country
+
+# Selecting values with [] operator
+df["country"]
+df[1,]
+df[1,1]
+
 
 # =============================================================================
 # CONTROL STRUCTURES
@@ -94,19 +110,6 @@ while (i < 6) {
 
 
 # =============================================================================
-# DATA SELECTION AND MANIPULATION
-# =============================================================================
-
-# Selecting values with $ operator
-df$country
-
-# Selecting values with [] operator
-df["country"]
-df[1,]
-df[1,1]
-
-
-# =============================================================================
 # WORKING DIRECTORY AND FILE OPERATIONS
 # =============================================================================
 
@@ -114,7 +117,7 @@ df[1,1]
 getwd()
 
 # Change working directory (uncomment and modify path as needed)
-setwd("C:\\Users\\agmaz\\Desktop\\Nwcst Training R\\Barbados")
+#setwd("C:\\Users\\agmaz\\Desktop\\Nwcst Training R\\Barbados")
 
 
 # =============================================================================
@@ -141,7 +144,7 @@ head(gdp_bb)
 stocks_bb <- ___
 
 print("Stocks Data:")
-stocks_bb
+head(stocks_bb)
 
 str(stocks_bb)
 
@@ -158,7 +161,7 @@ bb_data <- gdp_bb %>%
   data.frame()
 
 print("Merged Barbados Data:")
-bb_data
+head(bb_data)
 
 
 ### Activity No.2: Join the imported data, starting with "stocks_bb"
@@ -168,10 +171,9 @@ bb_data2 <- ___ %>%
   data.frame()
 
 print("Merged Barbados Data:")
-bb_data2
+head(bb_data2)
 
-
-# Descriptive statistics
+# What is different about the column order?
 summary(bb_data2[c('gdp', 'sp500')])
 
 # Export sample files (for demonstration)
@@ -183,17 +185,17 @@ write.xlsx(bb_data2, "bb_data.xlsx")
 # =============================================================================
 
 # Using pipe operator (%>%)
-bb_data %>%
-  filter(gdp > 3200) %>%
-  mutate(gdp_thousands = gdp / 1000) %>%
-  arrange(desc(gdp))
+df %>%
+  filter(gdp_pc < 80000) %>%
+  mutate(gdp_pc_thousands = gdp_pc / 1000) %>%
+  arrange(desc(gdp_pc))
 
 # Tidyverse functions in action
-bb_data %>%
+df %>%
   summarise(
-    avg_gdp = mean(gdp),
-    median_gdp = median(gdp),
-    sd_gdp = sd(gdp)
+    avg_gdp_pc    = mean(gdp_pc),
+    median_gdp_pc = median(gdp_pc),
+    sd_gdp_pc     = sd(gdp_pc)
   )
 
 ### Activity No.3 (a): Filter bb_data by date since 2015Q1
