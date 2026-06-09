@@ -7,7 +7,8 @@
 **Slides**
 
 - <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/session_0.html" target="_blank">Session 0 – Installation and Environment</a>
-- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/session_1.html" target="_blank">Session 1 – Python and R Fundamentals</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/session_1.html" target="_blank">Session 1a – Python Fundamentals</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/session_2b_intro_to_r.html" target="_blank">Session 1b – R Fundamentals</a>
 - <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/session_2.html" target="_blank">Session 2 – Data Collection and Web Scraping</a>
 
 
@@ -17,6 +18,7 @@
 
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s0_env_check.ipynb" target="_blank">Notebook 0: Environment Check</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s1_python_basics.ipynb" target="_blank">Notebook 1: Python Basics</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/session_2b_intro_to_r.R" target="_blank">R Code 1: R Basics</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s2a_data_download.ipynb" target="_blank">Notebook 2a: Downloading Data</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s2b_gtrends.ipynb" target="_blank">Notebook 2b: Google Trends</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s2c_ntl.ipynb" target="_blank">Notebook 2c: Nighttime Lights</a>
