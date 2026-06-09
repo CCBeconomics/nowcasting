@@ -20,3 +20,4 @@
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s2a_data_download.ipynb" target="_blank">Notebook 2a: Downloading Data</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s2b_gtrends.ipynb" target="_blank">Notebook 2b: Google Trends</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s2c_ntl.ipynb" target="_blank">Notebook 2c: Nighttime Lights</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s2e_build.ipynb" target="_blank">Notebook 2e: Buid the data</a>
