@@ -17,3 +17,6 @@
 
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s0_env_check.ipynb" target="_blank">Notebook 0: Environment Check</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s1_python_basics.ipynb" target="_blank">Notebook 1: Python Basics</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s2a_data_download.ipynb" target="_blank">Notebook 2a: Downloading Data</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s2b_gtrends.ipynb" target="_blank">Notebook 2b: Google Trends</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s2c_ntl.ipynb" target="_blank">Notebook 2c: Nighttime Lights</a>
