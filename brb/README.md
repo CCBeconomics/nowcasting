@@ -10,6 +10,9 @@
 - <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/session_1.html" target="_blank">Session 1a – Python Fundamentals</a>
 - <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/session_2b_intro_to_r.html" target="_blank">Session 1b – R Fundamentals</a>
 - <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/session_2.html" target="_blank">Session 2 – Data Collection and Web Scraping</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/Nowcast_in_The_Caribbean___Presentation_Slides_for_BBS.pdf" target="_blank">Methodology: Nowcast in the Caribbean</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/Long_Short_Term_Memory_Networks___BBDS.pdf" target="_blank">Theory: LSTM</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/Tree_based_Models_for_Nowcasting___BBDS.pdf" target="_blank">Theory: Tree-Based Models</a>
 
 
 **Activities**
@@ -23,3 +26,4 @@
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s2b_gtrends.ipynb" target="_blank">Notebook 2b: Google Trends</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s2c_ntl.ipynb" target="_blank">Notebook 2c: Nighttime Lights</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s2e_build.ipynb" target="_blank">Notebook 2e: Buid the data</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s4_selection.ipynb" target="_blank">Notebook 3: Estimation and Variable Selection</a>
