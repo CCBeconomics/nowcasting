@@ -15,6 +15,7 @@
 - <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/Tree_based_Models_for_Nowcasting___BBDS.pdf" target="_blank">Theory: Tree-Based Models</a>
 - <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/Nowcasting_BB___OLS_Regularization.pdf" target="_blank">Theory: Regularization</a>
 - <a href="https://CCBeconomics.github.io/nowcasting/brb/slides//R_models.html" target="_blank">R Models Solution</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides//TS_based_Models_for_Nowcasting___BBDS.pdf" target="_blank">Time-Series-Based Nowcasting Models</a>
 
 **Activities**
 
