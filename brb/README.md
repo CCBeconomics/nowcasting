@@ -29,3 +29,5 @@
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s2e_build.ipynb" target="_blank">Notebook 2e: Buid the data</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s4_selection.ipynb" target="_blank">Notebook 3: Estimation and Variable Selection</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s5_models.ipynb" target="_blank">Notebook 4: Estimation and Models</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s6a_nwcst.ipynb" target="_blank">Notebook 5: Nowcast</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s6b_results.ipynb" target="_blank">Notebook 6: Output</a>
