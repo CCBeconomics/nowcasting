@@ -31,4 +31,5 @@
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s5_models.ipynb" target="_blank">Notebook 4: Estimation and Models</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s6a_nwcst.ipynb" target="_blank">Notebook 5: Nowcast</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s6b_results.ipynb" target="_blank">Notebook 6: Output</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/R Models Excercise.R" target="_blank">R Code 2: R Models</a>
 
