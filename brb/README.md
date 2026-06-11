@@ -14,7 +14,7 @@
 - <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/Long_Short_Term_Memory_Networks___BBDS.pdf" target="_blank">Theory: LSTM</a>
 - <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/Tree_based_Models_for_Nowcasting___BBDS.pdf" target="_blank">Theory: Tree-Based Models</a>
 - <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/Nowcasting_BB___OLS_Regularization.pdf" target="_blank">Theory: Regularization</a>
-
+- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides//R_models.html" target="_blank">R Models Solution</a>
 
 **Activities**
 
@@ -31,3 +31,4 @@
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s5_models.ipynb" target="_blank">Notebook 4: Estimation and Models</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s6a_nwcst.ipynb" target="_blank">Notebook 5: Nowcast</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s6b_results.ipynb" target="_blank">Notebook 6: Output</a>
+
