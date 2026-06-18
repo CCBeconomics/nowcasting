@@ -6,16 +6,16 @@
 
 **Slides**
 
-- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/session_0.html" target="_blank">Session 0 – Installation and Environment</a>
-- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/session_1.html" target="_blank">Session 1a – Python Fundamentals</a>
-- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/session_2b_intro_to_r.html" target="_blank">Session 1b – R Fundamentals</a>
-- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/session_2.html" target="_blank">Session 2 – Data Collection and Web Scraping</a>
-- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/Nowcast_in_The_Caribbean___Presentation_Slides_for_BBS.pdf" target="_blank">Methodology: Nowcast in the Caribbean</a>
-- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/Long_Short_Term_Memory_Networks___BBDS.pdf" target="_blank">Theory: LSTM</a>
-- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/Tree_based_Models_for_Nowcasting___BBDS.pdf" target="_blank">Theory: Tree-Based Models</a>
-- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/Nowcasting_BB___OLS_Regularization.pdf" target="_blank">Theory: Regularization</a>
-- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides//R_models.html" target="_blank">R Models Solution</a>
-- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides//TS_based_Models_for_Nowcasting___BBDS.pdf" target="_blank">Time-Series-Based Nowcasting Models</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/session_0.html" target="_blank">Session 0: Installation and Environment</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/session_1.html" target="_blank">Session 1a: Python Fundamentals</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/session_2b_intro_to_r.html" target="_blank">Session 1b: R Fundamentals</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/session_2.html" target="_blank">Session 2: Data Collection and Web Scraping</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/Nowcast_in_The_Caribbean___Presentation_Slides_for_BBS.pdf" target="_blank">Session 3a: Methodology: Nowcast in the Caribbean</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/Nowcasting_BB___OLS_Regularization.pdf" target="_blank">Session 3b: Theory: Regularization</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/Tree_based_Models_for_Nowcasting___BBDS.pdf" target="_blank">Session 3c: Theory: Tree-Based Models</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/Long_Short_Term_Memory_Networks___BBDS.pdf" target="_blank">Session 3d: Theory: LSTM</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides//TS_based_Models_for_Nowcasting___BBDS.pdf" target="_blank">Session 3d: Time-Series-Based Nowcasting Models</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides//R_models.html" target="_blank">Session 4: R Models Solution</a>
 
 **Activities**
 
