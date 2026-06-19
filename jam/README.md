@@ -1,4 +1,4 @@
-# <a href="https://guerreroda.github.io/nwcst_jam">Introduction to Nowcasting</a>
+# <a href="https://ccbeconomics.github.io/nowcasting/jam">Introduction to Nowcasting</a>
 
 **Facilitators**: Jose L. Saboin, Diego Guerrero, Angelo Mazzocca
 
