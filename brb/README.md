@@ -15,7 +15,6 @@
 - <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/Tree_based_Models_for_Nowcasting___BBDS.pdf" target="_blank">Session 3c: Theory: Tree-Based Models</a>
 - <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/Long_Short_Term_Memory_Networks___BBDS.pdf" target="_blank">Session 3d: Theory: LSTM</a>
 - <a href="https://CCBeconomics.github.io/nowcasting/brb/slides//TS_based_Models_for_Nowcasting___BBDS.pdf" target="_blank">Session 3e: Time-Series-Based Nowcasting Models</a>
-- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides//R_models.html" target="_blank">Session 4: R Models Solution</a>
 
 **Activities**
 
@@ -33,4 +32,5 @@
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s6a_nwcst.ipynb" target="_blank">Notebook 5: Nowcast</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s6b_results.ipynb" target="_blank">Notebook 6: Output</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/R Models Excercise.R" target="_blank">R Code 2: R Models</a>
+- - <a href="https://CCBeconomics.github.io/nowcasting/brb/slides//R_models.html" target="_blank">R Models Solution</a>
 
