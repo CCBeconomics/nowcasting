@@ -4,9 +4,15 @@
 
 **Course Overview:** This intensive training program is designed for public sector professionals involved in national economic policy and statistics. It aims to equip participants with theoretical foundations and practical skills to utilize an advanced nowcasting toolkit in Python/R. We leverage real-time structured and unstructured data sources to generate timely estimates of economic activity, thereby enhancing informed policymaking and resource allocation. The course builds on the methodology outlined in our technical note "Nowcasting Real GDP Growth in The Bahamas", which develops a data-driven nowcasting framework for small, open economies facing data availability challenges. We apply this methodology to Barbados' GDP data.
 
+**Environment Installation**
+
+- <a href="https://CCBeconomics.github.io/nowcasting/brb/install/session_0.html" target="_blank">Python: Installation and Environment</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/install/s0_env_check.ipynb" target="_blank">Pythonh Notebook: Environment Check</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/brb/install/s0_env_check_R.Rmd" target="_blank">R: Installation and Environment</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/install/mfbvar_troubleshoot.html" target="_blank">bVar Installation and Troubleshoot</a>
+
 **Slides**
 
-- <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/session_0.html" target="_blank">Session 0: Installation and Environment</a>
 - <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/session_1.html" target="_blank">Session 1a: Python Fundamentals</a>
 - <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/session_2b_intro_to_r.html" target="_blank">Session 1b: R Fundamentals</a>
 - <a href="https://CCBeconomics.github.io/nowcasting/brb/slides/session_2.html" target="_blank">Session 2: Data Collection and Web Scraping</a>
@@ -20,7 +26,6 @@
 
 <a href="https://github.com/CCBeconomics/nowcasting/tree/main/brb/activity" target="_blank">Find them all here.</a>
 
-- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s0_env_check.ipynb" target="_blank">Notebook 0: Environment Check</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s1_python_basics.ipynb" target="_blank">Notebook 1: Python Basics</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/session_2b_intro_to_r.R" target="_blank">R Code 1: R Basics</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/activity/s2a_data_download.ipynb" target="_blank">Notebook 2a: Downloading Data</a>
