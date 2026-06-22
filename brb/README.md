@@ -8,8 +8,8 @@
 
 - <a href="https://CCBeconomics.github.io/nowcasting/brb/install/session_0.html" target="_blank">Python: Installation and Environment</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/install/s0_env_check.ipynb" target="_blank">Pythonh Notebook: Environment Check</a>
-- <a href="[https://CCBeconomics.github.io/nowcasting/brb/install/s0_env_check_R.Rmd" target="_blank">R: Installation and Environment</a>
-- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/install/mfbvar_troubleshoot.html" target="_blank">bVar Installation and Troubleshoot</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/brb/install/s0_env_check_R.Rmd" target="_blank">R: Installation and Environment</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/brb/install/mfbvar_troubleshoot.html" target="_blank">bVar Installation and Troubleshoot</a>
 
 **Slides**
 
