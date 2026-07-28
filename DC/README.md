@@ -6,12 +6,15 @@
 
 **Monday**
 - _Environment Installation_ --r-pipeline
+- <a href="https://CCBeconomics.github.io/nowcasting/dc/slides/session_0.html">Slides: Installation</a>
 
 **Tuesday**
-- Fundamentals
-- Data scraping (Jamaica)
-- _NightTime Lights_ --o&g (optional country)
-- _Data Build_ --season (Bahamas)
+- <a href="https://CCBeconomics.github.io/nowcasting/dc/slides/session_1.html">Slides: Fundamentals</a>
+- Activity:
+- <a href="https://CCBeconomics.github.io/nowcasting/dc/slides/session_2.html">Slides: Data -- Web Scraping, Google Trends, NightTime Lights</a>
+- Activity: Data scraping (Jamaica)
+- Activity: _NightTime Lights_ --o&g (optional country)
+- Activity: _Data Build_ --season (Bahamas)
 
 **Wednesday**
 - Methodology
