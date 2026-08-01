@@ -14,7 +14,8 @@
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act1_python_basics.ipynb">Activity: Python Basics</a>
 - <a href="https://CCBeconomics.github.io/nowcasting/DC/slides/session_2.html">Slides: Data -- Web Scraping, Google Trends, NightTime Lights</a>
 - Activity: Data scraping (Jamaica)
-- Activity: _NightTime Lights_ --o&g (optional country)
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act3_ntl.ipynb">Activity: NightTime Lights</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/config.py">Activity: NTL Config File</a>
 - Activity: _Data Build_ --season (Bahamas)
 
 **Wednesday**
