@@ -11,12 +11,13 @@
 
 **Tuesday**
 - <a href="https://CCBeconomics.github.io/nowcasting/DC/slides/session_1.html">Slides: Fundamentals</a>
-- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act1_python_basics.ipynb">Activity: Python Basics</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act1_python_basics.ipynb">Activity 1: Python Basics</a>
 - <a href="https://CCBeconomics.github.io/nowcasting/DC/slides/session_2.html">Slides: Data -- Web Scraping, Google Trends, NightTime Lights</a>
-- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act2_scraping.ipynb">Activity: Data Scraping</a>
-- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act3_ntl.ipynb">Activity: NightTime Lights</a>
-- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/config.py">Activity: NTL Config File</a>
-- Activity: _Data Build_ --season (Bahamas)
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act2_scraping.ipynb">Activity 2: Data Scraping</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act3_ntl.ipynb">Activity 3: NightTime Lights</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/config.py">Activity 3: NTL Config File</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act4_gtrends.ipynb">Activity 4: NTL Google Trends</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act5_build.ipynb">Activity 5: Building data</a>
 
 **Wednesday**
 - Methodology
