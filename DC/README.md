@@ -20,8 +20,11 @@
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act5_build.ipynb">Activity 5: Building data</a>
 
 **Wednesday**
-- Methodology
-- Theory
+- <a href="https://CCBeconomics.github.io/nowcasting/DC/slides/session_3-Nowcast_in_The_Caribbean.pdf" target="_blank">Session 3: Methodology -- Nowcast in the Caribbean</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/DC/slides/session_4_regularization.pdf" target="_blank">Session 4: Theory - Regularization</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/DC/slides/session_4_tree_models.pdf" target="_blank">Session 4: Theory - Tree-Based Models</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/DC/slides/session_4_LSTM.pdf" target="_blank">Session 4: Theory - LSTM</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/DC/slides/session_4_TS_based_Models_for_Nowcasting.pdf" target="_blank">Session 4: Time-Series-Based Nowcasting Models</a>
 - _Variable Selection_ & Estimation --new methods (Jamaica)
 - Models
 
