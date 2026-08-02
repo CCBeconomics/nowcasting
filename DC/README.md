@@ -29,6 +29,6 @@
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act7_models.ipynb">Activity 7: Models</a>
 
 **Thursday**
-- _Nowcast_ --regime aware (Jamaica)
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act8_nwcst.ipynb">Activity 8: Nowcast Tool</a> _(pend. regime aware)_
 - R Nowcast
 - Output
