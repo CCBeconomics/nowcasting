@@ -14,8 +14,7 @@
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act1_python_basics.ipynb">Activity 1: Python Basics</a>
 - <a href="https://CCBeconomics.github.io/nowcasting/DC/slides/session_2.html">Slides: Data -- Web Scraping, Google Trends, NightTime Lights</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act2_scraping.ipynb">Activity 2: Data Scraping</a>
-- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act3_ntl.ipynb">Activity 3: NightTime Lights</a>
-- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/config.py">Activity 3: NTL Config File</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act3_ntl.ipynb">Activity 3: NightTime Lights</a>. Companion Files: <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/config.py">NTL Config File</a> and <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/ntl_helpers.py">NTL Helpers</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act4_gtrends.ipynb">Activity 4: NTL Google Trends</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act5_build.ipynb">Activity 5: Building data</a>
 
@@ -29,6 +28,6 @@
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act7_models.ipynb">Activity 7: Models</a>
 
 **Thursday**
-- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act8_nwcst.ipynb">Activity 8: Nowcast Tool</a> _(pend. regime aware)_
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act8_nwcst.ipynb">Activity 8: Nowcast Tool</a> _(pend. regime aware)_ Companion File: <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/nwcst_helpers.py">Helpers</a>
 - R Nowcast
 - Output
