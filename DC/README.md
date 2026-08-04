@@ -6,8 +6,8 @@
 
 **Monday**
 - <a href="https://CCBeconomics.github.io/nowcasting/DC/slides/session_0.html">Slides: Installation</a>
-- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act0_env_check.ipynb">Activity: Installation</a>
-- _Environment Installation_ --r-pipeline
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act0_env_check.ipynb">Activity: Python Installation</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act0_env_check_R.Rmd">Activity: R Installation</a>
 
 **Tuesday**
 - <a href="https://CCBeconomics.github.io/nowcasting/DC/slides/session_1.html">Slides: Fundamentals of Python</a>
