@@ -10,8 +10,10 @@
 - _Environment Installation_ --r-pipeline
 
 **Tuesday**
-- <a href="https://CCBeconomics.github.io/nowcasting/DC/slides/session_1.html">Slides: Fundamentals</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/DC/slides/session_1.html">Slides: Fundamentals of Python</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act1_python_basics.ipynb">Activity 1: Python Basics</a>
+- <a href="https://CCBeconomics.github.io/nowcasting/DC/slides/session_2-intro_to_r.html">Slides: Fundamentals of R</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act1_intro_to_r.R">Activity 1: R  Basics</a>
 - <a href="https://CCBeconomics.github.io/nowcasting/DC/slides/session_2.html">Slides: Data -- Web Scraping, Google Trends, NightTime Lights</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act2_scraping.ipynb">Activity 2: Data Scraping</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act3_ntl.ipynb">Activity 3: NightTime Lights</a>. Companion Files: <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/config.py">NTL Config File</a> and <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/ntl_helpers.py">NTL Helpers</a>
@@ -29,5 +31,3 @@
 
 **Thursday**
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act8_nwcst.ipynb">Activity 8: Nowcast Tool</a> _(pend. regime aware)_ Companion File: <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/nwcst_helpers.py">Helpers</a>
-- R Nowcast
-- Output
