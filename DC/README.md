@@ -26,7 +26,7 @@
 - <a href="https://CCBeconomics.github.io/nowcasting/DC/slides/session_4_tree_models.pdf" target="_blank">Session 4: Theory - Tree-Based Models</a>
 - <a href="https://CCBeconomics.github.io/nowcasting/DC/slides/session_4_LSTM.pdf" target="_blank">Session 4: Theory - LSTM</a>
 - <a href="https://CCBeconomics.github.io/nowcasting/DC/slides/session_4_TS_based_Models_for_Nowcasting.pdf" target="_blank">Session 4: Time-Series-Based Nowcasting Models</a>
-- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act6_selection.ipynb">Activity 6: Estimation</a> _(pend. new methods)_
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act6_selection.ipynb">Activity 6: Estimation</a>
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act7_models.ipynb">Activity 7: Models</a>
 
 **Thursday**
