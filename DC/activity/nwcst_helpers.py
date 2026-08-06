@@ -2,47 +2,11 @@
 nwcst_helpers.py  —  nowcasting model library (factors, LARS ranking, data
 shaping, and fit/predict/oos for OLS, OLSR, ENET, LASSO, DT, RF, GBT, LSTM).
 
-WORKSHOP DC COPY. Sibling of ntl_helpers.py; imported by act6_selection.ipynb and
-act8_nwcst.ipynb so those notebooks stay thin orchestrators. Built from
-_baseline/nwcst_helpers.py, with two deliberate departures from it:
-
   * lars_variable_ranking() fits the scaler and the PCA on the TRAINING rows only
     and transforms the test rows with them, so the ranking's RMSE carries no
     look-ahead leakage. It also returns a true RMSE (sqrt of the mean squared
     error), not the raw MSE.
   * fit_rf() caps max_features at the number of columns actually available.
-
-The eight fit_* functions carry OPTIONAL arguments taken from the beta13/14
-research branch (act8_nwcst_beta14a.ipynb). Every one defaults to the behaviour
-this module had before they existed, so act6 -- which passes none of them -- is
-unaffected, and act8 with config.py section 6 left alone reproduces its stored
-output/<date>/ runs:
-
-  sample_weight=None   all seven sklearn fits. None is sklearn's own default.
-  seed=None            fit_dt / fit_rf / fit_gbt / fit_lstm. None leaves
-                       random_state unset (the bag is drawn fresh each run);
-                       an int gives member i random_state=seed+i.
-  scale=False          fit_olsr / fit_enet / fit_lasso. True wraps the estimator
-                       in Pipeline([StandardScaler, estimator]) and routes the
-                       sample weight through the pipeline's step name.
-
-ffill_dataset() is likewise additive: mean_fill_dataset() is untouched and stays
-act6's ragged-edge fill.
-
-Three functions come in TWO variants because act6 and act8 shape their data
-differently, and both sets of numbers are live. They are not redundant:
-
-  lagged_target / fit_ols / predict_ols        act8_nwcst -- matrices arrive
-                                               already flattened and lagged;
-                                               lagged_target shifts by 1.
-  lagged_target_q / fit_ols_flat /             act6_selection -- the functions
-  predict_ols_flat                             flatten, filter to quarter-end
-                                               rows and lag internally;
-                                               lagged_target_q converts the
-                                               publication lag to quarters and
-                                               shifts by l.
-
-Do not merge them: act8's output/<date>/ runs are baked against the first set.
 
 Two module globals are read by the functions below as defaults:
   * target_variable : the GDP target column. Defaults to "RGDP0000" (the
@@ -52,11 +16,6 @@ Two module globals are read by the functions below as defaults:
 `metadata` (lagged_target), `lags` (perform_tab) and `desired_date` (oos_*) are
 genuine runtime state — the orchestration notebook passes them in explicitly.
 
-NOTE on `desired_date`: in _baseline the eight oos_* functions declare
-`desired_date=desired_date`, a name that does not exist at module level, so that
-module cannot be imported at all. Defining the missing global is NOT the fix:
-`from nwcst_helpers import *` would then rebind the notebook's own desired_date
-to None and every OOS block would be silently skipped. The default is None here.
 """
 import os, json, time, warnings, re, traceback, timeit
 from copy import deepcopy
@@ -643,7 +602,7 @@ def lagged_target(data, total_lags, metadata, target_variable=target_variable) :
             data[f"{target_variable}_l{l}"] = data[target_variable]
             data.loc[data.index[-metadata[metadata['ticket']==target_variable]['months_lag'].values[0]:], f"{target_variable}_l{l}"] = np.nan
             data[f"{target_variable}_l{l}"] = data[f"{target_variable}_l{l}"].ffill()
-            data[f"{target_variable}_l{l}"] = data[f"{target_variable}_l{l}"].shift(1)
+            data[f"{target_variable}_l{l}"] = data[f"{target_variable}_l{l}"].shift(l)
             data[f"{target_variable}_l{l}"] = data[f"{target_variable}_l{l}"].fillna(data[f"{target_variable}_l{l}"].mean())
         return data
 
@@ -674,6 +633,85 @@ def lagged_target_q(data, total_lags, metadata, target_variable=target_variable)
             data[f"{target_variable}_l{l}"] = data[f"{target_variable}_l{l}"].shift(l)
             data[f"{target_variable}_l{l}"] = data[f"{target_variable}_l{l}"].fillna(data[f"{target_variable}_l{l}"].mean())
         return data
+
+
+def gen_aligned_data(metadata, data, last_date, lag, target_variable=target_variable):
+    """Vintage dataset by ALIGNMENT: shift each series by its effective delay.
+
+    Companion (and act8 successor) of gen_lagged_data() above. Where that one
+    blanks the ragged edge and leaves the fill to the caller, this one replaces
+    each series with its own publication-lag-shifted copy,
+
+        d_j = max(0, months_lag_j - lag)        # effective delay, months
+        x~_{j,t} = x_{j, t - d_j}               # latest value published at t
+
+    so EVERY row -- training rows and the prediction row alike -- carries only
+    what was actually available `lag` months around its reference date. Applied
+    to train and test from the same frame, this is what makes the refit
+    coefficients genuinely vintage-specific: the model trains on the same
+    staleness it predicts with, instead of training on final data and
+    predicting on mean-imputed constants.
+
+    `date` and the target are never shifted (the target is y, and
+    flatten_data() keys its row filter off it). d is floored at 0 -- a lag
+    larger than the publication delay never turns into a lead. The only NaNs
+    introduced are the first d_j rows of each column.
+    """
+    aligned = data.loc[data.date <= last_date, :].reset_index(drop=True)
+    for col in aligned.columns:
+        if col in ("date", target_variable):
+            continue
+        pub_lag = metadata.loc[metadata.ticket == col, "months_lag"].values[0]
+        d = max(0, int(pub_lag) - lag)
+        if d:
+            aligned[col] = aligned[col].shift(d)
+    return aligned
+
+
+def lagged_target_v(data, total_lags, metadata, lag, target_variable=target_variable):
+    """Autoregressive GDP lags, VINTAGE-AWARE variant (act8_nwcst).
+
+    Third sibling of lagged_target() / lagged_target_q() above -- same deal,
+    deliberate near-duplicate, do not merge. This one is for the refit-per-
+    vintage act8 loop: the number of quarters to reach the most recent
+    PUBLISHED GDP value depends on the vintage,
+
+        d = max(0, months_lag_y - lag)          # effective delay, months
+        q = max(1, ceil(d / 3))                 # quarters back, never current
+        AR term l = y.shift(q + l - 1)          # on QUARTERLY rows
+
+    Unlike lagged_target(), no blank-then-ffill: the shift is taken directly on
+    the (real, unfilled at quarter rows) target, so an unpublished value is
+    never carried forward into a feature. Leading rows that the shift cannot
+    reach are filled with the column mean, matching the fill style of the
+    other two variants. Expects a frame already collapsed to quarterly rows.
+    """
+    if total_lags == 0:
+        return data
+    pub_lag = metadata.loc[metadata.ticket == target_variable, "months_lag"].values[0]
+    d = max(0, int(pub_lag) - lag)
+    q = max(1, -(-d // 3))                       # ceil(d/3), floored at 1
+    for l in range(1, total_lags + 1):
+        col = data[target_variable].shift(q + l - 1)
+        data[f"{target_variable}_l{l}"] = col.fillna(col.mean())
+    return data
+
+
+def vintage_col_names(lags):
+    """Map vintage integers -> forecast_table column names, {lag: name}.
+
+    The historical five-vintage grid keeps its legacy names so every stored
+    output/{date}/ table and act9_results.ipynb keep loading unchanged; any
+    other grid gets self-describing p-names ("p-1", "p+0", ...). Single source
+    of truth for the vintage column schema -- act8's post-loop cells derive
+    their column lists from this instead of hard-coding the five names.
+    """
+    legacy = {-2: "two_back", -1: "one_back", 0: "zero_back",
+              1: "one_ahead", 2: "two_ahead"}
+    lags = sorted(lags)
+    if lags == [-2, -1, 0, 1, 2]:
+        return {l: legacy[l] for l in lags}
+    return {l: f"p{l:+d}" for l in lags}
 
 
 def fit_ols_flat(ttrain, metadata, gdp_lags=0, flat_lags=3,
@@ -739,18 +777,16 @@ def perform_tab( pred_values , model_name , specification , values , lags) :
 
 def forecast_table( pred_values , model_name , specification, values  , dates ) :
     # plot of predictions vs actuals
-    result = pd.DataFrame(
-        {
-            "actuals": values ,
-            "two_back": pred_values[-2] ,
-            "one_back": pred_values[-1] ,
-            "zero_back": pred_values[0] ,
-            "one_ahead": pred_values[1] ,
-            "two_ahead": pred_values[2] ,
-            "estimator": model_name ,
-            "spec": specification ,
-        }
-    )
+    # One column per vintage, named by vintage_col_names() -- the historical
+    # -2..+2 grid keeps its two_back..two_ahead names, so the on-disk schema
+    # act9_results.ipynb reads is unchanged; other grids no longer KeyError.
+    names = vintage_col_names(pred_values.keys())
+    cols = { "actuals": values }
+    for lag, name in names.items():
+        cols[name] = pred_values[lag]
+    cols["estimator"] = model_name
+    cols["spec"] = specification
+    result = pd.DataFrame(cols)
     result.index = pd.to_datetime(dates)
     return result
 

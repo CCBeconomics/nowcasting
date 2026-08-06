@@ -43,7 +43,7 @@ NTL_EVENT_WINDOW = 7      # days each side of the event for the before/after map
 # and a few seconds to extract. Start small, widen once it works.
 
 # ---- Worked examples: uncomment ONE block, with the matching COUNTRY ---------
-# Hurricane Dorian, The Bahamas (this reproduces the figure in the Session 2 deck)
+# Hurricane Dorian, The Bahamas
 #   COUNTRY = "The Bahamas"
 #   NTL_DATE_RANGE   = "2019-08-01 2019-10-15"
 #   NTL_EVENT_DATE   = "2019-09-01"
@@ -67,10 +67,6 @@ NTL_EVENT_WINDOW = 7      # days each side of the event for the before/after map
 # 1. Register (free) at https://urs.earthdata.nasa.gov
 # 2. Go to https://ladsweb.modaps.eosdis.nasa.gov -> My Account -> Generate Token
 # 3. Paste the token string below, between the quotes.
-#
-# Tokens EXPIRE (typically after 60 days). If downloads start returning 401,
-# generate a fresh one. Do not share a token or commit it anywhere public --
-# it authenticates as you.
 NASA_TOKEN = ""
 
 # ============================================================================
@@ -78,16 +74,6 @@ NASA_TOKEN = ""
 # ============================================================================
 DATA_CSV     = "data.csv"                      # merged modelling table, in data/
 METADATA_CSV = "meta.csv"                      # series metadata, in data/
-
-# ---- Inputs act5_build merges ----------------------------------------------
-GTRENDS_CSV = "gtrends.csv"      # act4's merged Google Trends            -> raw/
-# act3 writes only the window you asked it for (NTL_DATE_RANGE), which is far
-# too short for the monthly seasonal decomposition act5 runs. So act5 reads the
-# full-history country series that ships with the workshop bundle instead.
-NTL_BUILD_CSV = "ntl_shape.csv"  # daily NTL, full history (2012-)        -> data/
-
-# The country-code-stamped file names (Coordinates_bs.xlsx, ntl_bs.csv, ...) are
-# built from COUNTRY further down, once CODE_LC exists.
 
 # ---- Key series ------------------------------------------------------------
 GDP_TICKER    = "RGDP0000"   # real-GDP target (project-wide convention)
@@ -97,7 +83,6 @@ CPI_BASE_YEAR = 2019         # base year of that CPI index (differs by country)
 # ============================================================================
 #  5. NOWCAST RUN SETTINGS  (act6 - act9)
 # ============================================================================
-# act8_nwcst and act9_results MUST share DATE_STR -- it selects output/<DATE_STR>/.
 # DATE_STR defaults to today, so act9 reads the run act8 just wrote. To go back
 # and look at an older run, pin it here: DATE_STR = "20260801".
 DESIRED_DATE = "2026-06-01"                      # target quarter start (YYYY-MM-01)
@@ -119,18 +104,13 @@ LARS_FACTORS = 1
 #        installed. Series X-13 cannot handle fall back to the classical method,
 #        and act8 prints how many series took each route so a fallback is never
 #        silent.
-#
 # Cost, measured on this project's table (863 series): about 2 SECONDS for the
-# classical route, about 7.5 MINUTES for X-13. That makes X-13 the single most
-# expensive step in act8 -- more than the nowcasting loop itself. Worth it for a
-# production run, usually not for a live workshop session.
+# classical route, about 7.5 MINUTES for X-13.
 SEASONAL_FILTER = 0
 # Where the X-13 executable is.
 #   None -> look for x13as / x13as_ascii on PATH. Installing the binary into the
 #           environment (envs/nwcst/Library/bin/) puts it there whenever the
 #           nwcst env is active, which is the normal setup.
-#   "..." -> the FOLDER holding x13as.exe. See the warning below: a path to the
-#            .exe itself does not work.
 X13_PATH = None
 
 # ----------------------------------------------------------------------------
@@ -168,12 +148,6 @@ X13_PATH = None
 #     file path yields X13NotFoundError on EVERY series while the binary sits
 #     right there in the folder. Leaving X13_PATH = None avoids this entirely,
 #     because act8 resolves the directory itself.
-#
-# To confirm it works, set SEASONAL_FILTER = 1 and read act8's line:
-#     Seasonal adjustment: 682 series by X-13, 181 by classical fallback, ...
-# A first number of 0 means it was not found, and every series was silently
-# adjusted the classical way -- which is exactly the bug this reporting exists
-# to make visible.
 # ----------------------------------------------------------------------------
 
 # Which models to fit (1 = on, 0 = off).
@@ -191,27 +165,14 @@ EPOCH_LSTM = 50    # LSTM training episodes
 # ============================================================================
 #  6. BETA13/14 EXTENSIONS  (act8_nwcst)  --  every switch defaults to OFF.
 # ============================================================================
-# These are the research-branch methods developed on Jamaica in
-# act8_nwcst_beta14a.ipynb (kept in activity/ as the reference copy). As shipped,
-# act8_nwcst behaves EXACTLY as it did on 2026-08-01 -- a workshop run is
-# unaffected. Switch them on one at a time; the commented values reproduce
-# beta14a's Jamaica configuration.
-#
-# Turning any of these on changes the numbers act9_results reports. It also
-# costs time: ROLLING_LARS and SELECTION_CV are the two expensive ones.
-
 # ---- MASTER SWITCHES -------------------------------------------------------
-# Every extension act8 can turn on, in one place. 0 = off, 1 = on. The tuning
-# values for each live in the lettered groups below and stay inert while their
-# switch is 0 -- so you can leave a group configured between runs and flip only
-# the line here.
-SCALE_LINEAR     = 0    # A  scale predictors before Ridge / ENET / LASSO
-SHOCK_FEATURES   = 0    # B  quarterly-min "...N" / range "...R" series + SHOK0000
-ROLLING_LARS     = 0    # C  re-rank the variable pool at every test quarter
-SELECTION_CV     = 0    # C  expanding-window CV instead of one train/test split
-REGIME_ENSEMBLE  = 0    # E  inverse-RMSE consensus, calibrated per regime
-WATCHLIST        = 0    # F  model-spread and oracle-cluster diagnostic panels
-DISPERSION_BANDS = 0    # F  weighted-quantile prediction bands
+SCALE_LINEAR     = 1    # A  scale predictors before Ridge / ENET / LASSO
+SHOCK_FEATURES   = 1    # B  quarterly-min "...N" / range "...R" series + SHOK0000
+ROLLING_LARS     = 1    # C  re-rank the variable pool at every test quarter
+SELECTION_CV     = 1    # C  expanding-window CV instead of one train/test split
+REGIME_ENSEMBLE  = 1    # E  inverse-RMSE consensus, calibrated per regime
+WATCHLIST        = 1    # F  model-spread and oracle-cluster diagnostic panels
+DISPERSION_BANDS = 1    # F  weighted-quantile prediction bands
 
 # Four more knobs act as switches but carry the setting in the value itself, so
 # they stay down in their groups:
@@ -312,16 +273,6 @@ ORACLE_TREE_VINTAGE    = 2
 # ---- Country registry ------------------------------------------------------
 # name -> iso2 (the project's CODE), iso3 (GADM), bbox, and the VIIRS tiles the
 # country's ACTUAL GEOMETRY touches.
-#
-# `tiles` is not hand-written: it was derived by intersecting each GADM level-0
-# polygon with the 10x10-degree VIIRS grid (see refresh_registry() below, and
-# tiles_from_bbox() for the cheap approximation). Deriving from the polygon
-# rather than the bounding box matters -- a bounding box is a rectangle, so for
-# an irregularly shaped country it can reach into a tile the land never touches,
-# and you would then download and scan a tile holding nothing you care about.
-#
-# To add a country: put the name here with its iso2/iso3, then run
-# refresh_registry() once in the `geo` env and paste in the tiles it prints.
 COUNTRIES = {
     "Barbados":            dict(iso2="BB", iso3="BRB", bbox=(-59.65, 13.04, -59.42, 13.34),
                                 tiles=["h12v07"]),
@@ -352,36 +303,22 @@ GADM_ISO3 = _C["iso3"]          # -> gadm41_<ISO3>_shp.zip
 BBOX      = _C["bbox"]          # (lon_min, lat_min, lon_max, lat_max)
 
 # ---- File names that carry the country code --------------------------------
-# Site lat/lon for the point-based NTL extraction. One file per country ships in
-# raw/ (Coordinates_bs.xlsx, Coordinates_jm.xlsx, ...) -- all seven are included.
 COORDINATES_XLSX = f"Coordinates.xlsx"
 
-# NTL outputs are named after the country code, so switching COUNTRY does not
-# silently overwrite the series you built for the previous one.
 GDP_CSV        = f"gdp_{CODE_LC}.csv"          # quarterly real GDP     -> raw/
 NTL_OUTPUT_CSV = f"ntl_{CODE_LC}.csv"          # site-level daily NTL   -> raw/
 NTL_SHAPE_CSV  = f"ntl_shape_{CODE_LC}.csv"    # country-boundary daily -> raw/
 BLK_NTL_CSV    = f"blk_ntl_{CODE_LC}.csv"      # monthly composite      -> data/
 
 # ---- VIIRS Black Marble NTL tiles ------------------------------------------
-# Derived from COUNTRY. Extraction reads EVERY tile here; single- and multi-tile
-# countries use the same code path.
 TILES = list(_C["tiles"])
 
 # Set only to OVERRIDE the derived list (rare -- e.g. to skip a tile that touches
 # the country but holds nothing you care about). None = use the derived TILES.
-#
-# Example: The Bahamas touches h09v06 only along a thin strip west of longitude
-# -80, which is open water and sandbank. TILES_OVERRIDE = ["h10v06"] would halve
-# the download at essentially no cost in coverage. Left off by default so you can
-# see the multi-tile code path work.
 TILES_OVERRIDE = None
 if TILES_OVERRIDE:
     TILES = list(TILES_OVERRIDE)
 
-# Subset of TILES to DOWNLOAD. Leave None to download all TILES. Set this only
-# when a tile is already populated by a neighbour that shares it
-# (e.g. Guyana = ["h11v08"] because its h12v08 is downloaded by Suriname).
 DOWNLOAD_TILES = None
 
 GADM_ZIP = "gadm41_" + GADM_ISO3 + "_shp.zip"
@@ -389,8 +326,8 @@ GADM_ZIP = "gadm41_" + GADM_ISO3 + "_shp.zip"
 # ---- Where the folders are ---------------------------------------------------
 # The workshop root owns raw/, data/, output/, logs/, ntl_tmp/ and hfiles/.
 # Give its location RELATIVE TO THIS FILE (or an absolute path).
-#   ".."     -> this config.py sits in <workshop root>/activity/     <- current
-#   "../.."  -> ... in <workshop root>/workshop_code/activity/
+#   ".."     -> this config.py sits in <root>/activity/     <- current
+#   "../.."  -> ... in <root>/workshop_code/activity/
 PROJECT_ROOT = ".."
 
 # Where the VNP46A2 .h5 tiles live, as <NL_ROOT>/<tile>/*.h5 .
