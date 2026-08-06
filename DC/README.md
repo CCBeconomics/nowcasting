@@ -30,4 +30,4 @@
 - <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act7_models.ipynb">Activity 7: Models</a>
 
 **Thursday**
-- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act8_nwcst.ipynb">Activity 8: Nowcast Tool</a> _(pend. regime aware)_ Companion File: <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/nwcst_helpers.py">Helpers</a>
+- <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/act8_nwcst.ipynb">Activity 8: Nowcast Tool</a> Companion File: <a href="https://github.com/CCBeconomics/nowcasting/blob/main/DC/activity/nwcst_helpers.py">Helpers</a>
