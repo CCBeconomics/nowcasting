@@ -3,15 +3,12 @@
  GDP Growth Nowcasting Workshop -- Trinidad and Tobago (IDB, 2026)
 ====================================================================
 
-Do this BEFORE the Friday installation clinic. It takes 30-60 minutes,
-most of it waiting for downloads. If a step fails, do not keep trying:
-write down the step and bring a screenshot to the clinic. That is what
-the clinic is for.
+Please finalize Steps 1 and Step 2BEFORE the installation clinic.
+It takes 30-60 minutes, most of it waiting for downloads.
+IT support and admin permissions may be required to install these
+programs.
 
-You need: Windows 10/11, macOS 12+ or Linux; 10 GB free disk; a stable
-connection (~3 GB of downloads); and permission to install programs.
-On an institutional laptop, ask your IT team for that permission TODAY.
-
+Ask your IT team for that permissions asap.
 
 --------------------------------------------------------------------
  STEP 1. Install Anaconda (Python)
@@ -19,14 +16,6 @@ On an institutional laptop, ask your IT team for that permission TODAY.
 1. Download the installer from https://www.anaconda.com/download
 2. Run it with the default options ("Just Me" if you have no admin
    rights). Do NOT tick "Add Anaconda to my PATH".
-3. Open "Anaconda Prompt" from the Start menu (macOS/Linux: Terminal)
-   and type:
-
-       conda --version
-
-   It should print something like "conda 24.x". Everything below is
-   typed in this same window.
-
 
 --------------------------------------------------------------------
  STEP 2. Install R, Rtools and VS Code
@@ -43,14 +32,10 @@ On an institutional laptop, ask your IT team for that permission TODAY.
 --------------------------------------------------------------------
  STEP 3. Download the course material
 --------------------------------------------------------------------
-1. Go to https://github.com/CCBeconomics/nowcasting
+1. Go to https://github.com/CCBeconomics/nowcasting/
 2. Green "Code" button -> "Download ZIP". Unzip it somewhere simple,
    e.g. Documents\nowcasting.
-3. The workshop is the folder  tto/ . Everything below refers to it.
-
-   (If you use git:  git clone https://github.com/CCBeconomics/nowcasting.git
-    and later  git pull  to get updates.)
-
+3. The workshop is the folder  tto/ .
 
 --------------------------------------------------------------------
  STEP 4. Create the two Python environments
@@ -65,41 +50,14 @@ Then run these lines, one at a time:
     conda activate nwcst
     python -m ipykernel install --user --name nwcst
 
+    conda deactivate
+
     conda env create -f environment-geo.yml
     conda activate geo
     python -m ipykernel install --user --name geo
 
-Each "conda env create" takes 10-20 minutes and may sit on
-"Solving environment" for a long time. That is normal.
-
-  - Stuck for more than 20 minutes? Press Ctrl+C, then:
-        conda install -n base mamba
-        mamba env create -f environment.yml
-  - Still failing? Use manual_install.txt (same folder): the same
-    packages in several smaller commands, so you can see which one
-    breaks. Bring that message to the clinic.
-
-The "geo" environment is only for Activity 3 (nighttime lights).
-
-
 --------------------------------------------------------------------
- STEP 5. Check that everything works
---------------------------------------------------------------------
-Open the  tto/  folder in VS Code (File -> Open Folder).
-
-PYTHON: open  install/act0_env_check.ipynb
-  - Top right, "Select Kernel" -> nwcst. Run Part 1.
-    You should see "LinearRegression OK" and "LSTM OK".
-  - Switch the kernel to geo, paste your NASA token (Step 6) and run
-    Part 2. You should see a map and "Geo environment OK".
-
-R: open  install/act0_env_check_R.Rmd  and run the chunks in order
-   (Ctrl+Enter). The first run installs the packages (10-15 minutes).
-   The last chunk should print OK on every line.
-
-
---------------------------------------------------------------------
- STEP 6. Free accounts for data downloads
+ STEP 5. Accounts and API keys
 --------------------------------------------------------------------
 These are personal. Do not share them or paste them into a file you
 send to anyone.
@@ -118,6 +76,15 @@ NASA LAADS (Activity 0 Part 2 and Activity 3)
      NASA_TOKEN = "" in activity/config.py.
   Tokens expire after 60 days. A download that fails with an
   authorization error almost always means: generate a new token.
+
+--------------------------------------------------------------------
+ STEP 6. Check that everything works
+--------------------------------------------------------------------
+Open the  tto/  folder in VS Code (File -> Open Folder).
+
+PYTHON: open and run install/act0_env_check.ipynb
+R: open and run install/act0_env_check_R.Rmd
+
 
 
 --------------------------------------------------------------------
@@ -143,16 +110,3 @@ The kernel "nwcst" or "geo" does not appear in VS Code
 R says "Rtools NOT found"
     Install Rtools (Step 2), restart VS Code, run the chunk again.
 
-
---------------------------------------------------------------------
- SUMMARY
---------------------------------------------------------------------
-    conda --version                                   # step 1
-    cd Documents\nowcasting\tto\install               # step 3
-    conda env create -f environment.yml               # step 4
-    conda activate nwcst
-    python -m ipykernel install --user --name nwcst
-    conda env create -f environment-geo.yml
-    conda activate geo
-    python -m ipykernel install --user --name geo
-    -> run install/act0_env_check.ipynb and act0_env_check_R.Rmd   # step 5
