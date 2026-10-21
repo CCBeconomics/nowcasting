@@ -8,7 +8,6 @@
 
 **Friday · Installation clinic (in person)**
 - [Installation guide (start here)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/install/install_guide.txt)
-- [Slides: Installation and environment](https://CCBeconomics.github.io/nowcasting/tto/slides/s0_install.html)
 - Environment files: [environment.yml](https://github.com/CCBeconomics/nowcasting/blob/main/tto/install/environment.yml) · [environment-geo.yml](https://github.com/CCBeconomics/nowcasting/blob/main/tto/install/environment-geo.yml) · [Manual installation](https://github.com/CCBeconomics/nowcasting/blob/main/tto/install/manual_install.txt)
 - [Activity 0: Python check](https://github.com/CCBeconomics/nowcasting/blob/main/tto/install/act0_env_check.ipynb)
 - [Activity 0: R check](https://github.com/CCBeconomics/nowcasting/blob/main/tto/install/act0_env_check_R.Rmd)
