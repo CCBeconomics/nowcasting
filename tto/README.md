@@ -4,10 +4,6 @@
 
 **Course overview:** A training programme for public-sector professionals working on economic policy and national statistics in Trinidad and Tobago. It gives participants the theoretical foundations and the practical skills to build and run a GDP-growth *nowcasting* tool in Python and R, using structured and unstructured real-time data — Central Bank of Trinidad and Tobago (CBTT) statistics, international trade and energy prices, Google Trends and satellite nighttime lights — to estimate economic activity before official GDP is published.
 
-The workshop runs in person in Port of Spain: an installation clinic on **Friday**, then three full days, **Monday to Wednesday**. Tuesday is organised in four blocks, each a theory session followed by a hands-on activity in Python and R.
-
-> **Dates to be confirmed.** Materials are published as the course progresses. Items marked *(coming soon)* do not have files yet.
-
 ---
 
 **Friday · Installation clinic (in person)**
