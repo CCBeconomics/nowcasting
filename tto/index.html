@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nowcasting Trinidad and Tobago</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1d2530; --muted: #5b6675; --line: #e3e7ec;
+    --accent: #004e70; --soft: #eef4f7; --pending: #8a94a3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12171d; --fg: #e4e8ed; --muted: #9aa5b3; --line: #2a323c;
+      --accent: #6fb8d8; --soft: #1a232c; --pending: #6c7684;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12171d; --fg: #e4e8ed; --muted: #9aa5b3; --line: #2a323c;
+    --accent: #6fb8d8; --soft: #1a232c; --pending: #6c7684;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 780px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 8px; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  .intro p { margin: 0 0 12px; }
+  .note { background: var(--soft); border-radius: 8px; padding: 10px 14px; color: var(--muted); font-size: .92rem; }
+  section { border-top: 1px solid var(--line); padding: 18px 0; }
+  .when { color: var(--muted); font-size: .9rem; margin: 0; }
+  h2 { font-size: 1.1rem; margin: 2px 0 8px; }
+  ul { margin: 0; padding-left: 20px; }
+  li { margin: 3px 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .pending { color: var(--pending); font-style: italic; }
+  footer { border-top: 1px solid var(--line); padding-top: 16px; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>GDP Growth Nowcasting Workshop: Trinidad and Tobago</h1>
+  <p class="sub"><strong>Facilitators</strong>: Jose L. Saboin, Diego Guerrero, Angelo Mazzocca</p>
+
+  <div class="intro">
+    <p><strong>Course overview:</strong> A training programme for public-sector professionals working on economic policy and national statistics in Trinidad and Tobago. It gives participants the theoretical foundations and the practical skills to build and run a GDP-growth <em>nowcasting</em> tool in Python and R, using structured and unstructured real-time data — Central Bank of Trinidad and Tobago (CBTT) statistics, international trade and energy prices, Google Trends and satellite nighttime lights — to estimate economic activity before official GDP is published.</p>
+    <p>The workshop runs in person in Port of Spain: an installation clinic on <strong>Friday</strong>, then three full days, <strong>Monday to Wednesday</strong>. Tuesday is organised in four blocks, each a theory session followed by a hands-on activity in Python and R.</p>
+    <p class="note"><strong>Dates to be confirmed.</strong> Materials are published as the course progresses. Items marked <span class="pending">coming soon</span> do not have files yet.</p>
+  </div>
+
+  <section>
+    <p class="when">Friday</p>
+    <h2>Installation clinic (in person)</h2>
+    <ul>
+      <li><a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/install/install_guide.txt">Installation guide (start here)</a></li>
+      <li><a href="https://CCBeconomics.github.io/nowcasting/tto/slides/s0_install.html">Slides: Installation and environment</a></li>
+      <li>Environment files: <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/install/environment.yml">environment.yml</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/install/environment-geo.yml">environment-geo.yml</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/install/manual_install.txt">Manual installation</a></li>
+      <li><a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/install/act0_env_check.ipynb">Activity 0: Python check</a></li>
+      <li><a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/install/act0_env_check_R.Rmd">Activity 0: R check</a></li>
+    </ul>
+  </section>
+  <section>
+    <p class="when">Monday — morning</p>
+    <h2>Welcome, Python and R fundamentals</h2>
+    <ul>
+      <li><a href="https://CCBeconomics.github.io/nowcasting/tto/slides/s1_welcome.html">Slides: Welcome and agenda</a></li>
+      <li><a href="https://CCBeconomics.github.io/nowcasting/tto/slides/s1_python.html">Slides: Python fundamentals</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act1_python_basics.ipynb">Activity 1: Python basics</a></li>
+      <li><a href="https://CCBeconomics.github.io/nowcasting/tto/slides/s1_r.html">Slides: R fundamentals</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act1_r_basics.R">Activity 1: R basics</a></li>
+      <li>Data: <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/gdp.csv">gdp.csv</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/ntl_shape.csv">ntl_shape.csv</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/eia_brent.csv">eia_brent.csv</a></li>
+    </ul>
+  </section>
+  <section>
+    <p class="when">Monday — afternoon</p>
+    <h2>Data: scraping, nighttime lights, Google Trends and the build</h2>
+    <ul>
+      <li><a href="https://CCBeconomics.github.io/nowcasting/tto/slides/s2_scraping.html">Slides: Web scraping</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act2_scraping.ipynb">Activity 2: Web scraping (CBTT, FRED, CSO, US Census)</a></li>
+      <li><a href="https://CCBeconomics.github.io/nowcasting/tto/slides/s3_ntl.html">Slides: Nighttime lights, including oil &amp; gas</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act3_ntl.ipynb">Activity 3: Nighttime lights</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/config.py">config.py</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/ntl_helpers.py">ntl_helpers.py</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/raw/Coordinates.xlsx">Coordinates.xlsx</a></li>
+      <li><a href="https://CCBeconomics.github.io/nowcasting/tto/slides/s4_gtrends.html">Slides: Google Trends and the build</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act4_gtrends.ipynb">Activity 4: Google Trends</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act5_build.ipynb">Activity 5: Building the dataset</a></li>
+      <li>Data: <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/TT_GTrends_Keywords.csv">TT_GTrends_Keywords.csv</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/gtrends.csv">gtrends.csv</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/data.csv">data.csv</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/meta.csv">meta.csv</a></li>
+    </ul>
+  </section>
+  <section>
+    <p class="when">Tuesday — morning</p>
+    <h2>Methodology, Block 1 (regularization) and Block 2 (trees)</h2>
+    <ul>
+      <li><a href="https://CCBeconomics.github.io/nowcasting/tto/slides/s5_methodology.html">Slides: Nowcasting methodology</a> · <a href="https://CCBeconomics.github.io/nowcasting/tto/slides/s5_methodology_caribbean.pdf">Nowcasting in the Caribbean (PDF)</a></li>
+      <li>Block 1 · <a href="https://CCBeconomics.github.io/nowcasting/tto/slides/theory_1_regularization.pdf">Theory: Regularization</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act6_regularization.ipynb">Activity 6: Regularization (Python)</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act6_regularization.R">Activity 6 (R)</a></li>
+      <li>Block 2 · <a href="https://CCBeconomics.github.io/nowcasting/tto/slides/theory_2_trees.pdf">Theory: Tree-based models</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act7_trees.ipynb">Activity 7: Trees, random forest, boosting (Python)</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act7_trees.R">Activity 7 (R)</a></li>
+      <li>Data: <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/blocks_quarterly.csv">blocks_quarterly.csv</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/blocks_meta.csv">blocks_meta.csv</a></li>
+    </ul>
+  </section>
+  <section>
+    <p class="when">Tuesday — afternoon</p>
+    <h2>Block 3 (LSTM) and Block 4 (time-series models)</h2>
+    <ul>
+      <li>Block 3 · <a href="https://CCBeconomics.github.io/nowcasting/tto/slides/theory_3_lstm.pdf">Theory: LSTM</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act8_lstm.ipynb">Activity 8: LSTM (Python)</a></li>
+      <li>Block 4 · <a href="https://CCBeconomics.github.io/nowcasting/tto/slides/theory_4_timeseries.pdf">Theory: DFM, BVAR and MIDAS</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act9_timeseries.R">Activity 9: Time-series models (R)</a></li>
+      <li>Data: <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/blocks_monthly.csv">blocks_monthly.csv</a></li>
+      <li>Every block adds its test RMSE to one scoreboard: <code>output/workshop_results.csv</code></li>
+    </ul>
+  </section>
+  <section>
+    <p class="when">Wednesday — morning</p>
+    <h2>Variable selection and the nowcast tool</h2>
+    <ul>
+      <li><a href="https://CCBeconomics.github.io/nowcasting/tto/slides/s6_tool.html">Slides: The nowcasting tool</a></li>
+      <li><a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act10_selection.ipynb">Activity 10: Variable selection</a></li>
+      <li><a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act11_nwcst.ipynb">Activity 11: The nowcast tool</a> · <a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/nwcst_helpers.py">nwcst_helpers.py</a></li>
+    </ul>
+  </section>
+  <section>
+    <p class="when">Wednesday — afternoon</p>
+    <h2>Results and wrap-up</h2>
+    <ul>
+      <li><a href="https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act12_results.ipynb">Activity 12: Results</a></li>
+      <li>Final discussion: using the tool at your institution <span class="pending">coming soon</span></li>
+    </ul>
+  </section>
+
+  <footer>Folder guide and credentials notes: <a href="https://github.com/CCBeconomics/nowcasting/tree/main/tto">README on GitHub</a>. Kernel <code>nwcst</code> for every notebook except Activity 3 (<code>geo</code>); R scripts run in R with the packages from the R check.</footer>
+</main>
+</body>
+</html>

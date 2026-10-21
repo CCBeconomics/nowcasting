@@ -1,1 +1,69 @@
+# [GDP Growth Nowcasting Workshop: Trinidad and Tobago](https://CCBeconomics.github.io/nowcasting/tto/)
 
+**Facilitators**: Jose L. Saboin, Diego Guerrero, Angelo Mazzocca
+
+**Course overview:** A training programme for public-sector professionals working on economic policy and national statistics in Trinidad and Tobago. It gives participants the theoretical foundations and the practical skills to build and run a GDP-growth *nowcasting* tool in Python and R, using structured and unstructured real-time data — Central Bank of Trinidad and Tobago (CBTT) statistics, international trade and energy prices, Google Trends and satellite nighttime lights — to estimate economic activity before official GDP is published.
+
+The workshop runs in person in Port of Spain: an installation clinic on **Friday**, then three full days, **Monday to Wednesday**. Tuesday is organised in four blocks, each a theory session followed by a hands-on activity in Python and R.
+
+> **Dates to be confirmed.** Materials are published as the course progresses. Items marked *(coming soon)* do not have files yet.
+
+---
+
+**Friday · Installation clinic (in person)**
+- [Installation guide (start here)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/install/install_guide.txt)
+- [Slides: Installation and environment](https://CCBeconomics.github.io/nowcasting/tto/slides/s0_install.html)
+- Environment files: [environment.yml](https://github.com/CCBeconomics/nowcasting/blob/main/tto/install/environment.yml) · [environment-geo.yml](https://github.com/CCBeconomics/nowcasting/blob/main/tto/install/environment-geo.yml) · [Manual installation](https://github.com/CCBeconomics/nowcasting/blob/main/tto/install/manual_install.txt)
+- [Activity 0: Python check](https://github.com/CCBeconomics/nowcasting/blob/main/tto/install/act0_env_check.ipynb)
+- [Activity 0: R check](https://github.com/CCBeconomics/nowcasting/blob/main/tto/install/act0_env_check_R.Rmd)
+
+**Monday — morning · Welcome, Python and R fundamentals**
+- [Slides: Welcome and agenda](https://CCBeconomics.github.io/nowcasting/tto/slides/s1_welcome.html)
+- [Slides: Python fundamentals](https://CCBeconomics.github.io/nowcasting/tto/slides/s1_python.html) · [Activity 1: Python basics](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act1_python_basics.ipynb)
+- [Slides: R fundamentals](https://CCBeconomics.github.io/nowcasting/tto/slides/s1_r.html) · [Activity 1: R basics](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act1_r_basics.R)
+- Data: [gdp.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/gdp.csv) · [ntl_shape.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/ntl_shape.csv) · [eia_brent.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/eia_brent.csv)
+
+**Monday — afternoon · Data: scraping, nighttime lights, Google Trends and the build**
+- [Slides: Web scraping](https://CCBeconomics.github.io/nowcasting/tto/slides/s2_scraping.html) · [Activity 2: Web scraping (CBTT, FRED, CSO, US Census)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act2_scraping.ipynb)
+- [Slides: Nighttime lights, including oil & gas](https://CCBeconomics.github.io/nowcasting/tto/slides/s3_ntl.html) · [Activity 3: Nighttime lights](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act3_ntl.ipynb) · [config.py](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/config.py) · [ntl_helpers.py](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/ntl_helpers.py) · [Coordinates.xlsx](https://github.com/CCBeconomics/nowcasting/blob/main/tto/raw/Coordinates.xlsx)
+- [Slides: Google Trends and the build](https://CCBeconomics.github.io/nowcasting/tto/slides/s4_gtrends.html) · [Activity 4: Google Trends](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act4_gtrends.ipynb) · [Activity 5: Building the dataset](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act5_build.ipynb)
+- Data: [TT_GTrends_Keywords.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/TT_GTrends_Keywords.csv) · [gtrends.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/gtrends.csv) · [data.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/data.csv) · [meta.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/meta.csv)
+
+**Tuesday — morning · Methodology, Block 1 (regularization) and Block 2 (trees)**
+- [Slides: Nowcasting methodology](https://CCBeconomics.github.io/nowcasting/tto/slides/s5_methodology.html) · [Nowcasting in the Caribbean (PDF)](https://CCBeconomics.github.io/nowcasting/tto/slides/s5_methodology_caribbean.pdf)
+- Block 1 · [Theory: Regularization](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_1_regularization.pdf) · [Activity 6: Regularization (Python)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act6_regularization.ipynb) · [Activity 6 (R)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act6_regularization.R)
+- Block 2 · [Theory: Tree-based models](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_2_trees.pdf) · [Activity 7: Trees, random forest, boosting (Python)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act7_trees.ipynb) · [Activity 7 (R)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act7_trees.R)
+- Data: [blocks_quarterly.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/blocks_quarterly.csv) · [blocks_meta.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/blocks_meta.csv)
+
+**Tuesday — afternoon · Block 3 (LSTM) and Block 4 (time-series models)**
+- Block 3 · [Theory: LSTM](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_3_lstm.pdf) · [Activity 8: LSTM (Python)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act8_lstm.ipynb)
+- Block 4 · [Theory: DFM, BVAR and MIDAS](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_4_timeseries.pdf) · [Activity 9: Time-series models (R)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act9_timeseries.R)
+- Data: [blocks_monthly.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/blocks_monthly.csv)
+- Every block adds its test RMSE to one scoreboard: `output/workshop_results.csv`
+
+**Wednesday — morning · Variable selection and the nowcast tool**
+- [Slides: The nowcasting tool](https://CCBeconomics.github.io/nowcasting/tto/slides/s6_tool.html)
+- [Activity 10: Variable selection](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act10_selection.ipynb)
+- [Activity 11: The nowcast tool](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act11_nwcst.ipynb) · [nwcst_helpers.py](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/nwcst_helpers.py)
+
+**Wednesday — afternoon · Results and wrap-up**
+- [Activity 12: Results](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act12_results.ipynb)
+- Final discussion: using the tool at your institution *(coming soon)*
+
+---
+
+## Folder layout
+
+```
+install/    environment files and the two act0 checks
+activity/   the notebooks (.ipynb) and R scripts (.R) you work in, plus config.py (the one file you edit)
+sols/       the same notebooks and scripts, worked and run
+data/       inputs shipped with the course (Trinidad and Tobago panel, GDP, lights, Trends, the block datasets)
+raw/        Coordinates.xlsx; downloads land here when you run the activities
+slides/     the presentations (HTML) and theory notes (PDF)
+output/     written by the activities: the Tuesday scoreboard and the nowcast (Activity 11)
+```
+
+Download the repository (green **Code** button → **Download ZIP**), then open the `tto/` folder in VS Code or JupyterLab and run each notebook from `activity/`, so that `../data/` resolves. R scripts: set the working directory to `activity/` first. Kernel `nwcst` for every notebook except Activity 3, which needs `geo`.
+
+**Credentials:** Activity 2 needs a free FRED API key and Activity 3 a free NASA LAADS token. Paste them into your own copy only — never into a file you share.

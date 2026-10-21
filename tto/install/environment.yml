@@ -1,0 +1,59 @@
+####################################################################
+#  environment.yml  --  the "nwcst" environment
+#  GDP Growth Nowcasting Workshop, Trinidad and Tobago (IDB, 2026)
+#
+#  Create (Anaconda Prompt, in this folder):
+#      conda env create -f environment.yml
+#      conda activate nwcst
+#
+#  Same recipe as the previous Caribbean workshops (Bahamas, Jamaica,
+#  Barbados, Washington DC) and Bolivia, written as one file. Anaconda's
+#  `defaults` channel for everything conda installs; pip only for the
+#  three packages that are not on conda.
+#
+#  Covers every activity except the nighttime lights (act3), which
+#  needs the separate "geo" environment: see environment-geo.yml.
+#  Step-by-step fallback: manual_install.txt.
+####################################################################
+name: nwcst
+
+channels:
+  - defaults
+
+dependencies:
+  - python=3.11
+  - pip
+  - numpy=1.26.4      # pmdarima and nowcast_lstm are built against numpy 1.x
+  - pandas<3          # the notebooks are written for pandas 2.x
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - tqdm
+  - python-dateutil
+  - geopandas
+  - jupyterlab
+  - ipykernel
+  - joblib
+  - statsmodels
+  - openpyxl
+  - pmdarima
+  - pytorch=*=cpu_mkl*  # CPU build: avoids a ~2.5 GB CUDA download
+  - scipy
+  - requests
+  - beautifulsoup4    # central-bank pages without a CSV
+  - lxml
+  - html5lib
+  - xlrd              # legacy .xls files (EIA Brent)
+  - shap
+  - pip:
+      - nowcast_lstm
+      - eurostat      # EU trade with Trinidad and Tobago
+      - trendspy      # Google Trends (pytrends is archived and no longer works)
+
+####################################################################
+#  Notes
+#  - If the solver runs for more than ~15 minutes, use mamba:
+#        conda install -n base mamba
+#        mamba env create -f environment.yml
+#  - To start again:  conda env remove -n nwcst
+####################################################################

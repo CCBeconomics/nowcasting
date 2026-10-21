@@ -1,0 +1,66 @@
+====================================================================
+ MANUAL INSTALLATION, STEP BY STEP
+ GDP Growth Nowcasting Workshop -- Trinidad and Tobago (IDB, 2026)
+====================================================================
+
+WHAT THIS FILE IS FOR
+---------------------
+Start with install_guide.txt.
+The normal install is one command per environment:
+
+    conda env create -f environment.yml
+    conda env create -f environment-geo.yml
+
+This file is plan B: exactly the same packages, from the same channels,
+installed in several commands instead of one. Use it when
+`conda env create` hangs on "Solving environment", fails with an
+unclear error, or you need to find WHICH package breaks.
+
+====================================================================
+ ENVIRONMENT 1 of 2:  nwcst
+====================================================================
+
+conda create -n nwcst python=3.11 pip numpy=1.26.4 "pandas<3" matplotlib seaborn scikit-learn tqdm python-dateutil geopandas jupyterlab ipykernel joblib statsmodels openpyxl -y
+
+conda activate nwcst
+conda install numpy=1.26.4 "pandas<3" scipy requests beautifulsoup4 lxml html5lib xlrd shap -y
+
+conda clean --packages --tarballs
+
+conda install "pytorch=*=cpu_mkl*" numpy=1.26.4 "pandas<3" -y
+conda install pip pmdarima numpy=1.26.4 "pandas<3" -y
+pip install nowcast_lstm
+pip install eurostat
+pip install trendspy
+python -m ipykernel install --user --name nwcst
+
+Alternative for pytorch: conda install pytorch torchvision torchaudio cpuonly -c pytorch
+
+====================================================================
+ ENVIRONMENT 2 of 2:  geo
+====================================================================
+
+conda create -n geo python=3.11 pip numpy "pandas<3" matplotlib seaborn tqdm python-dateutil geopandas jupyterlab ipykernel gdal rasterio folium mapclassify fiona shapely pyproj colorcet h5py libgdal openpyxl requests -y
+
+conda activate geo
+conda install libgdal-hdf5 "pandas<3" -y
+
+conda install -c conda-forge contextily "pandas<3" -y
+pip install blackmarblepy
+python -m ipykernel install --user --name geo
+
+====================================================================
+ NASA ACCOUNT AND TOKEN (for Activity 3)
+====================================================================
+1. Register at https://ladsweb.modaps.eosdis.nasa.gov/
+2. Profile -> EULAs -> accept "Meris EULA" and "Sentinel-3 EULA".
+3. Profile -> Applications -> Authorized Apps: find "LAADS Web"
+   (you may need "Approve More Applications" and search for it).
+4. My Account -> Generate Token. Copy the token into
+   activity/config.py, in the line NASA_TOKEN = "".
+   Tokens expire after 60 days.
+
+====================================================================
+ OTHER KEYS
+====================================================================
+FRED (Activity 2): free key at https://fred.stlouisfed.org/docs/api/api_key.html

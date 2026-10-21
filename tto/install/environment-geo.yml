@@ -1,0 +1,55 @@
+####################################################################
+#  environment-geo.yml  --  the "geo" environment
+#  Only for Activity 3: nighttime lights (VIIRS Black Marble).
+#
+#  Create (Anaconda Prompt, in this folder):
+#      conda env create -f environment-geo.yml
+#      conda activate geo
+#
+#  Kept apart from "nwcst" on purpose: GDAL, PROJ and rasterio carry
+#  C libraries that clash with pytorch and pmdarima in one environment.
+####################################################################
+name: geo
+
+channels:
+  - defaults
+  - conda-forge       # only for contextily (base maps)
+
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - pandas<3
+  - matplotlib
+  - seaborn
+  - tqdm
+  - python-dateutil
+  - geopandas
+  - jupyterlab
+  - ipykernel
+  - gdal
+  - libgdal
+  - rasterio
+  - folium
+  - mapclassify
+  - fiona
+  - shapely
+  - pyproj
+  - colorcet
+  - h5py              # VIIRS tiles are HDF5
+  - openpyxl
+  - requests
+  # ESSENTIAL: since GDAL 3.11 the HDF5 driver ships separately. Without it
+  # gdal.Open() returns None on every .h5 tile WITHOUT raising an error, and
+  # act3 finishes "fine" but empty.
+  - libgdal-hdf5
+  - conda-forge::contextily
+  - pip:
+      - blackmarblepy
+
+####################################################################
+#  Notes
+#  - Trinidad and Tobago fits in ONE VIIRS tile (h11v07), ~25 MB a day.
+#  - You need a free NASA LAADS token: see manual_install.txt (bottom).
+#    Tokens expire after 60 days.
+####################################################################

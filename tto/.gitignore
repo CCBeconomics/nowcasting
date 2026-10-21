@@ -1,0 +1,23 @@
+# Claude Code files: instructions and working notes stay private
+CLAUDE.md
+**/CLAUDE.md
+.claude/
+ai-notes/
+
+# Machine-local cruft
+.ipynb_checkpoints/
+__pycache__/
+.Rhistory
+.RData
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+*conflicted copy*
+
+# Created when the notebooks run: tiles, temp files, results, cached borders
+hfiles/
+ntl_tmp/
+output/*
+!output/.gitkeep
+**/shapes/

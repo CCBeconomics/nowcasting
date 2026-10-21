@@ -1,0 +1,16 @@
+ticker,label,group,nominal,description
+RENE5005,LNG production,Energy,0,Liquefied Gas Production Prod
+XBRT0001,Brent oil price,Energy,0,"Brent crude oil spot price (benchmark), US dollars per barrel"
+UNTL0003,Night lights: oil & gas,Satellite,0,NTL Daily Radiance: Oil and Gas
+UNTL0000,Night lights: country,Satellite,0,NTL Daily Radiance: Country Area Mean
+RCEM1100,Local cement sales,Activity,0,Local sales of cement
+XUST0001,Exports to the US,Trade,0,Exports: USA Partner
+XUST0002,Imports from the US,Trade,0,Imports: USA Partner
+MCRD5000,Private sector credit,Credit,1,Commercial banks Private sector credit outstanding
+MCRD3000,Consumer credit,Credit,1,Commercial banks Consumer credit outstanding
+MDEP1000,Bank deposits,Money,1,Commercial banks Total deposits
+MAGG1000,Money supply M1,Money,1,Narrow money supply M1a
+MRAT1001,Prime lending rate,Financial,0,Average commercial bank prime lending rate
+FTFM1100,Stock price index,Financial,0,Composite Stock Price Index (1983=100)
+UGTR0000,Google Trends: mean,Searches,0,Google Trends: Mean
+UGTR1026,Google Trends: PriceSmart,Searches,0,Google Trends PriceSmart searches (TT)
