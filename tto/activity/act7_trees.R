@@ -1,6 +1,6 @@
 # =============================================================================
-# Activity 7 -- Tree-based models: a single tree, Random Forest, Gradient Boosting (R)
-# GDP Growth Nowcasting Workshop -- IDB, Port of Spain
+# Activity 7 (R): Tree-based models (a single tree, Random Forest, Gradient Boosting)
+# GDP Growth Nowcasting Workshop, IDB, Port of Spain
 # Tuesday · Block 2 · about 20-30 minutes
 #
 # Packages: tidyverse, rpart, rpart.plot, randomForest, xgboost, glmnet

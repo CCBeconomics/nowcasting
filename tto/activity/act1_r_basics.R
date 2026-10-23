@@ -1,6 +1,6 @@
 # =============================================================================
-# Activity 1 (R) -- R basics: GDP, oil and night-time lights in Trinidad and Tobago
-# GDP Growth Nowcasting Workshop -- IDB, Port of Spain
+# Activity 1 (R): R basics with GDP, oil and night-time lights in Trinidad and Tobago
+# GDP Growth Nowcasting Workshop, IDB, Port of Spain
 #
 # The same data as act1_python_basics.ipynb:
 #   ../data/gdp.csv        real GDP, TT$ millions, quarterly (date = 1st day of the quarter's last month)

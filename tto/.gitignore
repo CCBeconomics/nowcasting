@@ -21,3 +21,9 @@ ntl_tmp/
 output/*
 !output/.gitkeep
 **/shapes/
+
+# Snapshots of removed material, kept locally
+*deprecated/
+
+# Worked solutions stay local: never published
+sols/

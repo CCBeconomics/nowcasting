@@ -1,6 +1,6 @@
 # =============================================================================
-# Activity 9 -- Classical mixed-frequency models: DFM, MIDAS, MF-BVAR, MIDAS-ML (R)
-# GDP Growth Nowcasting Workshop -- IDB, Port of Spain
+# Activity 9 (R): Classical mixed-frequency models (DFM, MIDAS, MF-BVAR, MIDAS-ML)
+# GDP Growth Nowcasting Workshop, IDB, Port of Spain
 # Tuesday · Block 4 · about 20-30 minutes (the whole script runs in about a minute)
 #
 # Packages: tidyverse, nowcastDFM, midasr, mfbvar, midasml, imputeTS
@@ -268,7 +268,7 @@ save_result(4, "act9", "MIDAS", rmse_midas,
                     n_lags, paste(midas_vars, collapse = "+")))
 
 # =============================================================================
-# 4. MF-BVAR (mfbvar) -- about 15 seconds
+# 4. MF-BVAR (mfbvar), about 15 seconds
 # =============================================================================
 # A VAR on the monthly indicators AND GDP, written at monthly frequency, with GDP an
 # unobserved monthly series whose quarterly average is observed. A Minnesota prior
@@ -304,7 +304,7 @@ save_result(4, "act9", "MF-BVAR", rmse_bvar,
             "mfbvar Minnesota lambda1=0.2, 4 lags, LNG+NTL O&G+credit+GDP, re-estimated each quarter")
 
 # =============================================================================
-# 5. MIDAS-ML (midasml) -- sparse-group LASSO over all indicators and lags
+# 5. MIDAS-ML (midasml): sparse-group LASSO over all indicators and lags
 # =============================================================================
 # 15 indicators x 6 monthly lags = 90 regressors for 40 quarters. Each indicator's lags
 # are compressed with a Legendre polynomial of degree 2 (3 columns per indicator, the

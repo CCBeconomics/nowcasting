@@ -1,6 +1,6 @@
 # =============================================================================
-# Activity 6 -- Regularization: Ridge, LASSO and Elastic Net (R)
-# GDP Growth Nowcasting Workshop -- IDB, Port of Spain
+# Activity 6 (R): Regularization with Ridge, LASSO and Elastic Net
+# GDP Growth Nowcasting Workshop, IDB, Port of Spain
 # Tuesday · Block 1 · about 20-30 minutes
 #
 # Packages: tidyverse, glmnet

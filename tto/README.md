@@ -13,7 +13,7 @@
 - [Activity 0: R check](https://github.com/CCBeconomics/nowcasting/blob/main/tto/install/act0_env_check_R.Rmd)
 
 **Monday — morning · Welcome, Python and R fundamentals**
-- [Slides: Python fundamentals](https://CCBeconomics.github.io/nowcasting/tto/slides/s1_python.html) · [Activity 1: Python basics](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act1_python_basics.ipynb)
+- Python fundamentals: live demonstration · [Activity 1: Python basics](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act1_python_basics.ipynb)
 - [Slides: R fundamentals](https://CCBeconomics.github.io/nowcasting/tto/slides/s1_r.html) · [Activity 1: R basics](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act1_r_basics.R)
 - Data: [gdp.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/gdp.csv) · [ntl_shape.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/ntl_shape.csv) · [eia_brent.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/eia_brent.csv)
 
@@ -51,7 +51,6 @@
 ```
 install/    environment files and the two act0 checks
 activity/   the notebooks (.ipynb) and R scripts (.R) you work in, plus config.py (the one file you edit)
-sols/       the same notebooks and scripts, worked and run
 data/       inputs shipped with the course (Trinidad and Tobago panel, GDP, lights, Trends, the block datasets)
 raw/        Coordinates.xlsx; downloads land here when you run the activities
 slides/     the presentations (HTML) and theory notes (PDF)

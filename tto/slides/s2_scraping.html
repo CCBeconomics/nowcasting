@@ -1071,6 +1071,7 @@ Diego A. Guerrero
 <h2>Learning objectives</h2>
 <ul>
 <li>Retrieve data from <strong>public APIs</strong> (FRED)</li>
+<li>Make a <strong>plain web request</strong> and read what the server sends back</li>
 <li>Read tables straight from <strong>central-bank web pages</strong> (CBTT Data Centre)</li>
 <li>Save every source as one tidy CSV in <code>raw/</code>, ready for the build</li>
 </ul>
@@ -1080,6 +1081,86 @@ Diego A. Guerrero
 <h1>Scraping economic data</h1>
 <p><span class="label">Part 1</span></p>
 <p>Three ways to bring a number into Python</p>
+</section>
+<section class="slide level2">
+<h2>An API in five lines: FRED</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href></a><span class="im">import</span> requests, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href></a></span>
+<span id="cb1-3"><a href></a>key <span class="op">=</span> <span class="st">&quot;&quot;</span>          <span class="co"># your free FRED key</span></span>
+<span id="cb1-4"><a href></a>url <span class="op">=</span> (<span class="st">&quot;https://api.stlouisfed.org/fred/series/observations&quot;</span></span>
+<span id="cb1-5"><a href></a>       <span class="ss">f&quot;?series_id=DCOILBRENTEU&amp;api_key=</span><span class="sc">{</span>key<span class="sc">}</span><span class="ss">&amp;file_type=json&quot;</span>)</span>
+<span id="cb1-6"><a href></a>obs <span class="op">=</span> requests.get(url, timeout<span class="op">=</span><span class="dv">60</span>).json()[<span class="st">&quot;observations&quot;</span>]</span>
+<span id="cb1-7"><a href></a>brent <span class="op">=</span> pd.DataFrame(obs)[[<span class="st">&quot;date&quot;</span>, <span class="st">&quot;value&quot;</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Keys are personal: never paste one into a file you share or publish.</p>
+</section>
+<section class="slide level2">
+<h2>A simple request</h2>
+<p>Without an API, the same <code>requests.get</code> returns whatever the server sends:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href></a><span class="im">import</span> requests, pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href></a></span>
+<span id="cb2-3"><a href></a>r <span class="op">=</span> requests.get(<span class="st">&quot;https://www.central-bank.org.tt&quot;</span>, timeout<span class="op">=</span><span class="dv">60</span>)</span>
+<span id="cb2-4"><a href></a><span class="bu">print</span>(r.status_code)                  <span class="co"># 200 = OK, 403 = blocked, 404 = not found</span></span>
+<span id="cb2-5"><a href></a><span class="bu">print</span>(r.headers[<span class="st">&quot;Content-Type&quot;</span>])      <span class="co"># text/html: a web page, not data</span></span>
+<span id="cb2-6"><a href></a><span class="bu">print</span>(r.text[:<span class="dv">300</span>])                   <span class="co"># the raw HTML</span></span>
+<span id="cb2-7"><a href></a></span>
+<span id="cb2-8"><a href></a><span class="co"># When the address is a FILE, pandas reads it directly</span></span>
+<span id="cb2-9"><a href></a>brent <span class="op">=</span> pd.read_csv(<span class="st">&quot;https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>A web page is text. The numbers are inside it, wrapped in HTML tags.</p>
+</section>
+<section class="slide level2">
+<h2>The CBTT Data Centre</h2>
+<p>Every table lives at the same kind of address:</p>
+<pre><code>https://www.central-bank.org.tt/data-center-block/?title=&lt;table-name&gt;&amp;id=&lt;n&gt;</code></pre>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Table</th>
+<th><code>id</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Consumer price index, monthly</td>
+<td>36</td>
+</tr>
+<tr class="even">
+<td>Fiscal revenue, monthly</td>
+<td>90</td>
+</tr>
+<tr class="odd">
+<td>Fiscal expenditure, monthly</td>
+<td>94</td>
+</tr>
+<tr class="even">
+<td>Fiscal financing, monthly</td>
+<td>102</td>
+</tr>
+</tbody>
+</table>
+<p>One recipe, many tables: change the URL, keep the code.</p>
+</section>
+<section class="slide level2">
+<h2>The recipe: request → table → DataFrame</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-code-line-numbers="1-7|9-12|14-18|20-22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href></a><span class="im">import</span> requests, pandas <span class="im">as</span> pd</span>
+<span id="cb4-2"><a href></a><span class="im">from</span> bs4 <span class="im">import</span> BeautifulSoup</span>
+<span id="cb4-3"><a href></a></span>
+<span id="cb4-4"><a href></a>hdr <span class="op">=</span> {<span class="st">&quot;User-Agent&quot;</span>: <span class="st">&quot;Mozilla/5.0&quot;</span>}          <span class="co"># look like a browser</span></span>
+<span id="cb4-5"><a href></a>url <span class="op">=</span> (<span class="st">&quot;https://www.central-bank.org.tt/data-center-block/&quot;</span></span>
+<span id="cb4-6"><a href></a>       <span class="st">&quot;?title=consumer-price-index-index-values-monthly&amp;id=36&quot;</span>)</span>
+<span id="cb4-7"><a href></a>r <span class="op">=</span> requests.get(url, headers<span class="op">=</span>hdr, timeout<span class="op">=</span><span class="dv">60</span>)</span>
+<span id="cb4-8"><a href></a></span>
+<span id="cb4-9"><a href></a>r.raise_for_status()                          <span class="co"># stop on 403 / 404 / 500</span></span>
+<span id="cb4-10"><a href></a>soup  <span class="op">=</span> BeautifulSoup(r.text, <span class="st">&quot;html.parser&quot;</span>)</span>
+<span id="cb4-11"><a href></a>table <span class="op">=</span> soup.select_one(<span class="st">&quot;table#table_1&quot;</span>)      <span class="co"># the data table on every page</span></span>
+<span id="cb4-12"><a href></a></span>
+<span id="cb4-13"><a href></a>cols <span class="op">=</span> [th.get_text(strip<span class="op">=</span><span class="va">True</span>) <span class="cf">for</span> th <span class="kw">in</span> table.select(<span class="st">&quot;thead th&quot;</span>)]</span>
+<span id="cb4-14"><a href></a>rows <span class="op">=</span> [[td.get_text(strip<span class="op">=</span><span class="va">True</span>) <span class="cf">for</span> td <span class="kw">in</span> tr.select(<span class="st">&quot;td&quot;</span>)]</span>
+<span id="cb4-15"><a href></a>        <span class="cf">for</span> tr <span class="kw">in</span> table.select(<span class="st">&quot;tbody tr&quot;</span>)]</span>
+<span id="cb4-16"><a href></a>df <span class="op">=</span> pd.DataFrame([r <span class="cf">for</span> r <span class="kw">in</span> rows <span class="cf">if</span> r], columns<span class="op">=</span>cols)</span>
+<span id="cb4-17"><a href></a></span>
+<span id="cb4-18"><a href></a>df[<span class="st">&quot;date&quot;</span>] <span class="op">=</span> pd.to_datetime(df[<span class="st">&quot;Date&quot;</span>])</span>
+<span id="cb4-19"><a href></a>df <span class="op">=</span> df.set_index(<span class="st">&quot;date&quot;</span>).drop(columns<span class="op">=</span><span class="st">&quot;Date&quot;</span>).<span class="bu">apply</span>(pd.to_numeric, errors<span class="op">=</span><span class="st">&quot;coerce&quot;</span>)</span>
+<span id="cb4-20"><a href></a>df.to_csv(<span class="st">&quot;../raw/cbtt_cpi.csv&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section class="slide level2">
 <h2>Three ways to get a series</h2>
@@ -1117,72 +1198,6 @@ Diego A. Guerrero
 <p>The Trinidad pipeline (<code>code/1_data_down.ipynb</code>) uses all three: about <strong>40 CBTT tables</strong> plus FRED, EIA, US, Canadian, EU and UK trade.</p>
 </section>
 <section class="slide level2">
-<h2>The CBTT Data Centre</h2>
-<p>Every table lives at the same kind of address:</p>
-<pre><code>https://www.central-bank.org.tt/data-center-block/?title=&lt;table-name&gt;&amp;id=&lt;n&gt;</code></pre>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Table</th>
-<th><code>id</code></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Consumer price index, monthly</td>
-<td>36</td>
-</tr>
-<tr class="even">
-<td>Fiscal revenue, monthly</td>
-<td>90</td>
-</tr>
-<tr class="odd">
-<td>Fiscal expenditure, monthly</td>
-<td>94</td>
-</tr>
-<tr class="even">
-<td>Fiscal financing, monthly</td>
-<td>102</td>
-</tr>
-</tbody>
-</table>
-<p>One recipe, many tables: change the URL, keep the code.</p>
-</section>
-<section class="slide level2">
-<h2>The recipe: request → table → DataFrame</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-code-line-numbers="1-7|9-12|14-18|20-22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href></a><span class="im">import</span> requests, pandas <span class="im">as</span> pd</span>
-<span id="cb2-2"><a href></a><span class="im">from</span> bs4 <span class="im">import</span> BeautifulSoup</span>
-<span id="cb2-3"><a href></a></span>
-<span id="cb2-4"><a href></a>hdr <span class="op">=</span> {<span class="st">&quot;User-Agent&quot;</span>: <span class="st">&quot;Mozilla/5.0&quot;</span>}          <span class="co"># look like a browser</span></span>
-<span id="cb2-5"><a href></a>url <span class="op">=</span> (<span class="st">&quot;https://www.central-bank.org.tt/data-center-block/&quot;</span></span>
-<span id="cb2-6"><a href></a>       <span class="st">&quot;?title=consumer-price-index-index-values-monthly&amp;id=36&quot;</span>)</span>
-<span id="cb2-7"><a href></a>r <span class="op">=</span> requests.get(url, headers<span class="op">=</span>hdr, timeout<span class="op">=</span><span class="dv">60</span>)</span>
-<span id="cb2-8"><a href></a></span>
-<span id="cb2-9"><a href></a>r.raise_for_status()                          <span class="co"># stop on 403 / 404 / 500</span></span>
-<span id="cb2-10"><a href></a>soup  <span class="op">=</span> BeautifulSoup(r.text, <span class="st">&quot;html.parser&quot;</span>)</span>
-<span id="cb2-11"><a href></a>table <span class="op">=</span> soup.select_one(<span class="st">&quot;table#table_1&quot;</span>)      <span class="co"># the data table on every page</span></span>
-<span id="cb2-12"><a href></a></span>
-<span id="cb2-13"><a href></a>cols <span class="op">=</span> [th.get_text(strip<span class="op">=</span><span class="va">True</span>) <span class="cf">for</span> th <span class="kw">in</span> table.select(<span class="st">&quot;thead th&quot;</span>)]</span>
-<span id="cb2-14"><a href></a>rows <span class="op">=</span> [[td.get_text(strip<span class="op">=</span><span class="va">True</span>) <span class="cf">for</span> td <span class="kw">in</span> tr.select(<span class="st">&quot;td&quot;</span>)]</span>
-<span id="cb2-15"><a href></a>        <span class="cf">for</span> tr <span class="kw">in</span> table.select(<span class="st">&quot;tbody tr&quot;</span>)]</span>
-<span id="cb2-16"><a href></a>df <span class="op">=</span> pd.DataFrame([r <span class="cf">for</span> r <span class="kw">in</span> rows <span class="cf">if</span> r], columns<span class="op">=</span>cols)</span>
-<span id="cb2-17"><a href></a></span>
-<span id="cb2-18"><a href></a>df[<span class="st">&quot;date&quot;</span>] <span class="op">=</span> pd.to_datetime(df[<span class="st">&quot;Date&quot;</span>])</span>
-<span id="cb2-19"><a href></a>df <span class="op">=</span> df.set_index(<span class="st">&quot;date&quot;</span>).drop(columns<span class="op">=</span><span class="st">&quot;Date&quot;</span>).<span class="bu">apply</span>(pd.to_numeric, errors<span class="op">=</span><span class="st">&quot;coerce&quot;</span>)</span>
-<span id="cb2-20"><a href></a>df.to_csv(<span class="st">&quot;../raw/cbtt_cpi.csv&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section class="slide level2">
-<h2>An API in five lines: FRED</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href></a><span class="im">import</span> requests, pandas <span class="im">as</span> pd</span>
-<span id="cb3-2"><a href></a></span>
-<span id="cb3-3"><a href></a>key <span class="op">=</span> <span class="st">&quot;&quot;</span>          <span class="co"># your free FRED key</span></span>
-<span id="cb3-4"><a href></a>url <span class="op">=</span> (<span class="st">&quot;https://api.stlouisfed.org/fred/series/observations&quot;</span></span>
-<span id="cb3-5"><a href></a>       <span class="ss">f&quot;?series_id=DCOILBRENTEU&amp;api_key=</span><span class="sc">{</span>key<span class="sc">}</span><span class="ss">&amp;file_type=json&quot;</span>)</span>
-<span id="cb3-6"><a href></a>obs <span class="op">=</span> requests.get(url, timeout<span class="op">=</span><span class="dv">60</span>).json()[<span class="st">&quot;observations&quot;</span>]</span>
-<span id="cb3-7"><a href></a>brent <span class="op">=</span> pd.DataFrame(obs)[[<span class="st">&quot;date&quot;</span>, <span class="st">&quot;value&quot;</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Keys are personal: never paste one into a file you share or publish.</p>
-</section>
-<section class="slide level2">
 <h2>When the server does not cooperate</h2>
 <h3>Symptoms</h3>
 <ul>
@@ -1203,18 +1218,8 @@ Diego A. Guerrero
 <li>One source → one CSV in <code>raw/</code>, with a <code>date</code> column (first day of the period’s <strong>last</strong> month)</li>
 <li>Never edit <code>raw/</code> by hand: re-run the download</li>
 <li>Write down where each series comes from (<code>meta.csv</code>: <code>file</code>, <code>series</code>, <code>unit</code>)</li>
-<li>Check the result against the source once — a plot is enough</li>
+<li>Check the result against the source once</li>
 </ul>
-</section></section>
-<section>
-<section class="title-slide slide level1 divider center" data-background-color="#003D73">
-<h1>Activities</h1>
-
-</section>
-<section class="slide level2 smaller">
-<h2>Activity 2 — <code>act2_scraping.ipynb</code></h2>
-<p>Kernel: <code>nwcst</code>. Several techniques, each on a source the Trinidad pipeline uses: CBTT HTML tables, the FRED API, link harvesting (EIA, US Census), and the “merge onto the existing CSV” pattern.</p>
-<p><code>LIVE = False</code> runs entirely from bundled snapshots; <code>LIVE = True</code> hits the real sites.</p>
 
 </section></section>
     </div>

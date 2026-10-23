@@ -1,6 +1,6 @@
 ---
-title: "S0 — Environment Check"
-subtitle: "R Nowcasting Training — IDB Caribbean Country Department"
+title: "S0: Environment Check"
+subtitle: "R Nowcasting Training, IDB Caribbean Country Department"
 date: "`r Sys.Date()`"
 output:
   html_document:
@@ -34,7 +34,7 @@ This notebook verifies that your R environment is correctly configured for the t
 
 ---
 
-# Before you start — VS Code setup
+# Before you start: VS Code setup
 
 Before running any code, confirm the following in VS Code:
 
@@ -48,7 +48,7 @@ The first time you install an R package in VS Code, the terminal will ask:
 Would you like to choose a CRAN mirror for this session? (Yes/no/cancel)
 ```
 
-Type `yes` and press Enter. A numbered list of mirrors will appear. Type `0` (for **0-Cloud**, the globally load-balanced default) and press Enter. This only needs to be done once per session — you will not be asked again.
+Type `yes` and press Enter. A numbered list of mirrors will appear. Type `0` (for **0-Cloud**, the globally load-balanced default) and press Enter. This only needs to be done once per session; you will not be asked again.
 
 **3. The R terminal is active**
 You should see an `R` prompt (`>`) in the VS Code terminal panel at the bottom. If you see a plain shell prompt instead, run `R` in the terminal to start an R session.
@@ -57,7 +57,7 @@ You should see an `R` prompt (`>`) in the VS Code terminal panel at the bottom. 
 
 # 1 · Rtools check
 
-`mfbvar` must be compiled from source, which requires Rtools — a Windows build toolchain that is separate from R itself. This chunk verifies it is installed and reachable.
+`mfbvar` must be compiled from source, which requires Rtools, a Windows build toolchain that is separate from R itself. This chunk verifies it is installed and reachable.
 
 ```{r rtools-check}
 if (!requireNamespace("pkgbuild", quietly = TRUE)) {
@@ -65,16 +65,16 @@ if (!requireNamespace("pkgbuild", quietly = TRUE)) {
 }
 
 if (pkgbuild::has_build_tools(debug = FALSE)) {
-  cat("Rtools OK — build tools found\n")
+  cat("Rtools OK: build tools found\n")
 } else {
-  cat("Rtools NOT found — mfbvar cannot be installed without it.\n")
+  cat("Rtools NOT found: mfbvar cannot be installed without it.\n")
   cat("Install it from https://cran.r-project.org/bin/windows/Rtools/ (default options), restart R, rerun this chunk.\n")
 }
 ```
 
 **Expected output:**
 ```
-Rtools OK — build tools found
+Rtools OK: build tools found
 ```
 
 > If you see `Rtools NOT found`, stop here and install Rtools from <https://cran.r-project.org/bin/windows/Rtools/> (the version matching your R), restart R and rerun the chunk. macOS: `xcode-select --install`.
@@ -83,7 +83,7 @@ Rtools OK — build tools found
 
 # 2 · Package installation
 
-This chunk installs any packages that are not yet present. If everything is already installed, it will complete silently in a few seconds. `nowcastDFM` and `mfbvar` are installed from GitHub — this is the step that requires Rtools.
+This chunk installs any packages that are not yet present. If everything is already installed, it will complete silently in a few seconds. `nowcastDFM` and `mfbvar` are installed from GitHub; this is the step that requires Rtools.
 
 ```{r install}
 cran_packages <- c(
@@ -168,16 +168,16 @@ All libraries loaded OK
 
 # 4 · Smoke tests
 
-Each model is fitted on the same small synthetic dataset defined below. The goal is not to produce meaningful forecasts — it is to confirm that the estimation machinery runs end to end on your machine.
+Each model is fitted on the same small synthetic dataset defined below. The goal is not to produce meaningful forecasts; it is to confirm that the estimation machinery runs end to end on your machine.
 
 ## 4.0 Synthetic data
 
-Three series mimicking the Trinidad and Tobago nowcasting setup: quarterly real GDP (`gdp_tto`) and two monthly indicators (`x1_tto`, `x2_tto`). All values are randomly generated — only the structure (frequencies, date range, ragged edge) matches the real data.
+Three series mimicking the Trinidad and Tobago nowcasting setup: quarterly real GDP (`gdp_tto`) and two monthly indicators (`x1_tto`, `x2_tto`). All values are randomly generated; only the structure (frequencies, date range, ragged edge) matches the real data.
 
 ```{r synthetic-data}
 set.seed(42)
 
-# Date range: 2010 Q1 – 2024 Q4 (60 quarters, 180 months)
+# Date range: 2010 Q1 to 2024 Q4 (60 quarters, 180 months)
 dates_q <- seq(as.Date("2010-01-01"), by = "quarter", length.out = 60)
 dates_m <- seq(as.Date("2010-01-01"), by = "month",   length.out = 180)
 
@@ -197,14 +197,14 @@ df_smoke <- data.frame(
   x2_tto  = x2_tto
 )
 
-cat(sprintf("Synthetic data OK — %d monthly rows, %d quarterly obs, 3 series\n",
+cat(sprintf("Synthetic data OK: %d monthly rows, %d quarterly obs, 3 series\n",
             nrow(df_smoke), length(gdp_tto)))
 head(df_smoke)
 ```
 
 **Expected output:**
 ```
-Synthetic data OK — 180 monthly rows, 60 quarterly obs, 3 series
+Synthetic data OK: 180 monthly rows, 60 quarterly obs, 3 series
 ```
 
 ---
@@ -224,12 +224,12 @@ model_midas <- midas_r(
 )
 
 fcst_midas <- tail(fitted(model_midas), 1)
-cat(sprintf("MIDAS OK — in-sample fit (last obs): %.4f\n", fcst_midas))
+cat(sprintf("MIDAS OK: in-sample fit (last obs): %.4f\n", fcst_midas))
 ```
 
 **Expected output:**
 ```
-MIDAS OK — in-sample fit (last obs): [number]
+MIDAS OK: in-sample fit (last obs): [number]
 ```
 
 ## 4.2 MF-BVAR
@@ -263,12 +263,12 @@ fcst_bvar <- predict(model_bvar, pred_bands = NULL) %>%
   pull(fcst) %>%
   mean()
 
-cat(sprintf("BVAR OK — mean forecast across draws: %.4f\n", fcst_bvar))
+cat(sprintf("BVAR OK: mean forecast across draws: %.4f\n", fcst_bvar))
 ```
 
 **Expected output:**
 ```
-BVAR OK — mean forecast across draws: [number]
+BVAR OK: mean forecast across draws: [number]
 ```
 
 # Summary
