@@ -1,74 +1,165 @@
 ---
-title: "S0: Environment Check"
-subtitle: "R Nowcasting Training, IDB Caribbean Country Department"
+title: "S0: Environment check"
+subtitle: "Nowcasting training in R, Inter-American Development Bank / Central Bank of Bolivia"
 date: "`r Sys.Date()`"
-output:
-  html_document:
-    toc: true
-    toc_depth: 3
-    toc_float: true
-    theme: cosmo
-    highlight: github
-    self_contained: true
-    code_folding: show
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
-```
 
 ---
 
 # What this file does
 
-This notebook verifies that your R environment is correctly configured for the training. It checks four things, in order:
+This notebook checks that your R environment is set up correctly for the training. Run the chunks in order:
 
-| Step | What we check |
+| Section | What it does |
 |---|---|
-| 1. VS Code setup | R extension is active and running |
-| 2. Rtools | C++ build toolchain is available (required for `mfbvar`) |
-| 3. Packages | All required libraries load without errors |
-| 4. Smoke tests | Each model runs on synthetic data and returns a forecast |
+| 1. Initial setup | Sets the CRAN mirror, install options and the editor packages (blocking) |
+| 2. Rtools | Checks (or installs) the build toolchain needed by `mfbvar` and `nowcastDFM` |
+| 3. CRAN packages | Installs the training packages available on CRAN |
+| 4. GitHub packages | Installs `nowcastDFM` and `mfbvar` from source |
+| 5. Libraries | Loads each package and reports it as OK, MISSING or BROKEN |
+| 6. Smoke tests and summary | Fits each model on synthetic data and prints the final status |
 
-**How to run it:** Execute each chunk in order using the **▶ Run Cell** button or `Ctrl+Enter`. Expected output is shown below each chunk. If anything fails, read the note in that section before continuing.
+**How to run it:** run each chunk in order with **▶ Run Cell** or `Ctrl+Enter`. The expected output is shown below each chunk. If something fails, read the note for that section before moving on. If you restart R at any point, run chunk 1 again first.
+
+---
+
+# If R does not start in VS Code: link the paths
+
+If the terminal does not show the R prompt (`>`) and `R` is not recognized as a command, VS Code needs to be told where the R executables are. This happens when R was not added to the system PATH during installation.
+
+**Recommended option: run Part 3 of the `act0_env_check.ipynb` notebook first.** That cell (Python kernel, it does not need R to start in VS Code) detects your R installation, writes the `r.rpath` / `r.rterm` keys to your `settings.json` and keeps a backup. Open the notebook, run the Part 3 cell, **close VS Code completely and reopen it**, then continue with this file.
+
+**Manual option:** open an R session (for example from RGui) and run `R.home("bin")` to get the `bin` folder, something like `C:/Program Files/R/R-4.5.1/bin/x64`. Then in VS Code open the command palette with `Ctrl+Shift+P`, select **Preferences: Open User Settings (JSON)**, and add these two entries pointing to your path (adjust the version):
+
+```json
+"r.rpath.windows": "C:/Program Files/R/R-4.5.1/bin/x64/R.exe",
+"r.rterm.windows": "C:/Program Files/R/R-4.5.1/bin/x64/Rterm.exe"
+```
+
+Save (`Ctrl+S`), close and reopen VS Code. R should now start.
+
+> On macOS or Linux the keys are `r.rpath.mac` / `r.rterm.mac` and `r.rpath.linux` / `r.rterm.linux`, with the path returned by `R.home("bin")` on that system. The notebook detects the system and uses the right key automatically.
 
 ---
 
 # Before you start: VS Code setup
 
-Before running any code, confirm the following in VS Code:
+**1. The R extension is installed.** Open the Extensions panel (`Ctrl+Shift+X`) and search for **"R"** by REditorSupport. It should show as installed and enabled.
 
-**1. The R extension is installed**
-Open the Extensions panel (`Ctrl+Shift+X`) and search for **"R"** by REditorSupport. It should show as installed and enabled.
+**2. The `languageserver` popup.** When VS Code activates R, the extension may show a popup: *"The R package 'languageserver' is required to enable R language service features..."*. This is an editor package (autocomplete, signature help), not a training package. If it appears, click **"Yes"**. If you skip it or it never shows up, chunk 1 installs it anyway.
 
-**2. A CRAN mirror is selected**
-The first time you install an R package in VS Code, the terminal will ask:
-
-```
-Would you like to choose a CRAN mirror for this session? (Yes/no/cancel)
-```
-
-Type `yes` and press Enter. A numbered list of mirrors will appear. Type `0` (for **0-Cloud**, the globally load-balanced default) and press Enter. This only needs to be done once per session; you will not be asked again.
-
-**3. The R terminal is active**
-You should see an `R` prompt (`>`) in the VS Code terminal panel at the bottom. If you see a plain shell prompt instead, run `R` in the terminal to start an R session.
+**3. The R terminal is active.** You should see the R prompt (`>`) in the VS Code terminal panel. If you see a regular shell prompt, run `R` in the terminal to start an R session.
 
 ---
 
-# 1 · Rtools check
+# 1 · Initial setup
 
-`mfbvar` must be compiled from source, which requires Rtools, a Windows build toolchain that is separate from R itself. This chunk verifies it is installed and reachable.
+Run this chunk **before any other**: the rest of the notebook depends on it. It sets the CRAN mirror for this session and saves it to your `.Rprofile` for future sessions, sets install options (binaries first, parallel compilation), defines a fast package check and installs the editor packages (`jsonlite`, `languageserver` and `ps`). It is safe to run more than once.
+
+> If R showed `vscode-R could not start the session watcher: there is no package called 'ps'` when it started, this chunk fixes it. After it installs the editor packages, restart the R terminal once (close it with the trash icon and open a new one), then run chunk 1 again and continue.
+
+```{r setup}
+# 1) CRAN mirror for the current session
+options(repos = c(CRAN = "https://cloud.r-project.org"))
+
+# 2) Save it to the user's .Rprofile (future sessions)
+rprofile <- file.path(Sys.getenv("HOME"), ".Rprofile")
+if (!(file.exists(rprofile) && any(grepl("repos", readLines(rprofile, warn = FALSE))))) {
+  # Start on a new line if the file already has content, in case its last line
+  # has no line break (otherwise the new line would be glued onto it)
+  lead <- if (file.exists(rprofile) && file.size(rprofile) > 0) "\n" else ""
+  cat(lead, 'options(repos = c(CRAN = "https://cloud.r-project.org"))\n',
+      file = rprofile, append = TRUE, sep = "")
+  cat("Mirror added to .Rprofile:", rprofile, "\n")
+} else {
+  cat(".Rprofile already sets a mirror; left unchanged.\n")
+}
+
+# 3) Install options: prefer binaries (avoids compiling on Windows/macOS)
+#    and compile in parallel when there is no other choice
+options(install.packages.compile.from.source = "never",
+        Ncpus = max(1L, parallel::detectCores() - 1L))
+
+# 4) Fast install check: does not load the package (requireNamespace does)
+has_pkg <- function(p) nzchar(system.file(package = p))
+
+# 5) Editor packages: languageserver (autocomplete, help), jsonlite and ps
+#    (the session watcher that shows plots and the workspace in VS Code)
+editor_pkgs <- c("jsonlite", "languageserver", "ps")
+editor_missing <- editor_pkgs[!vapply(editor_pkgs, has_pkg, logical(1))]
+if (length(editor_missing) > 0) {
+  install.packages(editor_missing)
+  cat("Editor packages installed. Restart the R terminal once so VS Code picks them up.\n")
+}
+
+cat("Initial setup done. Active mirror:", getOption("repos")[["CRAN"]], "\n")
+```
+
+**Expected output (first run):**
+```
+Mirror added to .Rprofile: C:/Users/user/Documents/.Rprofile
+Initial setup done. Active mirror: https://cloud.r-project.org
+```
+
+---
+
+# 2 · Rtools check
+
+`mfbvar` and `nowcastDFM` are compiled from source, which requires Rtools45 (the Rtools version for R 4.5.x), a Windows build toolchain separate from R. This chunk checks whether it is installed and, if not, downloads and launches the official CRAN installer.
 
 ```{r rtools-check}
-if (!requireNamespace("pkgbuild", quietly = TRUE)) {
-  install.packages("pkgbuild")
-}
+if (!has_pkg("pkgbuild")) install.packages("pkgbuild")
+
+rtools_page <- "https://cran.r-project.org/bin/windows/Rtools/rtools45/rtools.html"
 
 if (pkgbuild::has_build_tools(debug = FALSE)) {
   cat("Rtools OK: build tools found\n")
+} else if (.Platform$OS.type == "windows") {
+  cat("Rtools NOT found. Downloading the Rtools45 installer from CRAN...\n")
+
+  # The .exe name changes between builds, so it is read from the CRAN index
+  files_dir <- "https://cran.r-project.org/bin/windows/Rtools/rtools45/files/"
+  exe <- tryCatch({
+    idx <- paste(readLines(files_dir, warn = FALSE), collapse = "\n")
+    hit <- regmatches(idx, regexpr("rtools45-[0-9]+-[0-9]+\\.exe", idx))
+    if (length(hit) == 0) stop("installer not found in index")
+    hit[1]
+  }, error = function(e) NA_character_)
+
+  # The installer is ~480 MB: R's default 60-second timeout is not enough
+  options(timeout = max(1200, getOption("timeout")))
+
+  dest <- if (!is.na(exe)) file.path(tempdir(), exe) else NA_character_
+  ok <- !is.na(exe) && tryCatch({
+    download.file(paste0(files_dir, exe), dest, mode = "wb")
+    TRUE
+  }, error = function(e) {
+    unlink(dest)   # drop the partial file
+    cat("Download failed:", conditionMessage(e), "\n")
+    FALSE
+  })
+
+  if (ok) {
+    # Silent install with default options; Windows only asks for admin permission (UAC)
+    cat("Installing Rtools45 silently. Click 'Yes' on the Windows permission prompt\n",
+        "and wait, this can take a few minutes...\n", sep = "")
+    system2("powershell", c("-NoProfile", "-Command", shQuote(sprintf(
+      "Start-Process '%s' -ArgumentList '/VERYSILENT','/SUPPRESSMSGBOXES','/NORESTART' -Verb RunAs -Wait",
+      normalizePath(dest)), type = "cmd")))
+
+    if (pkgbuild::has_build_tools(debug = FALSE)) {
+      cat("Rtools OK: installed and detected\n")
+    } else {
+      cat("Install finished, but R does not detect Rtools yet.\n",
+          "Restart R (or VS Code) and run chunks 1 and 2 again.\n", sep = "")
+    }
+  } else {
+    cat("Could not download the installer automatically. Install it from:\n  ",
+        rtools_page, "\n", sep = "")
+    utils::browseURL(rtools_page)
+  }
 } else {
-  cat("Rtools NOT found: mfbvar cannot be installed without it.\n")
-  cat("Install it from https://cran.r-project.org/bin/windows/Rtools/ (default options), restart R, rerun this chunk.\n")
+  cat("Rtools is Windows only. On macOS/Linux install the system build tools (Xcode Command Line Tools or build-essential).\n")
 }
 ```
 
@@ -77,231 +168,243 @@ if (pkgbuild::has_build_tools(debug = FALSE)) {
 Rtools OK: build tools found
 ```
 
-> If you see `Rtools NOT found`, stop here and install Rtools from <https://cran.r-project.org/bin/windows/Rtools/> (the version matching your R), restart R and rerun the chunk. macOS: `xcode-select --install`.
+> If Rtools is missing, the chunk installs it silently with the default options: just accept the Windows permission prompt. If it then asks you to restart, restart R (or VS Code) and run chunks 1 and 2 again until you see `Rtools OK`. If the download fails, the chunk opens the Rtools page so you can install it from the browser. Rtools45 requires R 4.5.x; if your R is older, update it first.
 
 ---
 
-# 2 · Package installation
+# 3 · CRAN packages
 
-This chunk installs any packages that are not yet present. If everything is already installed, it will complete silently in a few seconds. `nowcastDFM` and `mfbvar` are installed from GitHub; this is the step that requires Rtools.
+Installs the CRAN packages that are not yet present. If everything is installed, it finishes in a second.
 
-```{r install}
-cran_packages <- c(
-  "tidyverse",
-  "lubridate",
-  "openxlsx",
-  "Rmisc",
-  "imputeTS",
-  "midasr",
-  "midasml",
-  "glmnet",
-  "rpart",
-  "rpart.plot",
-  "randomForest",
-  "xgboost",
-  "devtools",
-  "jsonlite",
-  "pkgbuild"
-)
+```{r install-cran}
+cran_packages <- c("tidyverse", "lubridate", "openxlsx", "Rmisc",
+                   "imputeTS", "midasr", "remotes", "knitr")
 
-# Install any missing CRAN packages
-missing <- cran_packages[!sapply(cran_packages, requireNamespace, quietly = TRUE)]
+missing <- cran_packages[!vapply(cran_packages, has_pkg, logical(1))]
 if (length(missing) > 0) {
   cat("Installing:", paste(missing, collapse = ", "), "\n")
   install.packages(missing)
-} else {
-  cat("All CRAN packages already installed\n")
 }
 
-# nowcastDFM is not on CRAN: install it from GitHub
-if (!requireNamespace("nowcastDFM", quietly = TRUE)) {
-  cat("Installing nowcastDFM from GitHub...\n")
-  devtools::install_github("dhopp1/nowcastDFM")
+# Confirm the install worked (install.packages only warns on failure)
+still_missing <- cran_packages[!vapply(cran_packages, has_pkg, logical(1))]
+if (length(still_missing) == 0) {
+  cat("All CRAN packages installed\n")
 } else {
-  cat("nowcastDFM already installed\n")
-}
-
-# Install mfbvar from GitHub if not present
-if (!requireNamespace("mfbvar", quietly = TRUE)) {
-  cat("Installing mfbvar from GitHub...\n")
-  devtools::install_github("ankargren/mfbvar")
-} else {
-  cat("mfbvar already installed\n")
+  cat("FAILED to install:", paste(still_missing, collapse = ", "),
+      "\nRead the messages above and run this chunk again.\n")
 }
 ```
 
 ---
 
-# 3 · Library check
+# 4 · GitHub packages
 
-This chunk loads every package used across both training scripts. A clean run with no red error messages means your environment is complete.
+`nowcastDFM` and `mfbvar` are not on CRAN: they are compiled from source on GitHub, which is why they need Rtools (section 2) and `remotes` (section 3). If one fails, the other still runs. `upgrade = "never"` skips the interactive prompt about updating other packages, so the install does not hang waiting for input.
+
+> Compiling `mfbvar` can take several minutes. The chunk compiles its C++ files on several cores at once to speed this up. Let it finish before running the next chunk.
+
+```{r install-github}
+gh_packages <- c(nowcastDFM = "dhopp1/nowcastDFM", mfbvar = "ankargren/mfbvar")
+
+# Compile each package's C++ files in parallel (Ncpus from chunk 1, capped at 4:
+# every parallel compile of mfbvar's C++ code uses a lot of RAM)
+Sys.setenv(MAKEFLAGS = paste0("-j", min(getOption("Ncpus", 1L), 4L)))
+
+for (p in names(gh_packages)) {
+  if (has_pkg(p)) { cat(p, "is already installed\n"); next }
+  cat("Installing", p, "from GitHub...\n")
+  tryCatch(remotes::install_github(gh_packages[[p]], upgrade = "never"),
+           error = function(e) cat("ERROR installing", p, ":", conditionMessage(e), "\n"))
+}
+
+# Confirm the install worked
+gh_missing <- names(gh_packages)[!vapply(names(gh_packages), has_pkg, logical(1))]
+if (length(gh_missing) == 0) {
+  cat("All GitHub packages installed\n")
+} else {
+  cat("FAILED to install:", paste(gh_missing, collapse = ", "),
+      "\nCheck that chunk 2 shows 'Rtools OK' and run this chunk again.\n")
+}
+```
+
+---
+
+# 5 · Library check
+
+Loads each package used in the training scripts, one by one, and reports whether it is `OK`, `MISSING` (not installed) or `BROKEN` (installed but fails to load, for example after an interrupted install). A failure does not stop the check, so you see the status of every package at once.
 
 ```{r libraries}
-library(tidyverse)    # data manipulation and plotting
-library(lubridate)    # date arithmetic
-library(openxlsx)     # Excel import/export (Session 2b)
-library(Rmisc)        # CI(): confidence intervals for the BVAR prior
-library(nowcastDFM)   # dfm(), predict_dfm(): Dynamic Factor Model
-library(imputeTS)     # na_mean(): missing value imputation
-library(midasr)       # midas_r(), mls(): MIDAS regression
-library(midasml)      # cv.sglfit(): MIDAS-ML, sparse-group LASSO (Activity 9)
-library(glmnet)       # Ridge, LASSO, Elastic Net (Activity 6)
-library(rpart)        # decision tree (Activity 7)
-library(rpart.plot)   # drawing the tree (Activity 7)
-library(randomForest) # Random Forest (Activity 7)
-library(xgboost)      # Gradient Boosting (Activity 7)
-library(mfbvar)       # set_prior(), estimate_mfbvar(): MF-BVAR
-library(jsonlite)     # JSON parsing utilities
-library(devtools)     # GitHub package installation
-
-cat("All libraries loaded OK\n")
-```
-
-**Expected output:**
-```
-All libraries loaded OK
-```
-
-> **Note on `jsonlite`:** In some VS Code configurations a warning about `jsonlite` appears when starting R. This does not affect any part of the training workflow. Installing it explicitly (done above) resolves the warning in most cases. If it persists, ignore it.
-
----
-
-# 4 · Smoke tests
-
-Each model is fitted on the same small synthetic dataset defined below. The goal is not to produce meaningful forecasts; it is to confirm that the estimation machinery runs end to end on your machine.
-
-## 4.0 Synthetic data
-
-Three series mimicking the Trinidad and Tobago nowcasting setup: quarterly real GDP (`gdp_tto`) and two monthly indicators (`x1_tto`, `x2_tto`). All values are randomly generated; only the structure (frequencies, date range, ragged edge) matches the real data.
-
-```{r synthetic-data}
-set.seed(42)
-
-# Date range: 2010 Q1 to 2024 Q4 (60 quarters, 180 months)
-dates_q <- seq(as.Date("2010-01-01"), by = "quarter", length.out = 60)
-dates_m <- seq(as.Date("2010-01-01"), by = "month",   length.out = 180)
-
-# Quarterly GDP (Trinidad and Tobago-style: cumulative growth path)
-gdp_tto <- cumsum(rnorm(60, mean = 0.4, sd = 1.2))
-
-# Monthly indicators (correlated with GDP via shared factor)
-factor  <- rep(gdp_tto, each = 3) + rnorm(180, sd = 0.5)
-x1_tto  <- factor + rnorm(180, sd = 0.8)   # e.g. tourist arrivals proxy
-x2_tto  <- factor + rnorm(180, sd = 1.1)   # e.g. exports proxy
-
-# Combined monthly dataframe (quarterly GDP repeated at monthly frequency)
-df_smoke <- data.frame(
-  date    = dates_m,
-  gdp_tto = rep(gdp_tto, each = 3),   # quarterly values held constant within quarter
-  x1_tto  = x1_tto,
-  x2_tto  = x2_tto
+# Package -> what it is used for
+required <- c(
+  tidyverse  = "data manipulation and plots",
+  lubridate  = "date arithmetic",
+  openxlsx   = "Excel import/export (Session 2b)",
+  Rmisc      = "CI(): confidence intervals for the BVAR prior",
+  nowcastDFM = "dfm(), predict_dfm(): Dynamic Factor Model",
+  imputeTS   = "na_mean(): missing value imputation",
+  midasr     = "midas_r(), mls(): MIDAS regression",
+  mfbvar     = "set_prior(), estimate_mfbvar(): MF-BVAR",
+  jsonlite   = "JSON parsing utilities",
+  remotes    = "installing packages from GitHub"
 )
 
-cat(sprintf("Synthetic data OK: %d monthly rows, %d quarterly obs, 3 series\n",
-            nrow(df_smoke), length(gdp_tto)))
-head(df_smoke)
-```
-
-**Expected output:**
-```
-Synthetic data OK: 180 monthly rows, 60 quarterly obs, 3 series
-```
-
----
-
-## 4.1 MIDAS
-
-```{r smoke-midas}
-# mls(x, 0:3, 3) uses 4 monthly lags at ratio 3 = 12 monthly obs consumed.
-# We align by trimming: keep quarters 5:60 for y, months 1:168 for x
-# (168 = 56 quarters * 3 months), so both vectors have length 56.
-y_midas <- gdp_tto[5:60]        # 56 quarterly obs
-x_midas <- x1_tto[1:168]        # 56 * 3 = 168 monthly obs
-
-model_midas <- midas_r(
-  y_midas ~ mls(x_midas, 0:3, 3, nealmon),
-  start = list(x_midas = c(1, -0.5))
-)
-
-fcst_midas <- tail(fitted(model_midas), 1)
-cat(sprintf("MIDAS OK: in-sample fit (last obs): %.4f\n", fcst_midas))
-```
-
-**Expected output:**
-```
-MIDAS OK: in-sample fit (last obs): [number]
-```
-
-## 4.2 MF-BVAR
-
-```{r smoke-bvar}
-# mfbvar requires ts objects: monthly series first, quarterly last
-x1_ts  <- ts(x1_tto, start = c(2010, 1), frequency = 12)
-x2_ts  <- ts(x2_tto, start = c(2010, 1), frequency = 12)
-gdp_ts <- ts(gdp_tto, start = c(2010, 1), frequency = 4)
-
-mf_list <- list(x1_tto = x1_ts, x2_tto = x2_ts, gdp_tto = gdp_ts)
-
-prior <- set_prior(Y = mf_list, n_lags = 3, n_reps = 50,
-                   block_exo = "gdp_tto")
-
-c_interval      <- t(sapply(mf_list,
-                   function(s) CI(na.omit(as.numeric(s)), ci = 0.95)))
-prior_intervals <- c_interval[, c("upper", "lower")]
-moments         <- interval_to_moments(prior_intervals)
-
-prior <- update_prior(prior,
-                      d               = "intercept",
-                      prior_psi_mean  = moments$prior_psi_mean,
-                      prior_psi_Omega = moments$prior_psi_Omega)
-prior <- update_prior(prior, n_fcst = 4)
-
-model_bvar <- estimate_mfbvar(prior, prior = "minn", variance = "iw")
-
-fcst_bvar <- predict(model_bvar, pred_bands = NULL) %>%
-  dplyr::filter(variable == "gdp_tto") %>%
-  pull(fcst) %>%
-  mean()
-
-cat(sprintf("BVAR OK: mean forecast across draws: %.4f\n", fcst_bvar))
-```
-
-**Expected output:**
-```
-BVAR OK: mean forecast across draws: [number]
-```
-
-# Summary
-
-Run this chunk last. It gives a single-glance overview of what passed.
-
-```{r summary}
-results <- list(
-  "Rtools"    = pkgbuild::has_build_tools(debug = FALSE),
-  "Libraries" = all(sapply(c("tidyverse","lubridate","openxlsx","Rmisc",
-                              "nowcastDFM","imputeTS","midasr","mfbvar",
-                              "jsonlite","midasml","glmnet","rpart",
-                              "rpart.plot","randomForest","xgboost"), requireNamespace, quietly = TRUE)),
-  "MIDAS"     = exists("fcst_midas"),
-  "BVAR"      = exists("fcst_bvar")
-)
-
-cat("=== Environment Check Summary ===\n")
-for (item in names(results)) {
-  status <- if (isTRUE(results[[item]])) "OK" else "FAILED"
-  cat(sprintf("  %-12s %s\n", item, status))
+# Real check: actually load each package. remotes and jsonlite are only loaded,
+# not attached, since the session does not need them.
+check_pkg <- function(p) {
+  if (!has_pkg(p)) return("MISSING")
+  tryCatch({
+    if (p %in% c("remotes", "jsonlite")) loadNamespace(p)
+    else suppressPackageStartupMessages(library(p, character.only = TRUE))
+    "OK"
+  }, error = function(e) paste("BROKEN:", conditionMessage(e)))
 }
-cat("=================================\n")
+
+lib_status <- vapply(names(required), check_pkg, character(1))
+for (p in names(lib_status)) cat(sprintf("  %-11s %s\n", p, lib_status[[p]]))
+
+libs_ok <- all(lib_status == "OK")
+if (libs_ok) {
+  cat("\nAll libraries loaded successfully\n")
+} else {
+  if (any(lib_status == "MISSING"))
+    cat("\nMISSING: go back to sections 3 and 4.\n")
+  if (any(startsWith(lib_status, "BROKEN")))
+    cat("BROKEN: close VS Code and reinstall those packages from a fresh RGui session.\n")
+}
 ```
 
 **Expected output:**
 ```
-=== Environment Check Summary ===
-  Rtools       OK
-  Libraries    OK
-  MIDAS        OK
-  BVAR         OK
+  tidyverse   OK
+  lubridate   OK
+  ...
+  remotes     OK
+
+All libraries loaded successfully
+```
+
+> **Note on `jsonlite`:** in some VS Code setups a warning about `jsonlite` appears when R starts. It does not affect the training. Installing it explicitly (chunk 1) usually removes the warning; if it persists, ignore it.
+
+---
+
+# 6 · Smoke tests and summary
+
+This chunk builds a synthetic dataset, fits the three models on it and prints the final summary. The goal is not an economically meaningful forecast, only to confirm that each estimation runs end to end on your machine. Each model runs independently: if one fails, the others still run and the error message is shown next to the failing model. When you run the chunk again after fixing a problem, models that already passed are skipped and only the failed ones run again. To force a full rerun, run `rm(smoke_cache)` first.
+
+The data mimic Bolivia's nowcasting setup: quarterly real GDP (`gdp_bol`) and two monthly indicators (`x1_bol`, `x2_bol`). All values are random; only the structure (frequencies, date range) replicates the real data.
+
+```{r smoke-tests}
+# ---- Synthetic data: 2010 Q1 to 2024 Q4 (60 quarters, 180 months) ----
+set.seed(42)
+dates_m <- seq(as.Date("2010-01-01"), by = "month", length.out = 180)
+gdp_bol <- cumsum(rnorm(60, mean = 0.4, sd = 1.2))            # quarterly GDP
+factor  <- rep(gdp_bol, each = 3) + rnorm(180, sd = 0.5)      # shared factor
+x1_bol  <- factor + rnorm(180, sd = 0.8)                      # e.g. tourist arrivals proxy
+x2_bol  <- factor + rnorm(180, sd = 1.1)                      # e.g. exports proxy
+
+# Cache of models that already passed in this session (reset with rm(smoke_cache))
+if (!exists("smoke_cache")) smoke_cache <- c(MIDAS = NA_real_, BVAR = NA_real_, DFM = NA_real_)
+
+# Runs one model, prints OK/FAILED and returns the forecast (NA if it fails).
+# If the model already passed, it is skipped: expr is never evaluated.
+run_smoke <- function(label, expr) {
+  if (!is.na(smoke_cache[[label]])) {
+    cat(sprintf("  %-6s OK (skipped, passed before), forecast: %.4f\n", label, smoke_cache[[label]]))
+    return(smoke_cache[[label]])
+  }
+  out <- tryCatch({
+    v <- as.numeric(expr)
+    if (length(v) != 1 || !is.finite(v)) stop("model ran but did not return a valid forecast")
+    v
+  }, error = function(e) e)
+  if (inherits(out, "error")) {
+    cat(sprintf("  %-6s FAILED: %s\n", label, conditionMessage(out)))
+    NA_real_
+  } else {
+    cat(sprintf("  %-6s OK, forecast: %.4f\n", label, out))
+    smoke_cache[[label]] <<- out
+    out
+  }
+}
+
+cat("=== Smoke tests ===\n")
+fcst <- c(
+  # ---- MIDAS ----
+  # mls(x, 0:3, 3) uses 4 monthly lags with ratio 3 = 12 monthly obs. consumed.
+  # Quarters 5:60 for y and months 1:168 for x, so both have length 56.
+  MIDAS = run_smoke("MIDAS", {
+    y_midas <- gdp_bol[5:60]
+    x_midas <- x1_bol[1:168]
+    m <- midas_r(y_midas ~ mls(x_midas, 0:3, 3, nealmon),
+                 start = list(x_midas = c(1, -0.5)))
+    tail(fitted(m), 1)
+  }),
+
+  # ---- MF-BVAR ----
+  # mfbvar takes ts objects: monthly series first, quarterly last
+  BVAR = run_smoke("BVAR", {
+    mf_list <- list(x1_bol  = ts(x1_bol,  start = c(2010, 1), frequency = 12),
+                    x2_bol  = ts(x2_bol,  start = c(2010, 1), frequency = 12),
+                    gdp_bol = ts(gdp_bol, start = c(2010, 1), frequency = 4))
+    prior <- set_prior(Y = mf_list, n_lags = 3, n_reps = 50, block_exo = "gdp_bol")
+    ci <- t(sapply(mf_list, function(s) CI(na.omit(as.numeric(s)), ci = 0.95)))
+    moments <- interval_to_moments(ci[, c("upper", "lower")])
+    prior <- update_prior(prior, d = "intercept",
+                          prior_psi_mean  = moments$prior_psi_mean,
+                          prior_psi_Omega = moments$prior_psi_Omega,
+                          n_fcst = 4)
+    m <- estimate_mfbvar(prior, prior = "minn", variance = "iw")
+    predict(m, pred_bands = NULL) %>%
+      dplyr::filter(variable == "gdp_bol") %>%
+      dplyr::pull(fcst) %>%
+      mean()
+  }),
+
+  # ---- DFM ----
+  # nowcastDFM works at monthly frequency: quarterly GDP goes in the third month
+  # of each quarter and is NA otherwise. nowcastDFM 1.0.0 expects monthly columns
+  # first and quarterly last; otherwise it fails with "replacement has length zero".
+  DFM = run_smoke("DFM", {
+    df_dfm <- data.frame(
+      date    = dates_m,
+      x1_bol  = x1_bol,
+      x2_bol  = x2_bol,
+      gdp_bol = ifelse(month(dates_m) %in% c(3, 6, 9, 12),
+                       rep(gdp_bol, each = 3), NA)
+    )
+    blocks <- data.frame(global = rep(1, ncol(df_dfm) - 1))   # single global factor
+    m <- dfm(df_dfm, blocks = blocks, p = 1)
+    tail(predict_dfm(df_dfm, m, months_ahead = 1, lag = 0)$gdp_bol, 1)
+  })
+)
+
+# ---- Summary ----
+# Rtools is checked directly, so the line is right even after an R restart.
+# Libraries reuses chunk 5, which the models need in the same session anyway.
+status <- c(Rtools    = pkgbuild::has_build_tools(debug = FALSE),
+            Libraries = exists("libs_ok") && isTRUE(libs_ok),
+            !is.na(fcst))
+
+cat("\n=== Environment check summary ===\n",
+    sprintf("  %-10s %s\n", names(status), ifelse(status, "OK", "FAILED")),
+    "=================================\n", sep = "")
+```
+
+**Expected output:**
+```
+=== Smoke tests ===
+  MIDAS  OK, forecast: [number]
+  BVAR   OK, forecast: [number]
+  DFM    OK, forecast: [number]
+
+=== Environment check summary ===
+  Rtools     OK
+  Libraries  OK
+  MIDAS      OK
+  BVAR       OK
+  DFM        OK
 =================================
 ```
 
-> If any line shows `FAILED`, scroll up to the corresponding section and read the note. All four must show `OK` before starting the training exercises.
+> If any line shows `FAILED`, read the error message printed next to that model and go back to the matching section. All five must show `OK` before starting the training exercises.
