@@ -48,13 +48,11 @@ Then run these lines, one at a time:
 
     conda env create -f environment.yml
     conda activate nwcst
-    python -m ipykernel install --user --name nwcst
 
     conda deactivate
 
     conda env create -f environment-geo.yml
     conda activate geo
-    python -m ipykernel install --user --name geo
 
 --------------------------------------------------------------------
  STEP 5. Accounts and API keys
