@@ -1,6 +1,6 @@
 ---
 title: "S0: Environment check"
-subtitle: "Nowcasting training in R, Inter-American Development Bank / Central Bank of Bolivia"
+subtitle: "Nowcasting training in R, Inter-American Development Bank / Central Bank of Trinidad and Tobago"
 date: "`r Sys.Date()`"
 ---
 
@@ -292,16 +292,16 @@ All libraries loaded successfully
 
 This chunk builds a synthetic dataset, fits the three models on it and prints the final summary. The goal is not an economically meaningful forecast, only to confirm that each estimation runs end to end on your machine. Each model runs independently: if one fails, the others still run and the error message is shown next to the failing model. When you run the chunk again after fixing a problem, models that already passed are skipped and only the failed ones run again. To force a full rerun, run `rm(smoke_cache)` first.
 
-The data mimic Bolivia's nowcasting setup: quarterly real GDP (`gdp_bol`) and two monthly indicators (`x1_bol`, `x2_bol`). All values are random; only the structure (frequencies, date range) replicates the real data.
+The data mimic Trinidad and Tobago's nowcasting setup: quarterly real GDP (`gdp_tto`) and two monthly indicators (`x1_tto`, `x2_tto`). All values are random; only the structure (frequencies, date range) replicates the real data.
 
 ```{r smoke-tests}
 # ---- Synthetic data: 2010 Q1 to 2024 Q4 (60 quarters, 180 months) ----
 set.seed(42)
 dates_m <- seq(as.Date("2010-01-01"), by = "month", length.out = 180)
-gdp_bol <- cumsum(rnorm(60, mean = 0.4, sd = 1.2))            # quarterly GDP
-factor  <- rep(gdp_bol, each = 3) + rnorm(180, sd = 0.5)      # shared factor
-x1_bol  <- factor + rnorm(180, sd = 0.8)                      # e.g. tourist arrivals proxy
-x2_bol  <- factor + rnorm(180, sd = 1.1)                      # e.g. exports proxy
+gdp_tto <- cumsum(rnorm(60, mean = 0.4, sd = 1.2))            # quarterly GDP
+factor  <- rep(gdp_tto, each = 3) + rnorm(180, sd = 0.5)      # shared factor
+x1_tto  <- factor + rnorm(180, sd = 0.8)                      # e.g. tourist arrivals proxy
+x2_tto  <- factor + rnorm(180, sd = 1.1)                      # e.g. exports proxy
 
 # Cache of models that already passed in this session (reset with rm(smoke_cache))
 if (!exists("smoke_cache")) smoke_cache <- c(MIDAS = NA_real_, BVAR = NA_real_, DFM = NA_real_)
@@ -334,8 +334,8 @@ fcst <- c(
   # mls(x, 0:3, 3) uses 4 monthly lags with ratio 3 = 12 monthly obs. consumed.
   # Quarters 5:60 for y and months 1:168 for x, so both have length 56.
   MIDAS = run_smoke("MIDAS", {
-    y_midas <- gdp_bol[5:60]
-    x_midas <- x1_bol[1:168]
+    y_midas <- gdp_tto[5:60]
+    x_midas <- x1_tto[1:168]
     m <- midas_r(y_midas ~ mls(x_midas, 0:3, 3, nealmon),
                  start = list(x_midas = c(1, -0.5)))
     tail(fitted(m), 1)
@@ -344,10 +344,10 @@ fcst <- c(
   # ---- MF-BVAR ----
   # mfbvar takes ts objects: monthly series first, quarterly last
   BVAR = run_smoke("BVAR", {
-    mf_list <- list(x1_bol  = ts(x1_bol,  start = c(2010, 1), frequency = 12),
-                    x2_bol  = ts(x2_bol,  start = c(2010, 1), frequency = 12),
-                    gdp_bol = ts(gdp_bol, start = c(2010, 1), frequency = 4))
-    prior <- set_prior(Y = mf_list, n_lags = 3, n_reps = 50, block_exo = "gdp_bol")
+    mf_list <- list(x1_tto  = ts(x1_tto,  start = c(2010, 1), frequency = 12),
+                    x2_tto  = ts(x2_tto,  start = c(2010, 1), frequency = 12),
+                    gdp_tto = ts(gdp_tto, start = c(2010, 1), frequency = 4))
+    prior <- set_prior(Y = mf_list, n_lags = 3, n_reps = 50, block_exo = "gdp_tto")
     ci <- t(sapply(mf_list, function(s) CI(na.omit(as.numeric(s)), ci = 0.95)))
     moments <- interval_to_moments(ci[, c("upper", "lower")])
     prior <- update_prior(prior, d = "intercept",
@@ -356,7 +356,7 @@ fcst <- c(
                           n_fcst = 4)
     m <- estimate_mfbvar(prior, prior = "minn", variance = "iw")
     predict(m, pred_bands = NULL) %>%
-      dplyr::filter(variable == "gdp_bol") %>%
+      dplyr::filter(variable == "gdp_tto") %>%
       dplyr::pull(fcst) %>%
       mean()
   }),
@@ -368,14 +368,14 @@ fcst <- c(
   DFM = run_smoke("DFM", {
     df_dfm <- data.frame(
       date    = dates_m,
-      x1_bol  = x1_bol,
-      x2_bol  = x2_bol,
-      gdp_bol = ifelse(month(dates_m) %in% c(3, 6, 9, 12),
-                       rep(gdp_bol, each = 3), NA)
+      x1_tto  = x1_tto,
+      x2_tto  = x2_tto,
+      gdp_tto = ifelse(month(dates_m) %in% c(3, 6, 9, 12),
+                       rep(gdp_tto, each = 3), NA)
     )
     blocks <- data.frame(global = rep(1, ncol(df_dfm) - 1))   # single global factor
     m <- dfm(df_dfm, blocks = blocks, p = 1)
-    tail(predict_dfm(df_dfm, m, months_ahead = 1, lag = 0)$gdp_bol, 1)
+    tail(predict_dfm(df_dfm, m, months_ahead = 1, lag = 0)$gdp_tto, 1)
   })
 )
 
