@@ -65,7 +65,7 @@ FRED (Activity 2)
   2. Request an API key (32 characters, arrives instantly).
   3. Paste it into FRED_API_KEY = "" at the top of activity/act2_scraping.ipynb.
 
-NASA LAADS (Activity 0 Part 2 and Activity 3)
+NASA LAADS (Activity 0 Part 2 and Activity 4)
   1. Register at https://ladsweb.modaps.eosdis.nasa.gov/
   2. Profile -> EULAs -> accept "Meris EULA" and "Sentinel-3 EULA".
   3. Profile -> Applications -> Authorized Apps: find "LAADS Web"

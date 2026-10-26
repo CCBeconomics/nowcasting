@@ -50,7 +50,7 @@ pip install blackmarblepy
 python -m ipykernel install --user --name geo
 
 ====================================================================
- NASA ACCOUNT AND TOKEN (for Activity 3)
+ NASA ACCOUNT AND TOKEN (for Activity 4)
 ====================================================================
 1. Register at https://ladsweb.modaps.eosdis.nasa.gov/
 2. Profile -> EULAs -> accept "Meris EULA" and "Sentinel-3 EULA".

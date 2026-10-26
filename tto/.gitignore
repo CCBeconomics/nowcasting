@@ -27,3 +27,8 @@ output/*
 
 # Worked solutions stay local: never published
 sols/
+
+# Downloads made while running the activities stay local; raw/ ships only the inputs
+raw/*
+!raw/Coordinates.xlsx
+!raw/TT_GTrends_Keywords.csv

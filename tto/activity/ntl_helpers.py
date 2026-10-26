@@ -718,10 +718,10 @@ def raster_to_array(h5_paths, layer, gdf_boundary, out_folder):
     return data, lons, lats
 
 
-def save_fig(fig, P, name, notebook="act3", date_str=None, dpi=150):
+def save_fig(fig, P, name, notebook="act4", date_str=None, dpi=150):
     """Write a figure to output/<YYYYMMDD>/ under the project naming convention:
 
-        output/20260912/20260912 act3 Fig ntl_daily.png
+        output/20260912/20260912 act4 Fig ntl_daily.png
 
     Returns the path. An overnight run then leaves reviewable files behind
     instead of pictures that exist only inside the .ipynb -- which matters here

@@ -6,7 +6,7 @@ the NTL and Google Trends blocks. Edit THIS file, not the notebooks.
 """
 import os
 
-# NASA LAADS DAAC download token. Expires after ~60 days (this one: 2026-11-12).
+# NASA LAADS DAAC download token. Expires after ~60 days.
 # Regenerate at https://ladsweb.modaps.eosdis.nasa.gov/ -> My Account -> Generate Token
 NASA_TOKEN = ""   # paste your own token here (see the install guide)
 
@@ -82,7 +82,7 @@ def ntl_window():
 # ============================================================================
 #  GOOGLE TRENDS (1_data_gtrends)
 # ============================================================================
-GT_KEYWORDS = "TT_GTrends_Keywords.csv"   # in data/: keyword, geo, column
+GT_KEYWORDS = "TT_GTrends_Keywords.csv"   # in raw/: keyword, geo, column
 GT_START    = "2004-01-01"                # Google Trends starts here ("all" on the website)
 
 # ============================================================================
@@ -131,7 +131,7 @@ from datetime import date
 DATA_CSV     = "data.csv"           # monthly panel, quarterly GDP on quarter-end months
 METADATA_CSV = "meta.csv"           # one row per ticker: freq, months_lag, nominal, sa, agg_method
 GDP_CSV      = "gdp.csv"            # quarterly real GDP alone (act5)
-GTRENDS_CSV  = "gtrends.csv"        # Google Trends, monthly (act5)
+GTRENDS_CSV  = "gtrends.csv"        # Google Trends, monthly, in raw/ (made in act3, read by act5)
 NTL_CSV      = "ntl_shape.csv"      # daily country-mean night lights (act5)
 
 # ---- Key series --------------------------------------------------------------
