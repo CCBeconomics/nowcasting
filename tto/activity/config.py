@@ -121,7 +121,7 @@ def derive_paths(d, make=True):
 
 
 # ============================================================================
-# ==== NOWCAST (act5, act10–act12) ====
+# ==== NOWCAST (act5, act9, act11, act12) ====
 # ============================================================================
 # Settings for the build, selection, model and nowcast activities. Adapted from
 # the DC workshop config (2026-08) to Trinidad and Tobago.

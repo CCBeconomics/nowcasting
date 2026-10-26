@@ -1,5 +1,5 @@
 # =============================================================================
-# Activity 9 (R): Classical mixed-frequency models (DFM, MIDAS, MF-BVAR, MIDAS-ML)
+# Activity 10 (R): Classical mixed-frequency models (DFM, MIDAS, MF-BVAR, MIDAS-ML)
 # GDP Growth Nowcasting Workshop, IDB, Port of Spain
 # Tuesday · Block 4 · about 20-30 minutes (the whole script runs in about a minute)
 #
@@ -16,7 +16,7 @@
 #     - MIDAS-ML sparse-group LASSO over all indicators and their lags (midasml)
 #   Section marked YOUR TURN: the MIDAS indicators and number of lags.
 #   The YOUR TURN lines hold a starting value so the script runs end to end;
-#   replace them with your own choice. The worked version is sols/act9_timeseries.R.
+#   replace them with your own choice. The worked version is sols/act10_timeseries.R.
 # =============================================================================
 
 # =============================================================================
@@ -39,7 +39,7 @@ getwd()
 
 set.seed(42)
 
-# --- Helpers (the same in act6, act7 and act9) --------------------------------
+# --- Helpers (the same in act6, act7 and act10) --------------------------------
 
 rmse <- function(observed, predicted) sqrt(mean((observed - predicted)^2))
 
@@ -111,7 +111,7 @@ m %>% filter(date >= as.Date("2023-01-01"), date <= as.Date("2023-06-01")) %>%
 # Benchmark every model must beat: predict the train-sample mean every quarter
 rmse_naive <- rmse(y_test, mean(y_train))
 cat(sprintf("Naive (train mean) test RMSE: %.4f\n", rmse_naive))
-save_result(4, "act9", "Mean (train)", rmse_naive, "naive benchmark: mean GDP growth 2013Q1-2023Q1")
+save_result(4, "act10", "Mean (train)", rmse_naive, "naive benchmark: mean GDP growth 2013Q1-2023Q1")
 
 # =============================================================================
 # 2. DYNAMIC FACTOR MODEL (nowcastDFM)
@@ -175,7 +175,7 @@ pred_dfm <- sapply(test_q, dfm_nowcast)
 rmse_dfm <- rmse(y_test, pred_dfm)
 cat(sprintf("DFM test RMSE: %.4f   (naive: %.4f)\n", rmse_dfm, rmse_naive))
 
-save_result(4, "act9", "DFM", rmse_dfm,
+save_result(4, "act10", "DFM", rmse_dfm,
             "nowcastDFM, 1 global factor, p=1, 15 indicators, fixed on train, Kalman nowcast")
 
 # --- The live nowcast: the ragged edge today --------------------------------------
@@ -263,7 +263,7 @@ pred_midas  <- rowMeans(matrix(midas_preds, nrow = length(test_q)))
 rmse_midas  <- rmse(y_test, pred_midas)
 cat(sprintf("MIDAS test RMSE: %.4f   (naive: %.4f)\n", rmse_midas, rmse_naive))
 
-save_result(4, "act9", "MIDAS", rmse_midas,
+save_result(4, "act10", "MIDAS", rmse_midas,
             sprintf("midasr nealmon, %d monthly lags, avg of %s, fixed on train",
                     n_lags, paste(midas_vars, collapse = "+")))
 
@@ -300,7 +300,7 @@ rmse_bvar <- rmse(y_test, pred_bvar)
 cat(sprintf("MF-BVAR test RMSE: %.4f   (%.0f s)\n", rmse_bvar,
             as.numeric(difftime(Sys.time(), t0, units = "secs"))))
 
-save_result(4, "act9", "MF-BVAR", rmse_bvar,
+save_result(4, "act10", "MF-BVAR", rmse_bvar,
             "mfbvar Minnesota lambda1=0.2, 4 lags, LNG+NTL O&G+credit+GDP, re-estimated each quarter")
 
 # =============================================================================
@@ -334,7 +334,7 @@ kept <- unique(gindex[abs(as.numeric(beta_ml)) > 1e-10])
 cat(sprintf("MIDAS-ML test RMSE: %.4f   indicators kept: %s\n", rmse_ml,
             if (length(kept)) paste(labels[predictors[kept]], collapse = ", ") else "none"))
 
-save_result(4, "act9", "MIDAS-ML", rmse_ml,
+save_result(4, "act10", "MIDAS-ML", rmse_ml,
             "midasml sg-LASSO gamma=0.5, 15 indicators x 6 lags, Legendre deg 2, contiguous 5-fold CV")
 
 # =============================================================================

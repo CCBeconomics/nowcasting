@@ -20,7 +20,8 @@
 **Monday (afternoon): Data: scraping, Google Trends, nighttime lights and the build**
 - [Slides: Web scraping](https://CCBeconomics.github.io/nowcasting/tto/slides/s2_scraping.html) | [Activity 2: Web scraping (FRED, CBTT, Excel)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act2_scraping.ipynb)
 - [Slides: Google Trends](https://CCBeconomics.github.io/nowcasting/tto/slides/s4_gtrends.html) | [Activity 3: Google Trends](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act3_gtrends.ipynb)
-- [Slides: Nighttime lights](https://CCBeconomics.github.io/nowcasting/tto/slides/s3_ntl.html) | [Activity 4: Nighttime lights](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act4_ntl.ipynb) | [config.py](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/config.py) | [ntl_helpers.py](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/ntl_helpers.py) | [Coordinates.xlsx](https://github.com/CCBeconomics/nowcasting/blob/main/tto/raw/Coordinates.xlsx) | [Activity 5: Building the dataset](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act5_build.ipynb)
+- [Slides: Nighttime lights](https://CCBeconomics.github.io/nowcasting/tto/slides/s3_ntl.html) | [Activity 4: Nighttime lights](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act4_ntl.ipynb) | [config.py](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/config.py) | [ntl_helpers.py](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/ntl_helpers.py) | [Coordinates.xlsx](https://github.com/CCBeconomics/nowcasting/blob/main/tto/raw/Coordinates.xlsx)
+- [Activity 5: Building the dataset](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act5_build.ipynb)
 - Data: [TT_GTrends_Keywords.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/raw/TT_GTrends_Keywords.csv) | [data.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/data.csv) | [meta.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/meta.csv)
 
 **Tuesday (morning): Methodology, Block 1 (regularization) and Block 2 (trees)**
@@ -32,10 +33,10 @@
 **Tuesday (afternoon): Block 3 (LSTM), variable selection and a first nowcast**
 - Block 3 | [Theory: LSTM](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_3_lstm.pdf) | [Activity 8: LSTM (Python)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act8_lstm.ipynb)
 - Data: [blocks_monthly.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/blocks_monthly.csv)
-- [Slides: The nowcasting tool](https://CCBeconomics.github.io/nowcasting/tto/slides/s6_tool.html) | [Activity 10: Variable selection and a first nowcast (OLS)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act10_selection.ipynb)
+- [Activity 9: Variable selection and a first nowcast (OLS)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act9_selection.ipynb)
 
 **Wednesday (morning): Block 4 (time-series models) and the nowcast tool**
-- Block 4 | [Theory: DFM, BVAR and MIDAS](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_4_timeseries.pdf) | [Activity 9: Time-series models (R)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act9_timeseries.R)
+- Block 4 | [Theory: DFM, BVAR and MIDAS](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_4_timeseries.pdf) | [Activity 10: Time-series models (R)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act10_timeseries.R)
 - [Activity 11: The nowcast tool](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act11_nwcst.ipynb) | [nwcst_helpers.py](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/nwcst_helpers.py)
 - Every block adds its test RMSE to one scoreboard: `output/workshop_results.csv`
 

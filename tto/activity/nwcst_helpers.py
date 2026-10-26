@@ -701,7 +701,7 @@ def vintage_col_names(lags):
     """Map vintage integers -> forecast_table column names, {lag: name}.
 
     The historical five-vintage grid keeps its legacy names so every stored
-    output/{date}/ table and act9_results.ipynb keep loading unchanged; any
+    output/{date}/ table and act12_results.ipynb keep loading unchanged; any
     other grid gets self-describing p-names ("p-1", "p+0", ...). Single source
     of truth for the vintage column schema -- act8's post-loop cells derive
     their column lists from this instead of hard-coding the five names.
@@ -779,7 +779,7 @@ def forecast_table( pred_values , model_name , specification, values  , dates ) 
     # plot of predictions vs actuals
     # One column per vintage, named by vintage_col_names() -- the historical
     # -2..+2 grid keeps its two_back..two_ahead names, so the on-disk schema
-    # act9_results.ipynb reads is unchanged; other grids no longer KeyError.
+    # act12_results.ipynb reads is unchanged; other grids no longer KeyError.
     names = vintage_col_names(pred_values.keys())
     cols = { "actuals": values }
     for lag, name in names.items():
