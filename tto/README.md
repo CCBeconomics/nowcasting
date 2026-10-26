@@ -31,7 +31,7 @@
 - Data: [blocks_quarterly.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/blocks_quarterly.csv) | [blocks_meta.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/blocks_meta.csv) | [blocks_monthly.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/blocks_monthly.csv)
 
 **Tuesday (afternoon): Methodology, variable selection and a first nowcast**
-- [Slides: Nowcasting methodology](https://CCBeconomics.github.io/nowcasting/tto/slides/s5_methodology.html) | [Nowcasting in the Caribbean (PDF)](https://CCBeconomics.github.io/nowcasting/tto/slides/s5_methodology_caribbean.pdf)
+- [Nowcasting in the Caribbean (PDF)](https://CCBeconomics.github.io/nowcasting/tto/slides/s5_methodology_caribbean.pdf)
 - [Activity 9: Variable selection and a first nowcast (OLS)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act9_selection.ipynb)
 
 **Wednesday (morning): The nowcast tool and Block 4 (time-series models)**
