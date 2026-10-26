@@ -608,10 +608,12 @@ def lagged_target(data, total_lags, metadata, target_variable=target_variable) :
 
 
 def lagged_target_q(data, total_lags, metadata, target_variable=target_variable):
-    """Autoregressive GDP lags, QUARTERLY-INDEXED variant (act6_selection).
+    """Autoregressive GDP lags, QUARTERLY-INDEXED variant (the old act6_selection).
 
-    Deliberate duplicate of lagged_target() above. The two differ, and both are
-    live -- do not merge them:
+    No longer called by fit_ols_flat()/predict_ols_flat(), which now use the
+    vintage-aware lagged_target_v(). Kept so older notebooks still run.
+
+    Deliberate duplicate of lagged_target() above. The two differ:
 
       lagged_target()    blanks the last `months_lag` ROWS and always .shift(1).
                          Used by act8_nwcst's model loop; its numbers are baked
@@ -714,25 +716,64 @@ def vintage_col_names(lags):
     return {l: f"p{l:+d}" for l in lags}
 
 
-def fit_ols_flat(ttrain, metadata, gdp_lags=0, flat_lags=3,
+def fit_factors(train, n_factors, target_variable=target_variable):
+    """Scaler + PCA fitted on the TRAINING predictors only (act9 walkthrough).
+
+    Returns a dict that apply_factors() reuses on every other frame, so the test
+    rows are projected on the training loadings. Re-fitting a PCA on the test
+    frame instead gives factors that can rotate, or flip sign, relative to the
+    ones the model was estimated on. Columns that are entirely missing in the
+    training window are left out (they cannot be scaled).
+    """
+    X = train.drop(columns=["date", target_variable])
+    cols = [c for c in X.columns if X[c].notna().any()]
+    sc = StandardScaler().fit(X[cols])
+    pca = PCA(n_components=n_factors).fit(sc.transform(X[cols]))
+    return {"scaler": sc, "pca": pca, "cols": cols}
+
+
+def apply_factors(data, fitted, target_variable=target_variable):
+    """Project `data` on the factors from fit_factors(); keeps date and the target.
+
+    `data` must already be filled (mean_fill_dataset) and contain the columns
+    the factors were fitted on.
+    """
+    F = fitted["pca"].transform(fitted["scaler"].transform(data[fitted["cols"]]))
+    F = pd.DataFrame(F, index=data.index,
+                     columns=[f"PC_{i}" for i in range(F.shape[1])])
+    return pd.concat([data[["date", target_variable]], F], axis=1)
+
+
+def quarter_rows(data):
+    """Keep quarter-end months only (March, June, September, December): GDP is quarterly."""
+    return data.loc[data.date.dt.month.astype(int).isin([3, 6, 9, 12]), :].reset_index(drop=True)
+
+
+def fit_ols_flat(ttrain, metadata, lag, gdp_lags=0, flat_lags=3,
                  target_variable=target_variable):
-    """OLS that does its own reshaping (act6_selection walkthrough).
+    """OLS that does its own reshaping (act9 walkthrough), for ONE vintage.
 
     Unlike fit_ols(ytrain, xtrain), which expects matrices that are already
-    flattened and lagged, this one takes the raw rolling training frame and
-    performs the whole recipe: flatten the within-quarter months into extra
-    columns, keep quarter-end rows only, append GDP's own lags, then fit.
+    flattened and lagged, this one takes the rolling training frame (factors
+    already computed) and performs the whole recipe: flatten the within-quarter
+    months into extra columns, keep quarter-end rows only, append GDP's own
+    lags, then fit.
+
+    The GDP lags come from lagged_target_v(): at vintage `lag` the latest
+    published GDP is several quarters back (GDP is published with a long delay),
+    and the training rows use exactly that same delay. predict_ols_flat() builds
+    the prediction row the same way, so the model is never trained on last
+    quarter's GDP and then asked to predict without it. Because the delay
+    depends on the vintage, fit once per vintage.
 
     Returns (fitted model, the column names it was trained on).
     """
     transformed_train = flatten_data(ttrain, target_variable, flat_lags)
-    # keep only quarter-end months (March=3, June=6, Sep=9, Dec=12) -- GDP is quarterly
+    transformed_train = quarter_rows(transformed_train)
     transformed_train = (transformed_train
-                         .loc[transformed_train.date.dt.month.astype(int).isin([3, 6, 9, 12]), :]
                          .fillna(transformed_train.mean(numeric_only=True))
-                         .dropna(axis=1)
-                         .reset_index(drop=True))
-    transformed_train = lagged_target_q(transformed_train, gdp_lags, metadata,
+                         .dropna(axis=1))
+    transformed_train = lagged_target_v(transformed_train, gdp_lags, metadata, lag,
                                         target_variable=target_variable)
 
     model = LinearRegression()
@@ -745,11 +786,13 @@ def predict_ols_flat(model, X, train_vars, date, pred_dict, l, metadata,
                      flat_lags=3, gdp_lags=0,
                      target_variable=target_variable):
     """Companion of fit_ols_flat(): applies the SAME reshaping to the test
-    frame, picks the single row for `date`, and appends the nowcast to
-    pred_dict[l]. predict_ols() above assumes X arrives already reshaped.
+    frame (flatten, quarter-end rows, vintage-aware GDP lags for vintage `l`),
+    picks the single row for `date`, and appends the nowcast to pred_dict[l].
+    predict_ols() above assumes X arrives already reshaped.
     """
     Xi = flatten_data(X, target_variable, flat_lags)
-    Xi = lagged_target_q(Xi, gdp_lags, metadata, target_variable=target_variable)
+    Xi = quarter_rows(Xi)
+    Xi = lagged_target_v(Xi, gdp_lags, metadata, l, target_variable=target_variable)
 
     # Select only the single row matching the target date
     Xi = Xi.loc[Xi['date'] == date, :].drop(["date", target_variable], axis=1)
