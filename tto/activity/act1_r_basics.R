@@ -7,7 +7,7 @@
 #   ../data/eia_brent.csv  Brent crude, US$ per barrel, daily
 #   ../data/ntl_shape.csv  night-time lights over the whole country, daily
 #
-# Lines with ___ are for you to complete. The solution is sols/act1_r_basics.R.
+# Lines with ___ are for you to complete. The solution is act1_r_basics_solutions.R.
 # =============================================================================
 
 # =============================================================================
@@ -50,6 +50,14 @@ class(country); class(gdp_2026q1); class(is_island)
 x <- c(10, 20, 30)
 x * 2
 
+# Lists: can hold different types
+x <- list(10, "Brent", 10 < 20)
+str(x)
+
+# Matrices: two-dimensional, one type only
+x <- matrix(c(1, 2, 3, 4, 5, 6), nrow = 3, ncol = 2)
+x
+
 # A data frame: columns of equal length, possibly different types
 df <- data.frame(
   country = c("Trinidad and Tobago", "Barbados", "Jamaica", "Guyana"),
@@ -60,10 +68,21 @@ str(df)
 
 # Selecting
 df$country           # a column, with $
+df["country"]        # a column, with []
 df[1, ]              # first row
 df[1, "country"]     # one cell
 
-# Conditionals and loops
+# Conditionals
+brent <- 65
+if (brent >= 80) {
+  print("High oil price")
+} else if (brent >= 60) {
+  print("Medium oil price")
+} else {
+  print("Low oil price")
+}
+
+# Loops: a for loop over the rows of df, with an if inside
 for (i in 1:nrow(df)) {
   if (df$energy[i]) {
     print(paste(df$country[i], "is an energy exporter"))
@@ -71,6 +90,26 @@ for (i in 1:nrow(df)) {
     print(paste(df$country[i], "is not"))
   }
 }
+
+# A while loop runs as long as the condition is TRUE
+i <- 1
+while (i < 6) {
+  print(i)
+  i <- i + 1
+}
+
+# =============================================================================
+# THE PIPE AND THE TIDYVERSE VERBS
+# =============================================================================
+# %>% feeds the output of one function into the next.
+#   filter() rows, select() columns, rename() a column (new = old), mutate() new columns,
+#   arrange() sort, summarise() collapse rows (by group with group_by())
+
+df %>%
+  filter(energy) %>%
+  mutate(exporter = "energy") %>%
+  arrange(country) %>%
+  select(country, exporter)
 
 # =============================================================================
 # 1. IMPORT THE DATA
@@ -136,6 +175,7 @@ tt <- tt %>%
   mutate(gdp_yoy   = 100 * (gdp   / lag(gdp, 4)   - 1),
          ntl_yoy   = 100 * (ntl   / lag(ntl, 4)   - 1),
          brent_yoy = 100 * (brent / lag(brent, 4) - 1))
+tail(tt %>% select(date, gdp_yoy, ntl_yoy, brent_yoy))
 
 tt %>%
   summarise(avg_gdp_yoy = mean(gdp_yoy, na.rm = TRUE),
@@ -161,13 +201,26 @@ ggplot(tt, aes(x = date, y = gdp)) +
   labs(title = "Trinidad and Tobago: real GDP", x = NULL, y = "TT$ millions, constant prices") +
   theme_minimal()
 
-# Growth rates on one chart: reshape to long format first
-tt %>%
-  select(date, gdp_yoy, ntl_yoy) %>%
-  pivot_longer(-date, names_to = "series", values_to = "yoy") %>%
-  ggplot(aes(x = date, y = yoy, color = series)) +
-  geom_line() +
-  labs(title = "Year-on-year growth, %", x = NULL, y = NULL) +
+# Growth rates on one chart: one geom_line() per series; a label for color inside aes()
+# builds the legend
+ggplot(tt, aes(x = date)) +
+  geom_line(aes(y = gdp_yoy, color = "GDP")) +
+  geom_line(aes(y = ntl_yoy, color = "Night lights")) +
+  labs(title = "Year-on-year growth, %", x = NULL, y = NULL, color = NULL) +
+  theme_minimal()
+
+# Distribution of GDP growth
+ggplot(tt, aes(x = gdp_yoy)) +
+  geom_density(fill = "lightblue", alpha = 0.7, na.rm = TRUE) +
+  labs(title = "Distribution of real GDP growth", x = "Real GDP, YoY %", y = "Density") +
+  theme_minimal()
+
+# Scatter plot with a fitted line: night-time lights and GDP growth
+ggplot(tt, aes(x = ntl_yoy, y = gdp_yoy)) +
+  geom_point(color = "darkred", size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", se = TRUE, color = "black") +
+  labs(title = "Night-time lights and GDP growth",
+       x = "Night-time lights, YoY %", y = "Real GDP, YoY %") +
   theme_minimal()
 
 ### Activity 5: a scatter plot of GDP growth (y) against Brent growth (x), with a fitted line.
