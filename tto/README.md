@@ -34,10 +34,9 @@
 - [Slides: Nowcasting methodology](https://CCBeconomics.github.io/nowcasting/tto/slides/s5_methodology.html) | [Nowcasting in the Caribbean (PDF)](https://CCBeconomics.github.io/nowcasting/tto/slides/s5_methodology_caribbean.pdf)
 - [Activity 9: Variable selection and a first nowcast (OLS)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act9_selection.ipynb)
 
-**Wednesday (morning): Block 4 (time-series models) and the nowcast tool**
-- Block 4 | [Theory: DFM, BVAR and MIDAS](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_4_timeseries.pdf) | [Activity 10: Time-series models (R)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act10_timeseries.R)
-- [Activity 11: The nowcast tool](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act11_nwcst.ipynb) | [nwcst_helpers.py](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/nwcst_helpers.py)
-- Every block adds its test RMSE to one scoreboard: `output/workshop_results.csv`
+**Wednesday (morning): The nowcast tool and Block 4 (time-series models)**
+- [Activity 10: The nowcast tool](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act10_nwcst.ipynb) | [nwcst_helpers.py](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/nwcst_helpers.py)
+- Block 4 | [Theory: DFM, BVAR and MIDAS](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_4_timeseries.pdf) | [Activity 11: Time-series models (R)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act11_timeseries.R)
 
 **Wednesday (afternoon): Results**
 - [Activity 12: Results](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act12_results.ipynb)
@@ -52,7 +51,7 @@ activity/   the notebooks (.ipynb) and R scripts (.R) you work in, plus config.p
 data/       inputs shipped with the course (Trinidad and Tobago panel, GDP, lights, Trends, the block datasets)
 raw/        Coordinates.xlsx; downloads land here when you run the activities
 slides/     the presentations (HTML) and theory notes (PDF)
-output/     written by the activities: the Tuesday scoreboard and the nowcast (Activity 11)
+output/     written by the activities: the model-block scoreboard (workshop_results.csv) and the nowcast (Activity 10)
 ```
 
 Download the repository (green **Code** button → **Download ZIP**), then open the `tto/` folder in VS Code or JupyterLab and run each notebook from `activity/`, so that `../data/` resolves. R scripts: set the working directory to `activity/` first. Kernel `nwcst` for every notebook except Activity 4, which needs `geo`.
