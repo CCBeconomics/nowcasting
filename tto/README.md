@@ -24,14 +24,13 @@
 - [Activity 5: Building the dataset](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act5_build.ipynb)
 - Data: [TT_GTrends_Keywords.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/raw/TT_GTrends_Keywords.csv) | [data.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/data.csv) | [meta.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/meta.csv)
 
-**Tuesday (morning): Block 1 (regularization) and Block 2 (trees)**
+**Tuesday (morning): Block 1 (regularization), Block 2 (trees) and Block 3 (LSTM)**
 - Block 1 | [Theory: Regularization](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_1_regularization.pdf) | [Activity 6: Regularization (Python)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act6_regularization.ipynb) | [Activity 6 (R)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act6_regularization.R)
 - Block 2 | [Theory: Tree-based models](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_2_trees.pdf) | [Activity 7: Trees, random forest, boosting (Python)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act7_trees.ipynb) | [Activity 7 (R)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act7_trees.R)
-- Data: [blocks_quarterly.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/blocks_quarterly.csv) | [blocks_meta.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/blocks_meta.csv)
-
-**Tuesday (afternoon): Block 3 (LSTM), methodology, variable selection and a first nowcast**
 - Block 3 | [Theory: LSTM](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_3_lstm.pdf) | [Activity 8: LSTM (Python)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act8_lstm.ipynb)
-- Data: [blocks_monthly.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/blocks_monthly.csv)
+- Data: [blocks_quarterly.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/blocks_quarterly.csv) | [blocks_meta.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/blocks_meta.csv) | [blocks_monthly.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/blocks_monthly.csv)
+
+**Tuesday (afternoon): Methodology, variable selection and a first nowcast**
 - [Slides: Nowcasting methodology](https://CCBeconomics.github.io/nowcasting/tto/slides/s5_methodology.html) | [Nowcasting in the Caribbean (PDF)](https://CCBeconomics.github.io/nowcasting/tto/slides/s5_methodology_caribbean.pdf)
 - [Activity 9: Variable selection and a first nowcast (OLS)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act9_selection.ipynb)
 
