@@ -1,5 +1,5 @@
 series,ticket,description,unit,freq,months_lag,nominal,sa,agg_method,file,start_date,end_date,obs,definition
-NGDP_PA_R_XDC,RGDP0000,Gross Domestic Product (Production Approach) - Total Economy,Real (constant prices),quarterly,10,0,0,last,cbtt_gdp.csv,2012-03-01,2026-03-01,57.0,Gross Domestic Product (Production Approach) - Total Economy
+NGDP_PA_R_XDC,RGDP0000,Gross Domestic Product (Production Approach) - Total Economy,Real (constant prices),quarterly,6,0,0,last,cbtt_gdp.csv,2012-03-01,2026-03-01,57.0,Gross Domestic Product (Production Approach) - Total Economy
 NearNadir_Composite_Snow_Free,UBML0000,Black Marble Nightlights: Trinidad and Tobago,Radiance,monthly,0,0,0,mean,blk_ntl.csv,2012-01-01,2026-02-01,170.0,Black Marble Nightlights: Trinidad and Tobago
 TTO_CGO_BL_XDC,GCGO1118,Taxes on Income & Profits Business Levy,Nominal (current prices),monthly,3,1,0,mean,cbtt_cgo.csv,2020-10-01,2026-05-01,68.0,Taxes on Income & Profits Business Levy
 TTO_CGO_CGF_XDC,GCGO1181,Income Green Fund,Nominal (current prices),monthly,3,1,0,mean,cbtt_cgo.csv,2020-10-01,2026-05-01,68.0,Income Green Fund
