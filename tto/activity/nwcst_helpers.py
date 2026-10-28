@@ -152,7 +152,15 @@ def lars_variable_ranking(df, target, max_vars=None, test=None, factors=5):
     Chinn, M. D., Meunier, B., & Stumpner, S. (2023). Nowcasting world trade with machine learning: a three-step approach (No. w31419). National Bureau of Economic Research.
     """
     df0 = deepcopy(df)
-    
+
+    # Standardise the predictors first. LARS enters variables by their raw
+    # correlation with the residual, X'r, so without this the series with the
+    # largest numbers win (growth rates of near-zero series, std in the 10,000s),
+    # not the most informative ones. Constant columns stay at 0.
+    preds = [c for c in df0.columns if c != target]
+    sd = df0[preds].std().replace(0, 1)
+    df0[preds] = (df0[preds] - df0[preds].mean()) / sd
+
     selected_order = []
     count = 0
     max_vars = max_vars or (df0.shape[1] - 1)
@@ -703,7 +711,7 @@ def vintage_col_names(lags):
     """Map vintage integers -> forecast_table column names, {lag: name}.
 
     The historical five-vintage grid keeps its legacy names so every stored
-    output/{date}/ table and act12_results.ipynb keep loading unchanged; any
+    output/{date}/ table and act13_results.ipynb keep loading unchanged; any
     other grid gets self-describing p-names ("p-1", "p+0", ...). Single source
     of truth for the vintage column schema -- act8's post-loop cells derive
     their column lists from this instead of hard-coding the five names.
@@ -822,7 +830,7 @@ def forecast_table( pred_values , model_name , specification, values  , dates ) 
     # plot of predictions vs actuals
     # One column per vintage, named by vintage_col_names() -- the historical
     # -2..+2 grid keeps its two_back..two_ahead names, so the on-disk schema
-    # act12_results.ipynb reads is unchanged; other grids no longer KeyError.
+    # act13_results.ipynb reads is unchanged; other grids no longer KeyError.
     names = vintage_col_names(pred_values.keys())
     cols = { "actuals": values }
     for lag, name in names.items():

@@ -1,5 +1,5 @@
 # ============================================================
-# GDP Nowcasting — Activity 11: Classical mixed-frequency models
+# GDP Nowcasting — Activity 12: Classical mixed-frequency models
 # DFM · MIDAS · MF-BVAR — Trinidad and Tobago
 # IDB Caribbean Country Department
 # ============================================================
@@ -130,7 +130,7 @@ pred_dfm <- sapply(test_q, dfm_nowcast)
 rmse_dfm <- rmse(y_test, pred_dfm)
 cat(sprintf("DFM test RMSE: %.4f\n", rmse_dfm))
 
-save_result(4, "act11", "DFM", rmse_dfm,
+save_result(4, "act12", "DFM", rmse_dfm,
             "nowcastDFM, 1 global factor, p=1, 15 indicators, fixed on train")
 
 
@@ -183,7 +183,7 @@ oos_midas  <- rowMeans(sapply(midas_runs, `[[`, "oos"))
 rmse_midas <- rmse(y_test, pred_midas)
 cat(sprintf("MIDAS test RMSE: %.4f\n", rmse_midas))
 
-save_result(4, "act11", "MIDAS", rmse_midas,
+save_result(4, "act12", "MIDAS", rmse_midas,
             sprintf("midasr nealmon, %d monthly lags, avg of %s, fixed on train",
                     n_lags, paste(midas_vars, collapse = "+")))
 
@@ -211,7 +211,7 @@ pred_bvar <- sapply(test_q, bvar_nowcast)
 rmse_bvar <- rmse(y_test, pred_bvar)
 cat(sprintf("MF-BVAR test RMSE: %.4f\n", rmse_bvar))
 
-save_result(4, "act11", "MF-BVAR", rmse_bvar,
+save_result(4, "act12", "MF-BVAR", rmse_bvar,
             "mfbvar Minnesota lambda1=0.2, 4 lags, LNG+NTL O&G+credit+GDP, re-estimated each quarter")
 
 

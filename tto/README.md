@@ -34,12 +34,13 @@
 - [Nowcasting in the Caribbean (PDF)](https://CCBeconomics.github.io/nowcasting/tto/slides/s5_methodology_caribbean.pdf)
 - [Activity 9: Variable selection and a first nowcast (OLS)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act9_selection.ipynb)
 
-**Wednesday (morning): The nowcast tool and Block 4 (time-series models)**
+**Wednesday (morning): The nowcast tool, your own nowcast and Block 4 (time-series models)**
 - [Activity 10: The nowcast tool](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act10_nwcst.ipynb) | [nwcst_helpers.py](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/nwcst_helpers.py)
-- Block 4 | [Theory: DFM, BVAR and MIDAS](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_4_timeseries.pdf) | [Activity 11: Time-series models (R)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act11_timeseries.R)
+- [Activity 11: Your own nowcast (choose the variables and the model)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act11_my_nowcast.ipynb)
+- Block 4 | [Theory: DFM, BVAR and MIDAS](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_4_timeseries.pdf) | [Activity 12: Time-series models (R)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act12_timeseries.R)
 
 **Wednesday (afternoon): Results**
-- [Activity 12: Results](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act12_results.ipynb)
+- [Activity 13: Results](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act13_results.ipynb)
 
 ---
 

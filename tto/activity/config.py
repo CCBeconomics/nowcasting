@@ -121,7 +121,7 @@ def derive_paths(d, make=True):
 
 
 # ============================================================================
-# ==== NOWCAST (act5, act9, act10, act12) ====
+# ==== NOWCAST (act5, act9, act10, act11, act13) ====
 # ============================================================================
 # Settings for the build, selection, model and nowcast activities. Adapted from
 # the DC workshop config (2026-08) to Trinidad and Tobago.
@@ -155,7 +155,7 @@ X13_PATH        = None
 
 # ---- Models and ensemble sizes (small, so act10 runs inside a session) --------
 RUN = {"ols": 1, "olsr": 1, "enet": 1, "lasso": 1,
-       "gbt": 1, "dt": 1, "rf": 1, "lstm": 0}   # LSTM off by default: slow on laptops
+       "gbt": 1, "dt": 1, "rf": 1, "lstm": 1}   # LSTM kept small: ITER_LSTM networks x EPOCH_LSTM epochs
 ITER       = 5
 ITER_LSTM  = 5
 EPOCH_LSTM = 50

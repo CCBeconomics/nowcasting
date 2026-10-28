@@ -35,7 +35,7 @@ getwd()
 
 set.seed(42)
 
-# --- Helpers (the same in act6, act7 and act11) --------------------------------
+# --- Helpers (the same in act6, act7 and act12) --------------------------------
 
 rmse <- function(observed, predicted) sqrt(mean((observed - predicted)^2))
 
