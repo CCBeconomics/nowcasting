@@ -36,7 +36,7 @@
 
 **Wednesday (morning): The nowcast tool, your own nowcast and Block 4 (time-series models)**
 - [Activity 10: The nowcast tool](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act10_nwcst.ipynb) | [nwcst_helpers.py](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/nwcst_helpers.py)
-- [Activity 11: Your own nowcast (choose the variables and the model)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act11_my_nowcast.ipynb)
+- [Activity 11: Your own nowcast (choose the variables, the model and q/q or y/y growth)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act11_my_nowcast.ipynb)
 - Block 4 | [Theory: DFM, BVAR and MIDAS](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_4_timeseries.pdf) | [Activity 12: Time-series models (R)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act12_timeseries.R)
 
 **Wednesday (afternoon): Results**
