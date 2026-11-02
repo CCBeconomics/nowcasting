@@ -44,6 +44,9 @@
 **Wednesday (afternoon): Results**
 - [Activity 13: Results](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act13_results.ipynb)
 
+**The production pipeline**
+- [code/: the pipeline behind the results (data download, build, nowcast)](https://github.com/CCBeconomics/nowcasting/tree/main/tto/code) | [How to run it](https://github.com/CCBeconomics/nowcasting/blob/main/tto/code/README_pipeline.md)
+
 ---
 
 ## Folder layout
@@ -51,6 +54,7 @@
 ```
 install/    environment files and the two act0 checks
 activity/   the notebooks (.ipynb) and the two R scripts (act1, act12) you work in, plus config.py
+code/       the production pipeline: data download, build and nowcast (see code/README_pipeline.md)
 data/       inputs shipped with the course (Trinidad and Tobago panel, GDP, lights, Trends, the block datasets)
 raw/        Coordinates.xlsx; downloads land here when you run the activities
 slides/     the presentations (HTML), the methodology decks and the five theory notes (PDF)
