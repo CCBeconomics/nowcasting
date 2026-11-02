@@ -25,19 +25,21 @@
 - Data: [TT_GTrends_Keywords.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/raw/TT_GTrends_Keywords.csv) | [data.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/data.csv) | [meta.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/meta.csv)
 
 **Tuesday (morning): Block 1 (regularization), Block 2 (trees) and Block 3 (LSTM)**
-- Block 1 | [Theory: Regularization](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_1_regularization.pdf) | [Activity 6: Regularization (Python)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act6_regularization.ipynb) | [Activity 6 (R)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act6_regularization.R)
-- Block 2 | [Theory: Tree-based models](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_2_trees.pdf) | [Activity 7: Trees, random forest, boosting (Python)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act7_trees.ipynb) | [Activity 7 (R)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act7_trees.R)
-- Block 3 | [Theory: LSTM](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_3_lstm.pdf) | [Activity 8: LSTM (Python)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act8_lstm.ipynb)
+- Block 1 | [Theory: Regularization (Ridge, LASSO, Elastic Net)](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_1_regularization.pdf) | [Activity 6: Regularization](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act6_regularization.ipynb)
+- Block 2 | [Theory: Tree-based models (decision trees, random forests, gradient boosting)](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_2_trees.pdf) | [Activity 7: Trees, random forest, boosting](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act7_trees.ipynb)
+- Block 3 | [Theory: LSTM](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_3_lstm.pdf) | [Activity 8: LSTM](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act8_lstm.ipynb)
 - Data: [blocks_quarterly.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/blocks_quarterly.csv) | [blocks_meta.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/blocks_meta.csv) | [blocks_monthly.csv](https://github.com/CCBeconomics/nowcasting/blob/main/tto/data/blocks_monthly.csv)
 
 **Tuesday (afternoon): Methodology, variable selection and a first nowcast**
 - [Nowcasting in the Caribbean (PDF)](https://CCBeconomics.github.io/nowcasting/tto/slides/s5_methodology_caribbean.pdf)
+- [Methodology: Nowcasting Trinidad and Tobago's real GDP growth, the pipeline (PDF)](https://CCBeconomics.github.io/nowcasting/tto/slides/s5_methodology.pdf)
+- [Theory: Pre-selection, how the tool chooses the indicators (PDF)](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_5_preselection.pdf)
 - [Activity 9: Variable selection and a first nowcast (OLS)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act9_selection.ipynb)
 
 **Wednesday (morning): The nowcast tool, your own nowcast and Block 4 (time-series models)**
 - [Activity 10: The nowcast tool](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act10_nwcst.ipynb) | [nwcst_helpers.py](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/nwcst_helpers.py)
 - [Activity 11: Your own nowcast (choose the variables, the model and q/q or y/y growth)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act11_my_nowcast.ipynb)
-- Block 4 | [Theory: DFM, BVAR and MIDAS](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_4_timeseries.pdf) | [Activity 12: Time-series models (R)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act12_timeseries.R)
+- Block 4 | [Theory: DFM, BVAR, MIDAS and MIDAS-ML](https://CCBeconomics.github.io/nowcasting/tto/slides/theory_4_timeseries.pdf) | [Activity 12: Time-series models (R)](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act12_timeseries.R)
 
 **Wednesday (afternoon): Results**
 - [Activity 13: Results](https://github.com/CCBeconomics/nowcasting/blob/main/tto/activity/act13_results.ipynb)
@@ -48,13 +50,13 @@
 
 ```
 install/    environment files and the two act0 checks
-activity/   the notebooks (.ipynb) and R scripts (.R) you work in, plus config.py (the one file you edit)
+activity/   the notebooks (.ipynb) and the two R scripts (act1, act12) you work in, plus config.py
 data/       inputs shipped with the course (Trinidad and Tobago panel, GDP, lights, Trends, the block datasets)
 raw/        Coordinates.xlsx; downloads land here when you run the activities
-slides/     the presentations (HTML) and theory notes (PDF)
+slides/     the presentations (HTML), the methodology decks and the five theory notes (PDF)
 output/     written by the activities: the model-block scoreboard (workshop_results.csv) and the nowcast (Activity 10)
 ```
 
-Download the repository (green **Code** button → **Download ZIP**), then open the `tto/` folder in VS Code or JupyterLab and run each notebook from `activity/`, so that `../data/` resolves. R scripts: set the working directory to `activity/` first. Kernel `nwcst` for every notebook except Activity 4, which needs `geo`.
+Download the repository (green **Code** button → **Download ZIP**), then open the `tto/` folder in VS Code or JupyterLab and run each notebook from `activity/`, so that `../data/` resolves. R scripts: set the working directory to `activity/` first. Kernel `nwcst` for every notebook except Activity 4, which needs `geo`. R is used in Activity 1 (R basics) and Activity 12 (time-series models); Activities 6 to 8 are Python only.
 
 **Credentials:** Activity 2 needs a free FRED API key and Activity 4 a free NASA LAADS token. Paste them into your own copy only: never into a file you share.
