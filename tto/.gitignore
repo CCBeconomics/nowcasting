@@ -18,8 +18,7 @@ desktop.ini
 # Created when the notebooks run: tiles, temp files, results, cached borders
 hfiles/
 ntl_tmp/
-output/*
-!output/.gitkeep
+output/
 **/shapes/
 
 # Snapshots of removed material, kept locally

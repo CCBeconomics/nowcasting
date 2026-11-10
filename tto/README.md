@@ -58,7 +58,7 @@ code/       the production pipeline: data download, build and nowcast (see code/
 data/       inputs shipped with the course (Trinidad and Tobago panel, GDP, lights, Trends, the block datasets)
 raw/        Coordinates.xlsx; downloads land here when you run the activities
 slides/     the presentations (HTML), the methodology decks and the five theory notes (PDF)
-output/     written by the activities: the model-block scoreboard (workshop_results.csv) and the nowcast (Activity 10)
+output/     created when you run the activities or the pipeline (not in the repository): the scoreboard (workshop_results.csv) and the nowcast results
 ```
 
 Download the repository (green **Code** button → **Download ZIP**), then open the `tto/` folder in VS Code or JupyterLab and run each notebook from `activity/`, so that `../data/` resolves. R scripts: set the working directory to `activity/` first. Kernel `nwcst` for every notebook except Activity 4, which needs `geo`. R is used in Activity 1 (R basics) and Activity 12 (time-series models); Activities 6 to 8 are Python only.
