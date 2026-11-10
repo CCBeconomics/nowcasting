@@ -1,0 +1,1016 @@
+series,ticket,description,description 2,freq,first_date,last_date,No Obs,months_lag,nominal,sa,unstructured,type,agg_method,file_name
+gdp,RGDP0000,"Gross Domestic Product, Constant Prices and Seasonally Adjusted",,QE,3/1/2015,12/1/2025,44,5,0,1,0,R,last,boj_gdp.csv
+blk_ntl,UMBL0000,Black Marble Night Time Lights (Monthly),,MS,1/1/2012,12/1/2025,168,5,0,0,1,U,sum,blk_ntl.csv
+bank_liabilities_cheques_in_course_of_payment,MLIA0001,Cheques in clearing not yet settled,,MS,1/1/1991,11/1/2025,419,6,,0,0,M,mean,boj_bank_liabilities.csv
+bank_liabilities_deposits_central_gvt,MLIA1001,Central government deposits held by banks,,MS,1/1/1991,11/1/2025,419,6,,0,0,M,mean,boj_bank_liabilities.csv
+bank_liabilities_deposits_demand,MLIA1002,Deposits withdrawable on demand,,MS,1/1/1991,11/1/2025,419,6,,0,0,M,mean,boj_bank_liabilities.csv
+bank_liabilities_deposits_savings,MLIA1003,Interest-bearing savings deposits,,MS,1/1/1991,11/1/2025,419,6,,0,0,M,mean,boj_bank_liabilities.csv
+bank_liabilities_deposits_time,MLIA1004,Time or term deposits with fixed maturity,,MS,1/1/1991,11/1/2025,419,6,,0,0,M,mean,boj_bank_liabilities.csv
+bank_liabilities_deposits_total,MLIA1000,Total bank deposits,,MS,1/1/1991,11/1/2025,419,6,,0,0,M,mean,boj_bank_liabilities.csv
+bank_liabilities_discount_advs_from_boj,MLIA0002,Central bank (BOJ) advances and discount borrowing,,MS,1/1/1991,11/1/2025,419,6,,0,0,M,mean,boj_bank_liabilities.csv
+bank_liabilities_foreign_liabilities,MLIA0003,Bank liabilities to non-residents,,MS,1/1/1991,11/1/2025,419,6,,0,0,M,mean,boj_bank_liabilities.csv
+bank_liabilities_loansadvs_from_other_institutions,MLIA0004,Borrowing from domestic financial institutions,,MS,1/1/1991,11/1/2025,419,6,,0,0,M,mean,boj_bank_liabilities.csv
+bank_liabilities_other_liabilities,MLIA0005,Residual non-deposit liabilities,,MS,1/1/1991,11/1/2025,419,6,,0,0,M,mean,boj_bank_liabilities.csv
+bank_liabilities_total,MLIA0000,Total bank liabilities,,MS,1/1/1991,11/1/2025,419,6,,0,0,M,mean,boj_bank_liabilities.csv
+bank_loans_business_firms_demand,MLOA1001,Commercial Bank Loans (by customer): Business Firms - Demand Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_business_firms_savings,MLOA1002,Commercial Bank Loans (by customer): Business Firms - Savings Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_business_firms_time,MLOA1003,Commercial Bank Loans (by customer): Business Firms - Time Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_business_firms_total,MLOA1000,Commercial Bank Loans (by customer): Business Firms - Total,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_central_gvt_demand,MLOA2001,Commercial Bank Loans (by customer): Central Government - Demand Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_central_gvt_savings,MLOA2002,Commercial Bank Loans (by customer): Central Government - Savings Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_central_gvt_time,MLOA2003,Commercial Bank Loans (by customer): Central Government - Time Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_central_gvt_total,MLOA2000,Commercial Bank Loans (by customer): Central Government - Total,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_demand,MLOA0001,Commercial Bank Loans (by customer): Total - Demand Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_individuals_demand,MLOA5001,Commercial Bank Loans (by customer): Individuals - Demand Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_individuals_savings,MLOA5002,Commercial Bank Loans (by customer): Individuals - Savings Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_individuals_time,MLOA5003,Commercial Bank Loans (by customer): Individuals - Time Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_individuals_total,MLOA5000,Commercial Bank Loans (by customer): Individuals - Total,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_local_gvt_demand,MLOA3001,Commercial Bank Loans (by customer): Local Government - Demand Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_local_gvt_savings,MLOA3002,Commercial Bank Loans (by customer): Local Government - Savings Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_local_gvt_time,MLOA3003,Commercial Bank Loans (by customer): Local Government - Time Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_local_gvt_total,MLOA3000,Commercial Bank Loans (by customer): Local Government - Total,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_other_body_corporates_demand,MLOA6001,Commercial Bank Loans (by customer): Other Body Corporates - Demand Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_other_body_corporates_savings,MLOA6002,Commercial Bank Loans (by customer): Other Body Corporates - Savings Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_other_body_corporates_time,MLOA6003,Commercial Bank Loans (by customer): Other Body Corporates - Time Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_other_body_corporates_total,MLOA6000,Commercial Bank Loans (by customer): Other Body Corporates - Total,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_other_gvt_entities_demand,MLOA4001,Commercial Bank Loans (by customer): Other Government Entities - Demand Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_other_gvt_entities_savings,MLOA4002,Commercial Bank Loans (by customer): Other Government Entities - Savings Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_other_gvt_entities_time,MLOA4003,Commercial Bank Loans (by customer): Other Government Entities - Time Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_other_gvt_entities_total,MLOA4000,Commercial Bank Loans (by customer): Other Government Entities - Total,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_overseas_residents_demand,MLOA8001,Commercial Bank Loans (by customer): Overseas Residents - Demand Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_overseas_residents_savings,MLOA8002,Commercial Bank Loans (by customer): Overseas Residents - Savings Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_overseas_residents_time,MLOA8003,Commercial Bank Loans (by customer): Overseas Residents - Time Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_overseas_residents_total,MLOA8000,Commercial Bank Loans (by customer): Overseas Residents - Total,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_savings,MLOA0002,Commercial Bank Loans (by customer): Total - Savings Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_specified_and_other_financial_institutions_demand,MLOA7001,Commercial Bank Loans (by customer): Specified & Other Financial Institutions - Demand Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_specified_and_other_financial_institutions_savings,MLOA7002,Commercial Bank Loans (by customer): Specified & Other Financial Institutions - Savings Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_specified_and_other_financial_institutions_time,MLOA7003,Commercial Bank Loans (by customer): Specified & Other Financial Institutions - Time Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_specified_and_other_financial_institutions_total,MLOA7000,Commercial Bank Loans (by customer): Specified & Other Financial Institutions - Total,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_time,MLOA0003,Commercial Bank Loans (by customer): Total - Time Deposits,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_total,MLOA0000,Commercial Bank Loans (by customer): Total,,MS,1/1/2000,2/1/2026,314,3,,0,0,M,mean,boj_bank_loans_bycustomer.csv
+bank_loans_agriculture_land_acquisition,MLOA9101,Commercial Bank Loans (by sector): Agriculture - Land Acquisition,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_agriculture_marketing,MLOA9102,Commercial Bank Loans (by sector): Agriculture - Marketing,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_agriculture_production,MLOA9103,Commercial Bank Loans (by sector): Agriculture - Production,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_agriculture_total,MLOA9100,Commercial Bank Loans (by sector): Agriculture - Total,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_construction_land_development_construction,MLOA9501,Commercial Bank Loans (by sector): Construction & Land Development - Construction,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_construction_land_development_land_acquisition,MLOA9502,Commercial Bank Loans (by sector): Construction & Land Development - Land Acquisition,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_construction_land_development_land_development,MLOA9503,Commercial Bank Loans (by sector): Construction & Land Development - Land Development,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_construction_land_development_total,MLOA9500,Commercial Bank Loans (by sector): Construction & Land Development - Total,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_distribution_distribution,MLOA9601,Commercial Bank Loans (by sector): Distribution,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_electricity_gas_water_electricity_gas_water,MLOA9401,"Commercial Bank Loans (by sector): Electricity, Gas & Water",,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_entertainment_tourism,MLOA9802,Commercial Bank Loans (by sector): Tourism - Entertainment,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_financial_institutions_total,MLOA9901,Commercial Bank Loans (by sector): Financial Institutions - Total,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_food_and_beverage_services_excluding_tourism_food_and_beverage_services_excluding_tourism,MLOA9803,Commercial Bank Loans (by sector): Food and Beverage Services (excluding Tourism),,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_government_services_central_government,MLOAB001,Commercial Bank Loans (by sector): Government Services - Central Government,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_government_services_local_government,MLOAB002,Commercial Bank Loans (by sector): Government Services - Local Government,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_government_services_other_public_entities,MLOAB004,Commercial Bank Loans (by sector): Government Services - Other Public Entities,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_government_services_selected_public_entities,MLOAB003,Commercial Bank Loans (by sector): Government Services - Selected Public Entities,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_government_services_total,MLOAB000,Commercial Bank Loans (by sector): Government Services - Total,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_individuals_households_local_residents_nonbusiness_loans_personal_local_residents,MLOAC001,Commercial Bank Loans (by sector): Individuals & Households - Personal (Local Residents),,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_manufacturing_cement_clay_products,MLOA9301,Commercial Bank Loans (by sector): Manufacturing - Cement & Clay Products,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_manufacturing_chemicals_chemical_products,MLOA9302,Commercial Bank Loans (by sector): Manufacturing - Chemicals & Chemical Products,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_manufacturing_food_drink_tobacco,MLOA9303,"Commercial Bank Loans (by sector): Manufacturing - Food, Drink & Tobacco",,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_manufacturing_furniture_fixture_and_wood_products,MLOA9304,"Commercial Bank Loans (by sector): Manufacturing - Furniture, Fixture and Wood Products",,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_manufacturing_metal_products,MLOA9305,Commercial Bank Loans (by sector): Manufacturing - Metal Products,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_manufacturing_other,MLOA9308,Commercial Bank Loans (by sector): Manufacturing - Other,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_manufacturing_paper_printing_publishing,MLOA9309,"Commercial Bank Loans (by sector): Manufacturing - Paper, Printing & Publishing",,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_manufacturing_sugar_rum_molasses,MLOA9306,"Commercial Bank Loans (by sector): Manufacturing - Sugar, Rum & Molasses",,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_manufacturing_textile_leather_and_footwear,MLOA9307,"Commercial Bank Loans (by sector): Manufacturing - Textile, Leather and Footwear",,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_manufacturing_total,MLOA9300,Commercial Bank Loans (by sector): Manufacturing - Total,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_mining_total,MLOA9201,Commercial Bank Loans (by sector): Mining - Total,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_overseas_residents_overseas_residents,MLOAAD01,Commercial Bank Loans (by sector): Overseas Residents,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_professional_other_services_professional_other_services,MLOAA001,Commercial Bank Loans (by sector): Professional & Other Services,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_tourism_tourism,MLOA9801,Commercial Bank Loans (by sector): Tourism,,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_transport_storage_communication_communication,MLOA9703,"Commercial Bank Loans (by sector): Transport, Storage & Communication - Communication",,MS,4/1/1986,2/1/2026,477,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_transport_storage_communication_harbour_facilities_storage_warehousing,MLOA9702,"Commercial Bank Loans (by sector): Transport, Storage & Communication - Harbour Facilities, Storage & Warehousing",,MS,4/1/1986,2/1/2026,477,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_transport_storage_communication_total,MLOA9700,"Commercial Bank Loans (by sector): Transport, Storage & Communication - Total",,MS,4/1/1986,2/1/2026,479,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_loans_transport_storage_communication_transportation_by_land_water_or_air,MLOA9701,"Commercial Bank Loans (by sector): Transport, Storage & Communication - Transportation by Land, Water or Air",,MS,4/1/1986,2/1/2026,477,3,,0,0,M,mean,boj_bank_loans_bysector.csv
+bank_nonperf_loans_agriculture,MNPL0001,Non-Performing Loans (by customer): Agriculture,,MS,3/1/2017,2/1/2026,108,3,,0,0,M,mean,boj_bank_nonperf.csv
+bank_nonperf_loans_construction,MNPL0002,Non-Performing Loans (by customer): Construction,,MS,3/1/2017,2/1/2026,108,3,,0,0,M,mean,boj_bank_nonperf.csv
+bank_nonperf_loans_distribution,MNPL0003,Non-Performing Loans (by customer): Distribution,,MS,3/1/2017,2/1/2026,108,3,,0,0,M,mean,boj_bank_nonperf.csv
+bank_nonperf_loans_electricity_gas_and_water,MNPL0004,"Non-Performing Loans (by customer): Electricity, Gas and Water",,MS,3/1/2017,2/1/2026,108,3,,0,0,M,mean,boj_bank_nonperf.csv
+bank_nonperf_loans_entertainment,MNPL0005,Non-Performing Loans (by customer): Entertainment,,MS,3/1/2017,2/1/2026,108,3,,0,0,M,mean,boj_bank_nonperf.csv
+bank_nonperf_loans_gross_over3m,MNPL0000,Non-Performing Loans: Gross (90+ days past due),,MS,3/1/2017,2/1/2026,108,3,,0,0,M,mean,boj_bank_nonperf.csv
+bank_nonperf_loans_individuals_andor_households_1,MNPL0006,Non-Performing Loans (by customer): Individuals and/or Households,,MS,3/1/2017,2/1/2026,108,3,,0,0,M,mean,boj_bank_nonperf.csv
+bank_nonperf_loans_manufacturing,MNPL0007,Non-Performing Loans (by customer): Manufacturing,,MS,3/1/2017,2/1/2026,108,3,,0,0,M,mean,boj_bank_nonperf.csv
+bank_nonperf_loans_mining,MNPL0008,Non-Performing Loans (by customer): Mining,,MS,3/1/2017,2/1/2026,108,3,,0,0,M,mean,boj_bank_nonperf.csv
+bank_nonperf_loans_nonbank_financial_institutions,MNPL0009,Non-Performing Loans (by customer): Non-Bank Financial Institutions,,MS,3/1/2017,2/1/2026,108,3,,0,0,M,mean,boj_bank_nonperf.csv
+bank_nonperf_loans_overseas_residents,MNPL0010,Non-Performing Loans (by customer): Overseas Residents,,MS,3/1/2017,2/1/2026,108,3,,0,0,M,mean,boj_bank_nonperf.csv
+bank_nonperf_loans_past_due_gross_1mto3m,MNPL1000,Non-Performing Loans: Past Due (30-90 days) - Gross,,MS,3/1/2017,2/1/2026,108,3,,0,0,M,mean,boj_bank_nonperf.csv
+bank_nonperf_loans_professional_and_other_services,MNPL0011,Non-Performing Loans (by customer): Professional and Other Services,,MS,3/1/2017,2/1/2026,108,3,,0,0,M,mean,boj_bank_nonperf.csv
+bank_nonperf_loans_public_sector,MNPL0012,Non-Performing Loans (by customer): Public Sector,,MS,3/1/2017,2/1/2026,108,3,,0,0,M,mean,boj_bank_nonperf.csv
+bank_nonperf_loans_tourism,MNPL0013,Non-Performing Loans (by customer): Tourism,,MS,3/1/2017,2/1/2026,108,3,,0,0,M,mean,boj_bank_nonperf.csv
+bank_nonperf_loans_transport_storage_and_communication,MNPL0014,"Non-Performing Loans (by customer): Transport, Storage and Communication",,MS,3/1/2017,2/1/2026,108,3,,0,0,M,mean,boj_bank_nonperf.csv
+BACK_BP6_USD,XBOP0000,BOP: Net lending (+) / Net borrowing (-) from current and capital accounts,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BCA_BP6_USD,XBOP1000,BOP: Current Account (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFDA_BP6_USD,XBOP3101,BOP: Financial Account - Direct investment - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFDL_BP6_USD,XBOP3102,BOP: Financial Account - Direct investment - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFD_BP6_USD,XBOP3100,BOP: Financial Account - Direct investment (Net),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFFADC_BP6_USD,XBOP3301,BOP: Financial Account - Financial derivatives - Deposit-taking corporations (except central bank) - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFFAG_BP6_USD,XBOP3302,BOP: Financial Account - Financial derivatives - General government - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFFAOF_BP6_USD,XBOP3303,BOP: Financial Account - Financial derivatives - Other sectors - Other financial corporations - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFFAONF_BP6_USD,XBOP3304,"BOP: Financial Account - Financial derivatives - Other sectors - Non-financial corporations, households, and NPISHs - Net acquisition of financial assets",Balance of Payments (BOP),QE,12/1/2013,12/1/2013,1,149,0,0,0,X,mean,boj_bop.csv
+BFFAO_BP6_USD,XBOP3305,BOP: Financial Account - Financial derivatives - Other sectors - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFFA_BP6_USD,XBOP3306,BOP: Financial Account - Financial derivatives - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFFDC_BP6_USD,XBOP3307,BOP: Financial Account - Financial derivatives - Deposit-taking corporations (except central bank) (Net),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFFESO_BP6_USD,XBOP3308,BOP: Financial Account - Financial derivatives - Employee stock options (Net),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFFFDFC_BP6_USD,XBOP3309,BOP: Financial Account - Financial derivatives - Forward-type contracts (Net),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFFFDOP_BP6_USD,XBOP3310,BOP: Financial Account - Financial derivatives - Options (Net),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFFFD_BP6_USD,XBOP3311,BOP: Financial Account - Financial derivatives - Other than reserves (Net),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFFG_BP6_USD,XBOP3312,BOP: Financial Account - Financial derivatives - General government (Net),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFFLDC_BP6_USD,XBOP3313,BOP: Financial Account - Financial derivatives - Deposit-taking corporations (except central bank) - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFFLFD_BP6_USD,XBOP3314,BOP: Financial Account - Financial derivatives - Other than reserves - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFFLOF_BP6_USD,XBOP3315,BOP: Financial Account - Financial derivatives - Other sectors - Other financial corporations - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFFLO_BP6_USD,XBOP3316,BOP: Financial Account - Financial derivatives - Other sectors - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFFL_BP6_USD,XBOP3317,BOP: Financial Account - Financial derivatives - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFFOF_BP6_USD,XBOP3318,BOP: Financial Account - Financial derivatives - Other sectors - Other financial corporations (Net),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFFONF_BP6_USD,XBOP3319,"BOP: Financial Account - Financial derivatives - Other sectors - Non-financial corporations, households, and NPISHs (Net)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFFO_BP6_USD,XBOP3320,BOP: Financial Account - Financial derivatives - Other sectors (Net),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFF_BP6_USD,XBOP3300,BOP: Financial Account - Financial derivatives and employee stock options (Net),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOAE_BP6_USD,XBOP3401,BOP: Financial Account - Other investment - Other equity - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOA_BP6_USD,XBOP3402,BOP: Financial Account - Other investment - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCDACB_BP6_USD,XBOP3403,BOP: Financial Account - Other investment - Currency and deposits - Central bank - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCDADCIB_BP6_USD,XBOP3404,BOP: Financial Account - Other investment - Currency and deposits - Deposit-taking corporations - Interbank positions - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCDADC_BP6_USD,XBOP3405,BOP: Financial Account - Other investment - Currency and deposits - Deposit-taking corporations (except central bank) - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCDADC_L_BP6_USD,XBOP3406,BOP: Financial Account - Other investment - Currency and deposits - Deposit-taking corporations (except central bank) - Long-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCDADC_S_BP6_USD,XBOP3407,BOP: Financial Account - Other investment - Currency and deposits - Deposit-taking corporations (except central bank) - Short-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCDAG_BP6_USD,XBOP3408,BOP: Financial Account - Other investment - Currency and deposits - General government - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCDAOF_BP6_USD,XBOP3409,BOP: Financial Account - Other investment - Currency and deposits - Other sectors - Other financial corporations - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCDAOF_L_BP6_USD,XBOP3410,BOP: Financial Account - Other investment - Currency and deposits - Other sectors - Other financial corporations - Long-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCDAOF_S_BP6_USD,XBOP3411,BOP: Financial Account - Other investment - Currency and deposits - Other sectors - Other financial corporations - Short-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCDAONF_BP6_USD,XBOP3412,"BOP: Financial Account - Other investment - Currency and deposits - Other sectors - Non-financial corporations, households, and NPISHs - Net acquisition of financial assets",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCDAONF_S_BP6_USD,XBOP3413,"BOP: Financial Account - Other investment - Currency and deposits - Other sectors - Non-financial corporations, households, and NPISHs - Short-term - Net acquisition of financial assets",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCDAO_BP6_USD,XBOP3414,BOP: Financial Account - Other investment - Currency and deposits - Other sectors - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCDAO_L_BP6_USD,XBOP3415,BOP: Financial Account - Other investment - Currency and deposits - Other sectors - Long-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCDAO_S_BP6_USD,XBOP3416,BOP: Financial Account - Other investment - Currency and deposits - Other sectors - Short-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCDA_BP6_USD,XBOP3417,BOP: Financial Account - Other investment - Currency and deposits - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCDLCB_BP6_USD,XBOP3418,BOP: Financial Account - Other investment - Currency and deposits - Central bank - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCDLDC_BP6_USD,XBOP3419,BOP: Financial Account - Other investment - Currency and deposits - Deposit-taking corporations (except central bank) - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCDLDC_L_BP6_USD,XBOP3420,BOP: Financial Account - Other investment - Currency and deposits - Deposit-taking corporations (except central bank) - Long-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCDLDC_S_BP6_USD,XBOP3421,BOP: Financial Account - Other investment - Currency and deposits - Deposit-taking corporations (except central bank) - Short-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCDLMA_BP6_USD,XBOP3422,BOP: Financial Account - Other investment - Currency and deposits - Monetary authorities - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCDL_BP6_USD,XBOP3423,BOP: Financial Account - Other investment - Currency and deposits - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOCD_BP6_USD,XBOP3424,BOP: Financial Account - Other investment - Currency and deposits (Net),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOE_BP6_USD,XBOP3425,BOP: Financial Account - Other investment - Other equity (Net),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLE_BP6_USD,XBOP3426,BOP: Financial Account - Other investment - Other equity - Net incurrence of liabilities,Balance of Payments (BOP),QE,9/1/2018,9/1/2025,29,8,0,0,0,X,mean,boj_bop.csv
+BFOLNADC_BP6_USD,XBOP3427,BOP: Financial Account - Other investment - Loans - Deposit-taking corporations (except central bank) - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNADC_L_BP6_USD,XBOP3428,BOP: Financial Account - Other investment - Loans - Deposit-taking corporations (except central bank) - Long-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNADC_S_BP6_USD,XBOP3429,BOP: Financial Account - Other investment - Loans - Deposit-taking corporations (except central bank) - Short-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNAOF_BP6_USD,XBOP3430,BOP: Financial Account - Other investment - Loans - Other sectors - Other financial corporations - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNAOF_L_BP6_USD,XBOP3431,BOP: Financial Account - Other investment - Loans - Other sectors - Other financial corporations - Long-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2015,9/1/2025,36,8,0,0,0,X,mean,boj_bop.csv
+BFOLNAOF_S_BP6_USD,XBOP3432,BOP: Financial Account - Other investment - Loans - Other sectors - Other financial corporations - Short-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNAO_BP6_USD,XBOP3433,BOP: Financial Account - Other investment - Loans - Other sectors - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNAO_L_BP6_USD,XBOP3434,BOP: Financial Account - Other investment - Loans - Other sectors - Long-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2015,9/1/2025,36,8,0,0,0,X,mean,boj_bop.csv
+BFOLNAO_S_BP6_USD,XBOP3435,BOP: Financial Account - Other investment - Loans - Other sectors - Short-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNA_BP6_USD,XBOP3436,BOP: Financial Account - Other investment - Loans - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNLCBIMF_BP6_USD,XBOP3437,BOP: Financial Account - Other investment - Loans - Central bank - IMF credit and loans (excluding reserves) - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNLCB_BP6_USD,XBOP3438,BOP: Financial Account - Other investment - Loans - Central bank - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNLDC_BP6_USD,XBOP3439,BOP: Financial Account - Other investment - Loans - Deposit-taking corporations (except central bank) - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNLDC_L_BP6_USD,XBOP3440,BOP: Financial Account - Other investment - Loans - Deposit-taking corporations (except central bank) - Long-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNLDC_S_BP6_USD,XBOP3441,BOP: Financial Account - Other investment - Loans - Deposit-taking corporations (except central bank) - Short-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNLGIMF_BP6_USD,XBOP3442,BOP: Financial Account - Other investment - Loans - General government - IMF credit and loans (excluding reserves) - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNLG_BP6_USD,XBOP3443,BOP: Financial Account - Other investment - Loans - General government - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNLG_L_BP6_USD,XBOP3444,BOP: Financial Account - Other investment - Loans - General government - Long-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNLOF_BP6_USD,XBOP3445,BOP: Financial Account - Other investment - Loans - Other sectors - Other financial corporations - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNLOF_L_BP6_USD,XBOP3446,BOP: Financial Account - Other investment - Loans - Other sectors - Other financial corporations - Long-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,6/1/2017,17,107,0,0,0,X,mean,boj_bop.csv
+BFOLNLOF_S_BP6_USD,XBOP3447,BOP: Financial Account - Other investment - Loans - Other sectors - Other financial corporations - Short-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNLONF_BP6_USD,XBOP3448,"BOP: Financial Account - Other investment - Loans - Other sectors - Non-financial corporations, households, and NPISHs - Net incurrence of liabilities",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNLONF_L_BP6_USD,XBOP3449,"BOP: Financial Account - Other investment - Loans - Other sectors - Non-financial corporations, households, and NPISHs - Long-term - Net incurrence of liabilities",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNLO_BP6_USD,XBOP3450,BOP: Financial Account - Other investment - Loans - Other sectors - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNLO_L_BP6_USD,XBOP3451,BOP: Financial Account - Other investment - Loans - Other sectors - Long-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNLO_S_BP6_USD,XBOP3452,BOP: Financial Account - Other investment - Loans - Other sectors - Short-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNL_BP6_USD,XBOP3453,BOP: Financial Account - Other investment - Loans - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNPCAOF_BP6_USD,XBOP3454,"BOP: Financial Account - Other investment - Insurance, pension, and standardized guarantees - Other sectors - Other financial corporations - Net acquisition of financial assets",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNPCAONF_BP6_USD,XBOP3455,"BOP: Financial Account - Other investment - Insurance, pension, and standardized guarantees - Other sectors - Non-financial corporations, households, and NPISHs - Net acquisition of financial assets",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNPCAO_BP6_USD,XBOP3456,"BOP: Financial Account - Other investment - Insurance, pension, and standardized guarantees - Other sectors - Net acquisition of financial assets",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNPCA_BP6_USD,XBOP3457,"BOP: Financial Account - Other investment - Insurance, pension, and standardized guarantees - Net acquisition of financial assets",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNPCLOF_BP6_USD,XBOP3458,"BOP: Financial Account - Other investment - Insurance, pension, and standardized guarantees - Other sectors - Other financial corporations - Net incurrence of liabilities",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNPCLO_BP6_USD,XBOP3459,"BOP: Financial Account - Other investment - Insurance, pension, and standardized guarantees - Other sectors - Net incurrence of liabilities",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNPCL_BP6_USD,XBOP3460,"BOP: Financial Account - Other investment - Insurance, pension, and standardized guarantees - Net incurrence of liabilities",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLNPC_BP6_USD,XBOP3461,"BOP: Financial Account - Other investment - Insurance, pension, and standardized guarantees (Net)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLN_BP6_USD,XBOP3462,BOP: Financial Account - Other investment - Loans (Net),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOLSDR_BP6_USD,XBOP3463,BOP: Financial Account - Other investment - Special drawing rights (allocations) - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOL_BP6_USD,XBOP3464,BOP: Financial Account - Other investment - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFORADC_BP6_USD,XBOP3465,BOP: Financial Account - Other investment - Other accounts receivable/payable - Deposit-taking corporations (except central bank) - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFORADC_L_BP6_USD,XBOP3466,BOP: Financial Account - Other investment - Other accounts receivable/payable - Deposit-taking corporations (except central bank) - Long-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFORADC_S_BP6_USD,XBOP3467,BOP: Financial Account - Other investment - Other accounts receivable/payable - Deposit-taking corporations (except central bank) - Short-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFORAG_BP6_USD,XBOP3468,BOP: Financial Account - Other investment - Other accounts receivable/payable - General government - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFORAMA_BP6_USD,XBOP3469,BOP: Financial Account - Other investment - Other accounts receivable/payable - Monetary authorities - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFORAOF_BP6_USD,XBOP3470,BOP: Financial Account - Other investment - Other accounts receivable/payable - Other sectors - Other financial corporations - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFORAOF_L_BP6_USD,XBOP3471,BOP: Financial Account - Other investment - Other accounts receivable/payable - Other sectors - Other financial corporations - Long-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2015,9/1/2025,41,8,0,0,0,X,mean,boj_bop.csv
+BFORAOF_S_BP6_USD,XBOP3472,BOP: Financial Account - Other investment - Other accounts receivable/payable - Other sectors - Other financial corporations - Short-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFORAO_BP6_USD,XBOP3473,BOP: Financial Account - Other investment - Other accounts receivable/payable - Other sectors - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFORAO_L_BP6_USD,XBOP3474,BOP: Financial Account - Other investment - Other accounts receivable/payable - Other sectors - Long-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFORAO_S_BP6_USD,XBOP3475,BOP: Financial Account - Other investment - Other accounts receivable/payable - Other sectors - Short-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFORA_BP6_USD,XBOP3476,BOP: Financial Account - Other investment - Other accounts receivable/payable - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFORPLCB_BP6_USD,XBOP3477,BOP: Financial Account - Other investment - Other accounts receivable/payable - Central bank - Net incurrence of liabilities,Balance of Payments (BOP),QE,6/1/2017,6/1/2017,1,107,0,0,0,X,mean,boj_bop.csv
+BFORPLCB_L_BP6_USD,XBOP3478,BOP: Financial Account - Other investment - Other accounts receivable/payable - Central bank - Long-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,6/1/2017,6/1/2017,1,107,0,0,0,X,mean,boj_bop.csv
+BFORPLDC_BP6_USD,XBOP3479,BOP: Financial Account - Other investment - Other accounts receivable/payable - Deposit-taking corporations (except central bank) - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,53,8,0,0,0,X,mean,boj_bop.csv
+BFORPLDC_L_BP6_USD,XBOP3480,BOP: Financial Account - Other investment - Other accounts receivable/payable - Deposit-taking corporations (except central bank) - Long-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,9/1/2015,9/1/2025,24,8,0,0,0,X,mean,boj_bop.csv
+BFORPLDC_S_BP6_USD,XBOP3481,BOP: Financial Account - Other investment - Other accounts receivable/payable - Deposit-taking corporations (except central bank) - Short-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,53,8,0,0,0,X,mean,boj_bop.csv
+BFORPLOF_BP6_USD,XBOP3482,BOP: Financial Account - Other investment - Other accounts receivable/payable - Other sectors - Other financial corporations - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFORPLOF_L_BP6_USD,XBOP3483,BOP: Financial Account - Other investment - Other accounts receivable/payable - Other sectors - Other financial corporations - Long-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFORPLOF_S_BP6_USD,XBOP3484,BOP: Financial Account - Other investment - Other accounts receivable/payable - Other sectors - Other financial corporations - Short-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFORPLO_BP6_USD,XBOP3485,BOP: Financial Account - Other investment - Other accounts receivable/payable - Other sectors - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFORPLO_L_BP6_USD,XBOP3486,BOP: Financial Account - Other investment - Other accounts receivable/payable - Other sectors - Long-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFORPLO_S_BP6_USD,XBOP3487,BOP: Financial Account - Other investment - Other accounts receivable/payable - Other sectors - Short-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFORPL_BP6_USD,XBOP3488,BOP: Financial Account - Other investment - Other accounts receivable/payable - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOR_BP6_USD,XBOP3489,BOP: Financial Account - Other investment - Other accounts receivable/payable (Net),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOTADC_BP6_USD,XBOP3490,BOP: Financial Account - Other investment - Trade credit and advances - Deposit-taking corporations (except central bank) - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,53,8,0,0,0,X,mean,boj_bop.csv
+BFOTADC_S_BP6_USD,XBOP3491,BOP: Financial Account - Other investment - Trade credit and advances - Deposit-taking corporations (except central bank) - Short-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,53,8,0,0,0,X,mean,boj_bop.csv
+BFOTAOF_BP6_USD,XBOP3492,BOP: Financial Account - Other investment - Trade credit and advances - Other sectors - Other financial corporations - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOTAOF_L_BP6_USD,XBOP3493,BOP: Financial Account - Other investment - Trade credit and advances - Other sectors - Other financial corporations - Long-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,9/1/2016,9/1/2025,37,8,0,0,0,X,mean,boj_bop.csv
+BFOTAOF_S_BP6_USD,XBOP3494,BOP: Financial Account - Other investment - Trade credit and advances - Other sectors - Other financial corporations - Short-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,12/1/2012,9/1/2025,52,8,0,0,0,X,mean,boj_bop.csv
+BFOTAONF_BP6_USD,XBOP3495,"BOP: Financial Account - Other investment - Trade credit and advances - Other sectors - Non-financial corporations, households, and NPISHs - Net acquisition of financial assets",Balance of Payments (BOP),QE,3/1/2015,9/1/2025,43,8,0,0,0,X,mean,boj_bop.csv
+BFOTAONF_L_BP6_USD,XBOP3496,"BOP: Financial Account - Other investment - Trade credit and advances - Other sectors - Non-financial corporations, households, and NPISHs - Long-term - Net acquisition of financial assets",Balance of Payments (BOP),QE,3/1/2015,9/1/2017,11,104,0,0,0,X,mean,boj_bop.csv
+BFOTAONF_S_BP6_USD,XBOP3497,"BOP: Financial Account - Other investment - Trade credit and advances - Other sectors - Non-financial corporations, households, and NPISHs - Short-term - Net acquisition of financial assets",Balance of Payments (BOP),QE,12/1/2017,9/1/2025,32,8,0,0,0,X,mean,boj_bop.csv
+BFOTAO_BP6_USD,XBOP3498,BOP: Financial Account - Other investment - Trade credit and advances - Other sectors - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOTAO_L_BP6_USD,XBOP3499,BOP: Financial Account - Other investment - Trade credit and advances - Other sectors - Long-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOTAO_S_BP6_USD,XBOP3500,BOP: Financial Account - Other investment - Trade credit and advances - Other sectors - Short-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOTA_BP6_USD,XBOP3501,BOP: Financial Account - Other investment - Trade credit and advances - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOTLDC_BP6_USD,XBOP3502,BOP: Financial Account - Other investment - Trade credit and advances - Deposit-taking corporations (except central bank) - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOTLDC_L_BP6_USD,XBOP3503,BOP: Financial Account - Other investment - Trade credit and advances - Deposit-taking corporations (except central bank) - Long-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2018,9/1/2025,31,8,0,0,0,X,mean,boj_bop.csv
+BFOTLDC_S_BP6_USD,XBOP3504,BOP: Financial Account - Other investment - Trade credit and advances - Deposit-taking corporations (except central bank) - Short-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOTLMA_BP6_USD,XBOP3505,BOP: Financial Account - Other investment - Trade credit and advances - Monetary authorities - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOTLOF_BP6_USD,XBOP3506,BOP: Financial Account - Other investment - Trade credit and advances - Other sectors - Other financial corporations - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOTLOF_L_BP6_USD,XBOP3507,BOP: Financial Account - Other investment - Trade credit and advances - Other sectors - Other financial corporations - Long-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,12/1/2017,9/1/2025,32,8,0,0,0,X,mean,boj_bop.csv
+BFOTLOF_S_BP6_USD,XBOP3508,BOP: Financial Account - Other investment - Trade credit and advances - Other sectors - Other financial corporations - Short-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOTLONF_BP6_USD,XBOP3509,"BOP: Financial Account - Other investment - Trade credit and advances - Other sectors - Non-financial corporations, households, and NPISHs - Net incurrence of liabilities",Balance of Payments (BOP),QE,3/1/2015,9/1/2025,43,8,0,0,0,X,mean,boj_bop.csv
+BFOTLONF_L_BP6_USD,XBOP3510,"BOP: Financial Account - Other investment - Trade credit and advances - Other sectors - Non-financial corporations, households, and NPISHs - Long-term - Net incurrence of liabilities",Balance of Payments (BOP),QE,3/1/2015,9/1/2025,43,8,0,0,0,X,mean,boj_bop.csv
+BFOTLO_BP6_USD,XBOP3511,BOP: Financial Account - Other investment - Trade credit and advances - Other sectors - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOTLO_L_BP6_USD,XBOP3512,BOP: Financial Account - Other investment - Trade credit and advances - Other sectors - Long-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOTLO_S_BP6_USD,XBOP3513,BOP: Financial Account - Other investment - Trade credit and advances - Other sectors - Short-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOTL_BP6_USD,XBOP3514,BOP: Financial Account - Other investment - Trade credit and advances - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFOT_BP6_USD,XBOP3515,BOP: Financial Account - Other investment - Trade credit and advances (Net),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFO_BP6_USD,XBOP3400,BOP: Financial Account - Other investment (Net),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPADC_BP6_USD,XBOP3201,BOP: Financial Account - Portfolio investment - Debt securities - Deposit-taking corporations (except central bank) - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPADC_L_BP6_USD,XBOP3202,BOP: Financial Account - Portfolio investment - Debt securities - Deposit-taking corporations (except central bank) - Long-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPADC_S_BP6_USD,XBOP3203,BOP: Financial Account - Portfolio investment - Debt securities - Deposit-taking corporations (except central bank) - Short-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPADO_BP6_USD,XBOP3204,BOP: Financial Account - Portfolio investment - Debt securities - Other sectors - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPADO_L_BP6_USD,XBOP3205,BOP: Financial Account - Portfolio investment - Debt securities - Other sectors - Long-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPADO_S_BP6_USD,XBOP3206,BOP: Financial Account - Portfolio investment - Debt securities - Other sectors - Short-term - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPAD_BP6_USD,XBOP3207,BOP: Financial Account - Portfolio investment - Debt securities - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPAEDC_BP6_USD,XBOP3208,BOP: Financial Account - Portfolio investment - Equity and investment fund shares - Deposit-taking corporations (except central bank) - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPAEOF_BP6_USD,XBOP3209,BOP: Financial Account - Portfolio investment - Equity and investment fund shares - Other sectors - Other financial corporations - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPAEONF_BP6_USD,XBOP3210,"BOP: Financial Account - Portfolio investment - Equity and investment fund shares - Other sectors - Non-financial corporations, households, and NPISHs - Net acquisition of financial assets",Balance of Payments (BOP),QE,6/1/2019,9/1/2025,26,8,0,0,0,X,mean,boj_bop.csv
+BFPAEO_BP6_USD,XBOP3211,BOP: Financial Account - Portfolio investment - Equity and investment fund shares - Other sectors - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPAE_BP6_USD,XBOP3212,BOP: Financial Account - Portfolio investment - Equity and investment fund shares - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPA_BP6_USD,XBOP3213,BOP: Financial Account - Portfolio investment - Net acquisition of financial assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPLDDC_BP6_USD,XBOP3214,BOP: Financial Account - Portfolio investment - Debt securities - Deposit-taking corporations (except central bank) - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPLDDC_L_BP6_USD,XBOP3215,BOP: Financial Account - Portfolio investment - Debt securities - Deposit-taking corporations (except central bank) - Long-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPLDDC_S_BP6_USD,XBOP3216,BOP: Financial Account - Portfolio investment - Debt securities - Deposit-taking corporations (except central bank) - Short-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPLDG_BP6_USD,XBOP3217,BOP: Financial Account - Portfolio investment - Debt securities - General government - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPLDG_L_BP6_USD,XBOP3218,BOP: Financial Account - Portfolio investment - Debt securities - General government - Long-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPLDG_S_BP6_USD,XBOP3219,BOP: Financial Account - Portfolio investment - Debt securities - General government - Short-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPLDOF_BP6_USD,XBOP3220,BOP: Financial Account - Portfolio investment - Debt securities - Other sectors - Other financial corporations - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPLDOF_L_BP6_USD,XBOP3221,BOP: Financial Account - Portfolio investment - Debt securities - Other sectors - Other financial corporations - Long-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPLDOF_S_BP6_USD,XBOP3222,BOP: Financial Account - Portfolio investment - Debt securities - Other sectors - Other financial corporations - Short-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPLDO_BP6_USD,XBOP3223,BOP: Financial Account - Portfolio investment - Debt securities - Other sectors - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPLDO_L_BP6_USD,XBOP3224,BOP: Financial Account - Portfolio investment - Debt securities - Other sectors - Long-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPLDO_S_BP6_USD,XBOP3225,BOP: Financial Account - Portfolio investment - Debt securities - Other sectors - Short-term - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPLD_BP6_USD,XBOP3226,BOP: Financial Account - Portfolio investment - Debt securities - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPLEDC_BP6_USD,XBOP3227,BOP: Financial Account - Portfolio investment - Equity and investment fund shares - Deposit-taking corporations (except central bank) - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPLEOF_BP6_USD,XBOP3228,BOP: Financial Account - Portfolio investment - Equity and investment fund shares - Other sectors - Other financial corporations - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPLEONF_BP6_USD,XBOP3229,"BOP: Financial Account - Portfolio investment - Equity and investment fund shares - Other sectors - Non-financial corporations, households, and NPISHs - Net incurrence of liabilities",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPLEO_BP6_USD,XBOP3230,BOP: Financial Account - Portfolio investment - Equity and investment fund shares - Other sectors - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPLE_BP6_USD,XBOP3231,BOP: Financial Account - Portfolio investment - Equity and investment fund shares - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFPL_BP6_USD,XBOP3232,BOP: Financial Account - Portfolio investment - Net incurrence of liabilities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFP_BP6_USD,XBOP3200,BOP: Financial Account - Portfolio investment (Net),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFRAIMF_BP6_USD,XBOP3501,BOP: Financial Account - Reserve assets - Reserve position in the IMF,Balance of Payments (BOP),QE,3/1/2016,9/1/2025,39,8,0,0,0,X,mean,boj_bop.csv
+BFRAOCDMA_BP6_USD,XBOP3502,BOP: Financial Account - Reserve assets - Other reserve assets - Currency and deposits - Monetary authorities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFRAOCDO_BP6_USD,XBOP3503,BOP: Financial Account - Reserve assets - Other reserve assets - Currency and deposits - Other entities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFRAOCD_BP6_USD,XBOP3504,BOP: Financial Account - Reserve assets - Other reserve assets - Currency and deposits,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFRAOSD_BP6_USD,XBOP3505,BOP: Financial Account - Reserve assets - Other reserve assets - Debt securities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFRAOS_BP6_USD,XBOP3506,BOP: Financial Account - Reserve assets - Other reserve assets - Securities,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFRAO_BP6_USD,XBOP3507,BOP: Financial Account - Reserve assets - Other reserve assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFRASDR_BP6_USD,XBOP3508,BOP: Financial Account - Reserve assets - Special drawing rights,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BFRA_BP6_USD,XBOP3500,BOP: Financial Account - Reserve assets,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BF_BP6_USD,XBOP3000,BOP: Financial Account (Net lending (+)/Net borrowing (-)),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BGM_BP6_USD,XBOP1101,BOP: Goods - General merchandise (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BGN_BP6_USD,XBOP1102,BOP: Goods - Non-monetary gold (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BGS_BP6_USD,XBOP1103,BOP: Goods and Services (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BG_BP6_USD,XBOP1100,BOP: Goods (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BIPCE_BP6_USD,XBOP1301,BOP: Primary income - Compensation of employees (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BIPID_BP6_USD,XBOP1302,BOP: Primary income - Investment income - Direct investment (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BIPIOI_BP6_USD,XBOP1303,BOP: Primary income - Investment income - Other investment - Interest (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BIPIOPC_BP6_USD,XBOP1304,"BOP: Primary income - Investment income - Other investment - Attributable to policyholders in insurance, etc. (Balance)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BIPIO_BP6_USD,XBOP1305,BOP: Primary income - Investment income - Other investment (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BIPIP_BP6_USD,XBOP1306,BOP: Primary income - Investment income - Portfolio investment (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BIPI_BP6_USD,XBOP1307,BOP: Primary income - Investment income (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BIP_BP6_USD,XBOP1300,BOP: Primary income (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BISG_BP6_USD,XBOP1401,BOP: Secondary income - General government (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BISOMT_BP6_USD,XBOP1402,BOP: Secondary income - Other sectors - Miscellaneous current transfers (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BISONC_BP6_USD,XBOP1403,BOP: Secondary income - Other sectors - Non-life insurance claims (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BISONP_BP6_USD,XBOP1404,BOP: Secondary income - Other sectors - Net non-life insurance premiums (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BISOOT_BP6_USD,XBOP1405,BOP: Secondary income - Other sectors - Other current transfers (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BISOPTWR_BP6_USD,XBOP1406,BOP: Secondary income - Other sectors - Personal transfers - Workers' remittances (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BISOPT_BP6_USD,XBOP1407,BOP: Secondary income - Other sectors - Personal transfers (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BISOSB_BP6_USD,XBOP1408,BOP: Secondary income - Other sectors - Social benefits (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BISOSC_BP6_USD,XBOP1409,BOP: Secondary income - Other sectors - Social contributions (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BISO_BP6_USD,XBOP1410,BOP: Secondary income - Other sectors (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BIS_BP6_USD,XBOP1400,BOP: Secondary income (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BKA_BP6_USD,XBOP2100,BOP: Capital Account - Acquisitions/disposals of non-produced non-financial assets (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BKTGD_BP6_USD,XBOP2200,BOP: Capital Account - Capital transfers - General government - Debt forgiveness (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BKTGO_BP6_USD,XBOP2201,BOP: Capital Account - Capital transfers - General government - Other capital transfers (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BKTGO_CD_BP6_USD,XBOP2202,BOP: Capital Account - Capital transfers - General government - Other capital transfers (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BKTG_BP6_USD,XBOP2203,BOP: Capital Account - Capital transfers - General government (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BKTG_CD_BP6_USD,XBOP2204,BOP: Capital Account - Capital transfers - General government (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BKTG_DB_BP6_USD,XBOP2205,BOP: Capital Account - Capital transfers - General government (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BKTOD_BP6_USD,XBOP2206,BOP: Capital Account - Capital transfers - Other sectors - Debt forgiveness (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BKTOO_BP6_USD,XBOP2207,BOP: Capital Account - Capital transfers - Other sectors - Other capital transfers (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BKTO_BP6_USD,XBOP2208,BOP: Capital Account - Capital transfers - Other sectors (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BKTO_CD_BP6_USD,XBOP2209,BOP: Capital Account - Capital transfers - Other sectors (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BKTO_DB_BP6_USD,XBOP2210,BOP: Capital Account - Capital transfers - Other sectors (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BKT_BP6_USD,XBOP2211,BOP: Capital Account - Capital transfers (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BKT_CD_BP6_USD,XBOP2212,BOP: Capital Account - Capital transfers (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BKT_DB_BP6_USD,XBOP2213,BOP: Capital Account - Capital transfers (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BK_BP6_USD,XBOP2000,BOP: Capital Account (Balance),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BK_CD_BP6_USD,XBOP2001,BOP: Capital Account (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BK_DB_BP6_USD,XBOP2002,BOP: Capital Account (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMCA_BP6_USD,XBOP1001,BOP: Current Account (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMGM_BP6_USD,XBOP1105,BOP: Goods - General merchandise (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMGS_BP6_USD,XBOP1106,BOP: Goods and Services (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMG_BP6_USD,XBOP1107,BOP: Goods (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMIPCE_BP6_USD,XBOP1309,BOP: Primary income - Compensation of employees (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMIPID_BP6_USD,XBOP1310,BOP: Primary income - Investment income - Direct investment (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMIPIOI_BP6_USD,XBOP1311,BOP: Primary income - Investment income - Other investment - Interest (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMIPIO_BP6_USD,XBOP1312,BOP: Primary income - Investment income - Other investment (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMIPIP_BP6_USD,XBOP1313,BOP: Primary income - Investment income - Portfolio investment (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMIPI_BP6_USD,XBOP1314,BOP: Primary income - Investment income (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMIP_BP6_USD,XBOP1315,BOP: Primary income (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMISG_BP6_USD,XBOP1411,BOP: Secondary income - General government (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMISOOT_BP6_USD,XBOP1412,BOP: Secondary income - Other sectors - Other current transfers (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMISOPT_BP6_USD,XBOP1413,BOP: Secondary income - Other sectors - Personal transfers (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMISO_BP6_USD,XBOP1414,BOP: Secondary income - Other sectors (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMIS_BP6_USD,XBOP1415,BOP: Secondary income (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMKTOO_BP6_USD,XBOP2214,BOP: Capital Account - Capital transfers - Other sectors - Other capital transfers (Debit),Balance of Payments (BOP),QE,9/1/2017,9/1/2025,33,8,0,0,0,X,mean,boj_bop.csv
+BMSOCNAR_BP6_USD,XBOP1201,BOP: Services - Other services - Construction services - In the reporting economy (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSOCN_BP6_USD,XBOP1202,BOP: Services - Other services - Construction services (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSOFIEX_BP6_USD,XBOP1203,BOP: Services - Other services - Financial services - Explicitly charged and other (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSOFI_BP6_USD,XBOP1204,BOP: Services - Other services - Financial services (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSOGGS_BP6_USD,XBOP1205,BOP: Services - Other services - Government goods and services n.i.e. (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSOINAI_BP6_USD,XBOP1206,BOP: Services - Other services - Insurance and pension services - Auxiliary services (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSOIND_BP6_USD,XBOP1207,BOP: Services - Other services - Insurance and pension services - Direct insurance (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSOINPG_BP6_USD,XBOP1208,BOP: Services - Other services - Insurance and pension services - Pension and standardized guarantee services (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSOINRI_BP6_USD,XBOP1209,BOP: Services - Other services - Insurance and pension services - Reinsurance (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSOIN_BP6_USD,XBOP1210,BOP: Services - Other services - Insurance and pension services (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSOOBPM_BP6_USD,XBOP1211,BOP: Services - Other services - Other business services - Professional and management consulting (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSOOBTT_BP6_USD,XBOP1212,"BOP: Services - Other services - Other business services - Technical, trade-related, and other business services (Debit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSOOB_BP6_USD,XBOP1213,BOP: Services - Other services - Other business services (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSOPCRAU_BP6_USD,XBOP1214,"BOP: Services - Other services - Personal, cultural, and recreational services - Audiovisual and related services (Debit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSOPCRO_BP6_USD,XBOP1215,"BOP: Services - Other services - Personal, cultural, and recreational services - Other (Debit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSOPCR_BP6_USD,XBOP1216,"BOP: Services - Other services - Personal, cultural, and recreational services (Debit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSORL_BP6_USD,XBOP1217,BOP: Services - Other services - Charges for the use of intellectual property n.i.e. (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSOTCMC_BP6_USD,XBOP1218,"BOP: Services - Other services - Telecommunications, computer, and information services - Computer services (Debit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSOTCMM_BP6_USD,XBOP1219,"BOP: Services - Other services - Telecommunications, computer, and information services - Information services (Debit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSOTCMT_BP6_USD,XBOP1220,"BOP: Services - Other services - Telecommunications, computer, and information services - Telecommunications services (Debit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSOTCM_BP6_USD,XBOP1221,"BOP: Services - Other services - Telecommunications, computer, and information services (Debit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSTRAO_BP6_USD,XBOP1222,BOP: Services - Transport - Air transport - Other (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSTRAPA_BP6_USD,XBOP1223,BOP: Services - Transport - Air transport - Passenger (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSTRA_BP6_USD,XBOP1224,BOP: Services - Transport - Air transport (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSTRFR_BP6_USD,XBOP1225,BOP: Services - Transport - Freight (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSTROTO_BP6_USD,XBOP1226,BOP: Services - Transport - Other modes of transport - Other (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSTROT_BP6_USD,XBOP1227,BOP: Services - Transport - Other modes of transport (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSTRO_BP6_USD,XBOP1228,BOP: Services - Transport - Other (including postal and courier) (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSTRPA_BP6_USD,XBOP1229,BOP: Services - Transport - Passenger (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSTRSFR_BP6_USD,XBOP1230,BOP: Services - Transport - Sea transport - Freight (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSTRSO_BP6_USD,XBOP1231,BOP: Services - Transport - Sea transport - Other (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSTRS_BP6_USD,XBOP1232,BOP: Services - Transport - Sea transport (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSTR_BP6_USD,XBOP1233,BOP: Services - Transport (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSTVB_BP6_USD,XBOP1234,BOP: Services - Travel - Business travel (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSTVPO_BP6_USD,XBOP1235,BOP: Services - Travel - Personal travel - Other (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSTVP_BP6_USD,XBOP1236,BOP: Services - Travel - Personal travel (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMSTV_BP6_USD,XBOP1237,BOP: Services - Travel (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BMS_BP6_USD,XBOP1238,BOP: Services (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BOP_BP6_USD,XBOP4000,BOP: Net errors and omissions,Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSM_BP6_USD,XBOP1200,BOP: Services - Manufacturing services on physical inputs owned by others (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSOCNAR_BP6_USD,XBOP1240,BOP: Services - Other services - Construction services - In the reporting economy (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSOCN_BP6_USD,XBOP1241,BOP: Services - Other services - Construction services (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSOFIEX_BP6_USD,XBOP1242,BOP: Services - Other services - Financial services - Explicitly charged and other (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSOFI_BP6_USD,XBOP1243,BOP: Services - Other services - Financial services (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSOGGS_BP6_USD,XBOP1244,BOP: Services - Other services - Government goods and services n.i.e. (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSOINAI_BP6_USD,XBOP1245,BOP: Services - Other services - Insurance and pension services - Auxiliary services (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSOIND_BP6_USD,XBOP1246,BOP: Services - Other services - Insurance and pension services - Direct insurance (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSOINPG_BP6_USD,XBOP1247,BOP: Services - Other services - Insurance and pension services - Pension and standardized guarantee services (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSOINRI_BP6_USD,XBOP1248,BOP: Services - Other services - Insurance and pension services - Reinsurance (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSOIN_BP6_USD,XBOP1249,BOP: Services - Other services - Insurance and pension services (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSOOBPM_BP6_USD,XBOP1250,BOP: Services - Other services - Other business services - Professional and management consulting (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSOOBRD_BP6_USD,XBOP1251,BOP: Services - Other services - Other business services - Research and development services (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSOOBTT_BP6_USD,XBOP1252,"BOP: Services - Other services - Other business services - Technical, trade-related, and other business services (Debit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSOOB_BP6_USD,XBOP1253,BOP: Services - Other services - Other business services (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSOPCRAU_BP6_USD,XBOP1254,"BOP: Services - Other services - Personal, cultural, and recreational services - Audiovisual and related services (Debit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSOPCRO_BP6_USD,XBOP1255,"BOP: Services - Other services - Personal, cultural, and recreational services - Other (Debit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSOPCR_BP6_USD,XBOP1256,"BOP: Services - Other services - Personal, cultural, and recreational services (Debit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSORL_BP6_USD,XBOP1257,BOP: Services - Other services - Charges for the use of intellectual property n.i.e. (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSOTCMC_BP6_USD,XBOP1258,"BOP: Services - Other services - Telecommunications, computer, and information services - Computer services (Debit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSOTCMM_BP6_USD,XBOP1259,"BOP: Services - Other services - Telecommunications, computer, and information services - Information services (Debit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSOTCMT_BP6_USD,XBOP1260,"BOP: Services - Other services - Telecommunications, computer, and information services - Telecommunications services (Debit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSOTCM_BP6_USD,XBOP1261,"BOP: Services - Other services - Telecommunications, computer, and information services (Debit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSR_BP6_USD,XBOP1262,BOP: Services - Maintenance and repair services n.i.e. (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSTRAFR_BP6_USD,XBOP1263,BOP: Services - Transport - Air transport - Freight (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSTRAO_BP6_USD,XBOP1264,BOP: Services - Transport - Air transport - Other (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSTRAPA_BP6_USD,XBOP1265,BOP: Services - Transport - Air transport - Passenger (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSTRA_BP6_USD,XBOP1266,BOP: Services - Transport - Air transport (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSTRFR_BP6_USD,XBOP1267,BOP: Services - Transport - Freight (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSTROTO_BP6_USD,XBOP1268,BOP: Services - Transport - Other modes of transport - Other (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSTROTPA_BP6_USD,XBOP1269,BOP: Services - Transport - Other modes of transport - Passenger (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSTROT_BP6_USD,XBOP1270,BOP: Services - Transport - Other modes of transport (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSTRO_BP6_USD,XBOP1271,BOP: Services - Transport - Other (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSTRPA_BP6_USD,XBOP1272,BOP: Services - Transport - Passenger (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSTRPC_BP6_USD,XBOP1273,BOP: Services - Transport - Postal and courier services (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSTRSFR_BP6_USD,XBOP1274,BOP: Services - Transport - Sea transport - Freight (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSTRSO_BP6_USD,XBOP1275,BOP: Services - Transport - Sea transport - Other (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSTRSPA_BP6_USD,XBOP1276,BOP: Services - Transport - Sea transport - Passenger (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSTRS_BP6_USD,XBOP1277,BOP: Services - Transport - Sea transport (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSTR_BP6_USD,XBOP1278,BOP: Services - Transport (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSTVB_BP6_USD,XBOP1279,BOP: Services - Travel - Business travel (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSTVPO_BP6_USD,XBOP1280,BOP: Services - Travel - Personal travel - Other (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSTVP_BP6_USD,XBOP1281,BOP: Services - Travel - Personal travel (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BSTV_BP6_USD,XBOP1282,BOP: Services - Travel (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BS_BP6_USD,XBOP1283,BOP: Services (Debit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXCA_BP6_USD,XBOP1002,BOP: Current Account (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXGM_BP6_USD,XBOP1108,BOP: Goods - General merchandise (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXGS_BP6_USD,XBOP1109,BOP: Goods and Services (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXG_BP6_USD,XBOP1110,BOP: Goods (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXIPCE_BP6_USD,XBOP1316,BOP: Primary income - Compensation of employees (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXIPID_BP6_USD,XBOP1317,BOP: Primary income - Investment income - Direct investment (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXIPIOI_BP6_USD,XBOP1318,BOP: Primary income - Investment income - Other investment - Interest (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXIPIO_BP6_USD,XBOP1319,BOP: Primary income - Investment income - Other investment (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXIPIP_BP6_USD,XBOP1320,BOP: Primary income - Investment income - Portfolio investment (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXIPIRI_BP6_USD,XBOP1321,BOP: Primary income - Investment income - Reserve assets - Interest (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXIPIR_BP6_USD,XBOP1322,BOP: Primary income - Investment income - Reserve assets (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXIPI_BP6_USD,XBOP1323,BOP: Primary income - Investment income (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXIP_BP6_USD,XBOP1324,BOP: Primary income (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXISGCTX_BP6_USD,XBOP1416,"BOP: Secondary income - General government - Current taxes on income, wealth, etc. (Credit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXISGSCS_BP6_USD,XBOP1417,BOP: Secondary income - General government - Social contributions (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXISG_BP6_USD,XBOP1418,BOP: Secondary income - General government (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXISONC_BP6_USD,XBOP1419,BOP: Secondary income - Other sectors - Non-life insurance claims (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXISOOT_BP6_USD,XBOP1420,BOP: Secondary income - Other sectors - Other current transfers (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXISOPT_BP6_USD,XBOP1421,BOP: Secondary income - Other sectors - Personal transfers (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXISO_BP6_USD,XBOP1422,BOP: Secondary income - Other sectors (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXIS_BP6_USD,XBOP1423,BOP: Secondary income (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXKTOD_BP6_USD,XBOP2215,BOP: Capital account - Other sectors - Debt forgiveness (Credit),Balance of Payments (BOP),QE,9/1/2015,9/1/2015,1,128,0,0,0,X,mean,boj_bop.csv
+BXKTOO_BP6_USD,XBOP2216,BOP: Capital account - Other sectors - Other capital transfers (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSOCNAR_BP6_USD,XBOP1284,BOP: Services - Other services - Construction services - In the reporting economy (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSOFIEX_BP6_USD,XBOP1285,BOP: Services - Other services - Financial services - Explicitly charged and other (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSOFI_BP6_USD,XBOP1286,BOP: Services - Other services - Financial services (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSOGGS_BP6_USD,XBOP1287,BOP: Services - Other services - Government goods and services n.i.e. (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSOINAI_BP6_USD,XBOP1288,BOP: Services - Other services - Insurance and pension services - Auxiliary services (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSOIND_BP6_USD,XBOP1289,BOP: Services - Other services - Insurance and pension services - Direct insurance (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSOINPG_BP6_USD,XBOP1290,BOP: Services - Other services - Insurance and pension services - Pension and standardized guarantee services (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSOIN_BP6_USD,XBOP1291,BOP: Services - Other services - Insurance and pension services (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSOOBPM_BP6_USD,XBOP1292,BOP: Services - Other services - Other business services - Professional and management consulting (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSOOBRD_BP6_USD,XBOP1293,BOP: Services - Other services - Other business services - Research and development services (Credit),Balance of Payments (BOP),QE,6/1/2019,6/1/2019,1,83,0,0,0,X,mean,boj_bop.csv
+BXSOOBTT_BP6_USD,XBOP1294,"BOP: Services - Other services - Other business services - Technical, trade-related, and other business services (Credit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSOOB_BP6_USD,XBOP1295,BOP: Services - Other services - Other business services (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSOPCRO_BP6_USD,XBOP1296,"BOP: Services - Other services - Personal, cultural, and recreational services - Other (Credit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSOPCR_BP6_USD,XBOP1297,"BOP: Services - Other services - Personal, cultural, and recreational services (Credit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSORL_BP6_USD,XBOP1298,BOP: Services - Other services - Charges for the use of intellectual property n.i.e. (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSOTCMC_BP6_USD,XBOP1299,"BOP: Services - Other services - Telecommunications, computer, and information services - Computer services (Credit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSOTCMM_BP6_USD,XBOP1300,"BOP: Services - Other services - Telecommunications, computer, and information services - Information services (Credit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSOTCMT_BP6_USD,XBOP1301,"BOP: Services - Other services - Telecommunications, computer, and information services - Telecommunications services (Credit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSOTCM_BP6_USD,XBOP1302,"BOP: Services - Other services - Telecommunications, computer, and information services (Credit)",Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSTRAO_BP6_USD,XBOP1303,BOP: Services - Transport - Air transport - Other (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSTRA_BP6_USD,XBOP1304,BOP: Services - Transport - Air transport (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSTRFR_BP6_USD,XBOP1305,BOP: Services - Transport - Freight (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSTROTO_BP6_USD,XBOP1306,BOP: Services - Transport - Other modes of transport - Other (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSTROT_BP6_USD,XBOP1307,BOP: Services - Transport - Other modes of transport (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSTRO_BP6_USD,XBOP1308,BOP: Services - Transport - Other (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSTRPA_BP6_USD,XBOP1309,BOP: Services - Transport - Passenger (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSTRSO_BP6_USD,XBOP1310,BOP: Services - Transport - Sea transport - Other (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSTRS_BP6_USD,XBOP1311,BOP: Services - Transport - Sea transport (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSTR_BP6_USD,XBOP1312,BOP: Services - Transport (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSTVB_BP6_USD,XBOP1313,BOP: Services - Travel - Business travel (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSTVPO_BP6_USD,XBOP1314,BOP: Services - Travel - Personal travel - Other (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSTVP_BP6_USD,XBOP1315,BOP: Services - Travel - Personal travel (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXSTV_BP6_USD,XBOP1316,BOP: Services - Travel (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+BXS_BP6_USD,XBOP1317,BOP: Services (Credit),Balance of Payments (BOP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_bop.csv
+FASF_XDC,MBOJ0001,Central Bank: Net Foreign Assets (JMD Millions),,MS,1/1/2010,3/1/2026,195,2,1,0,0,M,mean,boj_cbs.csv
+FASMB_XDC,MBOJ0002,Central Bank: Monetary Base (JMD Millions),,MS,1/1/2010,3/1/2026,195,2,1,0,0,M,mean,boj_cbs.csv
+GCALND_G01_XDC,FCGD1000,CG Debt: Domestic Debt,Central Government Debt,MS,4/1/2015,9/1/2024,114,20,1,0,0,F,mean,boj_cendebt.csv
+GCALNF_G01_XDC,FCGD2000,CG Debt: External Debt,Central Government Debt,MS,4/1/2015,9/1/2024,114,20,1,0,0,F,mean,boj_cendebt.csv
+GCALN_G01_XDC,FCGD0000,CG Debt: Central Government Gross Debt,Central Government Debt,MS,4/1/2015,9/1/2024,114,20,1,0,0,F,mean,boj_cendebt.csv
+JM_CGD_ND_LT_001,FCGD1101,CG Debt: Domestic Debt - Long Term (Total),Central Government Debt,MS,4/1/2015,9/1/2024,114,20,,0,0,F,mean,boj_cendebt.csv
+JM_CGD_ND_LT_002,FCGD1102,CG Debt: Domestic Debt - Long Term - J$ Benchmark Notes,Central Government Debt,MS,4/1/2015,9/1/2024,114,20,,0,0,F,mean,boj_cendebt.csv
+JM_CGD_ND_LT_003,FCGD1103,CG Debt: Domestic Debt - Long Term - US$ Denominated Notes & Loans,Central Government Debt,MS,4/1/2015,9/1/2024,114,20,,0,0,F,mean,boj_cendebt.csv
+JM_CGD_ND_LT_004,FCGD1104,CG Debt: Domestic Debt - Long Term - Commercial Bank & Public Sector Entity Loans,Central Government Debt,MS,4/1/2015,9/1/2024,114,20,,0,0,F,mean,boj_cendebt.csv
+JM_CGD_ND_LT_005,FCGD1105,CG Debt: Domestic Debt - Long Term - Other,Central Government Debt,MS,4/1/2015,9/1/2024,114,20,,0,0,F,mean,boj_cendebt.csv
+JM_CGD_ND_ST_001,FCGD1201,CG Debt: Domestic Debt - Short Term (Total),Central Government Debt,MS,4/1/2015,9/1/2024,114,20,,0,0,F,mean,boj_cendebt.csv
+JM_CGD_ND_ST_002,FCGD1202,CG Debt: Domestic Debt - Short Term - J$ Benchmark Notes,Central Government Debt,MS,4/1/2015,9/1/2024,114,20,,0,0,F,mean,boj_cendebt.csv
+JM_CGD_ND_ST_003,FCGD1203,CG Debt: Domestic Debt - Short Term - US$ Denominated Notes & Loans,Central Government Debt,MS,4/1/2015,9/1/2024,114,20,,0,0,F,mean,boj_cendebt.csv
+JM_CGD_ND_ST_004,FCGD1204,CG Debt: Domestic Debt - Short Term - T-Bills,Central Government Debt,MS,4/1/2015,9/1/2024,114,20,,0,0,F,mean,boj_cendebt.csv
+JM_CGD_ND_ST_005,FCGD1205,CG Debt: Domestic Debt - Short Term - Commercial Bank & Public Sector Entity Loans,Central Government Debt,MS,9/1/2017,9/1/2024,85,20,,0,0,F,mean,boj_cendebt.csv
+JM_CGD_NF_LT_001,FCGD2101,CG Debt: External Debt - Long Term (Total),Central Government Debt,MS,4/1/2015,9/1/2024,114,20,,0,0,F,mean,boj_cendebt.csv
+JM_CGD_NF_LT_002,FCGD2102,CG Debt: External Debt - Long Term - Bilateral,Central Government Debt,MS,4/1/2015,9/1/2024,114,20,,0,0,F,mean,boj_cendebt.csv
+JM_CGD_NF_LT_003,FCGD2103,CG Debt: External Debt - Long Term - Multilateral,Central Government Debt,MS,4/1/2015,9/1/2024,114,20,,0,0,F,mean,boj_cendebt.csv
+JM_CGD_NF_LT_004,FCGD2104,CG Debt: External Debt - Long Term - Commercial Bank,Central Government Debt,MS,4/1/2015,9/1/2024,114,20,,0,0,F,mean,boj_cendebt.csv
+JM_CGD_NF_LT_005,FCGD2105,CG Debt: External Debt - Long Term - Other Commercial,Central Government Debt,MS,4/1/2015,9/1/2024,114,20,,0,0,F,mean,boj_cendebt.csv
+JM_CGD_NF_LT_006,FCGD2106,CG Debt: External Debt - Long Term - Bonds,Central Government Debt,MS,4/1/2015,9/1/2024,114,20,,0,0,F,mean,boj_cendebt.csv
+JM_CGD_NF_ST_001,FCGD2201,CG Debt: External Debt - Short Term (Total),Central Government Debt,MS,4/1/2015,9/1/2024,114,20,,0,0,F,mean,boj_cendebt.csv
+JM_CGD_NF_ST_002,FCGD2202,CG Debt: External Debt - Short Term - Bilateral,Central Government Debt,MS,4/1/2015,9/1/2024,114,20,,0,0,F,mean,boj_cendebt.csv
+JM_CGD_NF_ST_003,FCGD2203,CG Debt: External Debt - Short Term - Multilateral,Central Government Debt,MS,4/1/2015,9/1/2024,114,20,,0,0,F,mean,boj_cendebt.csv
+JM_CGD_NF_ST_004,FCGD2204,CG Debt: External Debt - Short Term - Commercial Bank,Central Government Debt,MS,4/1/2015,9/1/2024,114,20,,0,0,F,mean,boj_cendebt.csv
+JM_CGD_NF_ST_005,FCGD2205,CG Debt: External Debt - Short Term - Other Commercial,Central Government Debt,MS,4/1/2015,9/1/2024,114,20,,0,0,F,mean,boj_cendebt.csv
+JM_CGD_NF_ST_006,FCGD2206,CG Debt: External Debt - Short Term - Bonds,Central Government Debt,MS,4/1/2015,9/1/2024,114,20,,0,0,F,mean,boj_cendebt.csv
+JAM_CGO_ERECECP_XDC,FCGF1000,CGO: Financing - Net Domestic Financing,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_ERECE_XDC,FCGF0000,CGO: Financing,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_ERECOEEC_XDC,FCGE1302,CGO: Expenditure - Recurrent Expenditure - Interest - External,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_ERECOEWS_XDC,FCGE1301,CGO: Expenditure - Recurrent Expenditure - Interest - Domestic,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_ERECOE_XDC,FCGE1300,CGO: Expenditure - Recurrent Expenditure - Interest,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_EREID_XDC,FCGE2001,CGO: Expenditure - Capital Expenditure - Capital Programmes,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_EREIE_XDC,FCGF2004,CGO: Financing - External Financing - Amortization,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_EREI_XDC,FCGE2000,CGO: Expenditure - Capital Expenditure,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_EREP_XDC,FCGE1202,CGO: Expenditure - Recurrent Expenditure - Compensation of Employees - Employers Contribution,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_ERE_XDC,FCGE1201,CGO: Expenditure - Recurrent Expenditure - Compensation of Employees - Wages & Salaries,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_E_XDC,FCGE1200,CGO: Expenditure - Recurrent Expenditure - Compensation of Employees,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_FBSDFDP_XDC,FCGR0003,CGO: Revenue & Grants - Non-Tax Revenue - Bauxite Levy,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,133,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_FBSDFNDFA_XDC,FCGF2002,CGO: Financing - Net External Financing - Market Issues/Bonds,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,130,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_FBSDFNDFCBL_XDC,FCGF2000,CGO: Financing - Net External Financing,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_FBSDFNDFMI_XDC,FCGF1005,"CGO: Financing - Net Domestic Financing - Other, including Deposit Drawdown",Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_FBSDFNDFNIP_XDC,FCGF1004,CGO: Financing - Net Domestic Financing - Commercial Bank Loans,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,128,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_FBSDFNDFOIDD_XDC,FCGF2001,CGO: Financing - Net External Financing - Project/Investment Loans,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_FBSDFNDFT_XDC,FCGF1006,CGO: Financing - Net Domestic Financing - Amortization,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_FBSDFNDF_XDC,FCGF1003,CGO: Financing - Net Domestic Financing - T-Bills,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_FBSDFNEFA_XDC,FCGR0002,CGO: Revenue & Grants - Non-Tax Revenue,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_FBSDFNEFBSL_XDC,FCGR0001,CGO: Revenue & Grants - Tax Revenue,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_FBSDFNEFMI_XDC,FCGR0000,CGO: Revenue & Grants,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_FBSDFNEF_XDC,FCGF2003,CGO: Financing - Net External Financing - Budget Support Loans,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,133,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_FBSDF_XDC,FCGF1002,CGO: Financing - Net Domestic Financing - Market Issues/Bonds,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,131,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_FBSD_XDC,FCGF1001,"CGO: Financing - Net Domestic Financing - Non-Bank, including PCDF",Central Government Operations (CGO),MS,4/1/2013,2/1/2025,131,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_FBSOIPCDF_XDC,FCGF3000,CGO: Other Inflows (including PCDF),Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_FBSOOBOJREC_XDC,FCGB0000,CGO: Overall Balance (Surplus + / Deficit -),Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_OBSD_XDC,FCGR0004,CGO: Revenue & Grants - Capital Revenue,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_PBSD_XDC,FCGR0005,CGO: Revenue & Grants - Grants,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_RGBL_XDC,FCGE0000,CGO: Expenditure,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_RGCR_XDC,FCGE1000,CGO: Expenditure - Recurrent Expenditure,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_RGG_XDC,FCGE1100,CGO: Expenditure - Recurrent Expenditure - Programmes,Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_RGNR_XDC,FCGB1000,CGO: Primary Balance (Surplus + / Deficit -),Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CGO_RG_XDC,FCGB2000,CGO: Fiscal Balance (Surplus + / Deficit -),Central Government Operations (CGO),MS,4/1/2013,2/1/2025,134,15,1,0,0,F,mean,boj_cengov.csv
+JAM_CG_FBSOOBOJREC_XDC,FCGF4000,CGO: Other Outflows,Central Government Operations (CGO),MS,3/1/2018,2/1/2025,84,15,1,0,0,F,mean,boj_cengov.csv
+cpi,RCPI0000,Consumer Price Index (All Items),,MS,5/1/1999,3/1/2026,323,2,0,0,0,R,mean,boj_cpi.csv
+FDSAD_XDC,MDEP0001,Depository Corporations: Domestic Claims (JMD Millions),,MS,1/1/2010,3/1/2026,195,2,1,0,0,M,mean,boj_dcs.csv
+FDSB_XDC,MDEP0002,Depository Corporations: Broad Money Liabilities (JMD Millions),,MS,1/1/2010,3/1/2026,195,2,1,0,0,M,mean,boj_dcs.csv
+FDSF_XDC,MDEP0003,Depository Corporations: Net Foreign Assets (JMD Millions),,MS,1/1/2010,3/1/2026,195,2,1,0,0,M,mean,boj_dcs.csv
+d_rate_0_1m,MDDR0101,Domestic Deposit Rates: Time Deposits - Call & up to 1 month,,MS,1/1/1996,3/1/2026,363,2,0,0,0,M,mean,boj_deposit_rates.csv
+d_rate_12m_plus,MDDR0102,Domestic Deposit Rates: Time Deposits - 12 months & over,,MS,1/1/1996,3/1/2026,363,2,0,0,0,M,mean,boj_deposit_rates.csv
+d_rate_1_3m,MDDR0103,Domestic Deposit Rates: Time Deposits - 1 month & less than 3 months,,MS,1/1/1996,3/1/2026,363,2,0,0,0,M,mean,boj_deposit_rates.csv
+d_rate_3_6m,MDDR0104,Domestic Deposit Rates: Time Deposits - 3 months & less than 6 months,,MS,1/1/1996,3/1/2026,363,2,0,0,0,M,mean,boj_deposit_rates.csv
+d_rate_6_12m,MDDR0105,Domestic Deposit Rates: Time Deposits - 6 months & less than 12 months,,MS,1/1/1996,3/1/2026,363,2,0,0,0,M,mean,boj_deposit_rates.csv
+d_rate_overall,MDDR0100,Domestic Deposit Rates: Time Deposits - Overall average weighted rate,,MS,1/1/1996,3/1/2026,363,2,0,0,0,M,mean,boj_deposit_rates.csv
+demand_dep_rate,MDDR0200,Domestic Deposit Rates: Demand Deposits,,MS,3/1/1996,3/1/2026,361,2,0,0,0,M,mean,boj_deposit_rates.csv
+dep_rate_overall,MDDR0000,Domestic Deposit Rates: Overall deposit average weighted rate,,MS,3/1/1996,3/1/2026,361,2,0,0,0,M,mean,boj_deposit_rates.csv
+savings_dep_rate,MDDR0300,Domestic Deposit Rates: Savings Deposits,,MS,3/1/1996,3/1/2026,361,2,0,0,0,M,mean,boj_deposit_rates.csv
+d_rate_fx_0_1m,MFXR0101,FX Deposit Rates: Time Deposits - Call & up to 1 month,,MS,3/1/1996,2/1/2026,360,3,0,0,0,M,mean,boj_deposit_rates_fx.csv
+d_rate_fx_12m_plus,MFXR0102,FX Deposit Rates: Time Deposits - 12 months & over,,MS,3/1/1996,2/1/2026,360,3,0,0,0,M,mean,boj_deposit_rates_fx.csv
+d_rate_fx_1_3m,MFXR0103,FX Deposit Rates: Time Deposits - 1 month & less than 3 months,,MS,3/1/1996,2/1/2026,360,3,0,0,0,M,mean,boj_deposit_rates_fx.csv
+d_rate_fx_3_6m,MFXR0104,FX Deposit Rates: Time Deposits - 3 months & less than 6 months,,MS,3/1/1996,2/1/2026,360,3,0,0,0,M,mean,boj_deposit_rates_fx.csv
+d_rate_fx_6_12m,MFXR0105,FX Deposit Rates: Time Deposits - 6 months & less than 12 months,,MS,3/1/1996,2/1/2026,360,3,0,0,0,M,mean,boj_deposit_rates_fx.csv
+d_rate_fx_overall,MFXR0100,FX Deposit Rates: Time Deposits - Overall average weighted rate,,MS,3/1/1996,2/1/2026,360,3,0,0,0,M,mean,boj_deposit_rates_fx.csv
+demand_dep_fx_rate,MFXR0200,FX Deposit Rates: Demand Deposits,,MS,4/1/2000,2/1/2026,311,3,0,0,0,M,mean,boj_deposit_rates_fx.csv
+dep_rate_fx_overall,MFXR0000,FX Deposit Rates: Overall deposit average weighted rate,,MS,4/1/2000,2/1/2026,311,3,0,0,0,M,mean,boj_deposit_rates_fx.csv
+savings_dep_fx_rate,MFXR0300,FX Deposit Rates: Savings Deposits,,MS,4/1/2000,2/1/2026,311,3,0,0,0,M,mean,boj_deposit_rates_fx.csv
+DB_LC_USD,XEXD1101,EXD: Deposit-Taking Corporations External Debt - Long-term - Central bank creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DB_LD_USD,XEXD1102,EXD: Deposit-Taking Corporations External Debt - Long-term - Deposit-taking corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DB_LL_USD,XEXD1103,EXD: Deposit-Taking Corporations External Debt - Long-term - Other financial corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DB_LO_USD,XEXD1104,EXD: Deposit-Taking Corporations External Debt - Long-term - Other (residual),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,31,8,0,0,0,X,mean,boj_extdebt.csv
+DB_LT_USD,XEXD1105,EXD: Deposit-Taking Corporations External Debt - Long-term - Other sectors creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DB_L_USD,XEXD1100,EXD: Deposit-Taking Corporations External Debt - Long-term (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DB_SC_USD,XEXD1201,EXD: Deposit-Taking Corporations External Debt - Short-term - Central bank creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DB_SD_USD,XEXD1202,EXD: Deposit-Taking Corporations External Debt - Short-term - Deposit-taking corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DB_SL_USD,XEXD1203,EXD: Deposit-Taking Corporations External Debt - Short-term - Other financial corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DB_SO_USD,XEXD1204,EXD: Deposit-Taking Corporations External Debt - Short-term - Other (residual),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DB_ST_USD,XEXD1205,EXD: Deposit-Taking Corporations External Debt - Short-term - Other sectors creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DB_S_USD,XEXD1200,EXD: Deposit-Taking Corporations External Debt - Short-term (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DB_USD,XEXD1000,EXD: Deposit-Taking Corporations External Debt (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DG_LC_USD,XEXD2101,EXD: General Government External Debt - Long-term - Central bank creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DG_LD_USD,XEXD2102,EXD: General Government External Debt - Long-term - Deposit-taking corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DG_LL_USD,XEXD2103,EXD: General Government External Debt - Long-term - Other financial corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DG_LO_USD,XEXD2104,EXD: General Government External Debt - Long-term - Other (residual),IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DG_LS_USD,XEXD2105,EXD: General Government External Debt - Long-term - General government creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DG_LT_USD,XEXD2106,EXD: General Government External Debt - Long-term - Other sectors creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DG_L_USD,XEXD2100,EXD: General Government External Debt - Long-term (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DG_SC_USD,XEXD2201,EXD: General Government External Debt - Short-term - Central bank creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DG_SD_USD,XEXD2202,EXD: General Government External Debt - Short-term - Deposit-taking corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DG_SL_USD,XEXD2203,EXD: General Government External Debt - Short-term - Other financial corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DG_SO_USD,XEXD2204,EXD: General Government External Debt - Short-term - Other (residual),IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DG_ST_USD,XEXD2205,EXD: General Government External Debt - Short-term - Other sectors creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DG_S_USD,XEXD2200,EXD: General Government External Debt - Short-term (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DG_USD,XEXD2000,EXD: General Government External Debt (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DIAA_USD,XEXD3101,EXD: Direct Investment: Intercompany Lending - Debt liabilities to affiliated enterprises - Arrears,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2018,12,98,0,0,0,X,mean,boj_extdebt.csv
+DIAO_USD,XEXD3102,EXD: Direct Investment: Intercompany Lending - Debt liabilities to affiliated enterprises - Other,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2018,12,98,0,0,0,X,mean,boj_extdebt.csv
+DIA_USD,XEXD3100,EXD: Direct Investment: Intercompany Lending - Debt liabilities to affiliated enterprises (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2018,12,98,0,0,0,X,mean,boj_extdebt.csv
+DI_USD,XEXD3000,EXD: Direct Investment: Intercompany Lending (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DMA_LC_USD,XEXD4101,EXD: Monetary Authorities External Debt - Long-term - Central bank creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DMA_LD_USD,XEXD4102,EXD: Monetary Authorities External Debt - Long-term - Deposit-taking corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DMA_LL_USD,XEXD4103,EXD: Monetary Authorities External Debt - Long-term - Other financial corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DMA_LO_USD,XEXD4104,EXD: Monetary Authorities External Debt - Long-term - Other (residual),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DMA_LS_USD,XEXD4105,EXD: Monetary Authorities External Debt - Long-term - General government creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DMA_LT_USD,XEXD4106,EXD: Monetary Authorities External Debt - Long-term - Other sectors creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DMA_L_USD,XEXD4100,EXD: Monetary Authorities External Debt - Long-term (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DMA_SC_USD,XEXD4201,EXD: Monetary Authorities External Debt - Short-term - Central bank creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DMA_SD_USD,XEXD4202,EXD: Monetary Authorities External Debt - Short-term - Deposit-taking corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DMA_SL_USD,XEXD4203,EXD: Monetary Authorities External Debt - Short-term - Other financial corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DMA_SO_USD,XEXD4204,EXD: Monetary Authorities External Debt - Short-term - Other (residual),IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DMA_ST_USD,XEXD4205,EXD: Monetary Authorities External Debt - Short-term - Other sectors creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DMA_S_USD,XEXD4200,EXD: Monetary Authorities External Debt - Short-term (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DMA_USD,XEXD4000,EXD: Monetary Authorities External Debt (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DO_LC_USD,XEXD5101,EXD: Other Sectors External Debt - Long-term - Central bank creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DO_LD_USD,XEXD5102,EXD: Other Sectors External Debt - Long-term - Deposit-taking corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DO_LL_USD,XEXD5103,EXD: Other Sectors External Debt - Long-term - Other financial corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DO_LO_USD,XEXD5104,EXD: Other Sectors External Debt - Long-term - Other (residual),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DO_LT_USD,XEXD5105,EXD: Other Sectors External Debt - Long-term - Other sectors creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DO_L_USD,XEXD5100,EXD: Other Sectors External Debt - Long-term (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DO_SC_USD,XEXD5201,EXD: Other Sectors External Debt - Short-term - Central bank creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DO_SD_USD,XEXD5202,EXD: Other Sectors External Debt - Short-term - Deposit-taking corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DO_SL_USD,XEXD5203,EXD: Other Sectors External Debt - Short-term - Other financial corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DO_SO_USD,XEXD5204,EXD: Other Sectors External Debt - Short-term - Other (residual),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DO_ST_USD,XEXD5205,EXD: Other Sectors External Debt - Short-term - Other sectors creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DO_S_USD,XEXD5200,EXD: Other Sectors External Debt - Short-term (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DO_USD,XEXD5000,EXD: Other Sectors External Debt (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DPN_L_USD,XEXD6100,EXD: Private Non-Guaranteed External Debt - Long-term,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DPN_S_USD,XEXD6200,EXD: Private Non-Guaranteed External Debt - Short-term,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DPN_USD,XEXD6000,EXD: Private Non-Guaranteed External Debt (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DUGILAA_USD,XEXD7111,EXD: Public External Debt - Interest in arrears (long-term) - Arrears,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DUGILAO_USD,XEXD7112,EXD: Public External Debt - Interest in arrears (long-term) - Other,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DUGILA_USD,XEXD7110,EXD: Public External Debt - Interest in arrears (long-term) (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DUGIL_USD,XEXD7100,EXD: Public External Debt - Interest in arrears (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DUG_LC_USD,XEXD7201,EXD: Public External Debt - Long-term - Central bank creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DUG_LD_USD,XEXD7202,EXD: Public External Debt - Long-term - Deposit-taking corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DUG_LL_USD,XEXD7203,EXD: Public External Debt - Long-term - Other financial corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DUG_LO_USD,XEXD7204,EXD: Public External Debt - Long-term - Other (residual),IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DUG_LT_USD,XEXD7205,EXD: Public External Debt - Long-term - Other sectors creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DUG_L_USD,XEXD7200,EXD: Public External Debt - Long-term (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DUG_SC_USD,XEXD7301,EXD: Public External Debt - Short-term - Central bank creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DUG_SD_USD,XEXD7302,EXD: Public External Debt - Short-term - Deposit-taking corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DUG_SL_USD,XEXD7303,EXD: Public External Debt - Short-term - Other financial corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DUG_SO_USD,XEXD7304,EXD: Public External Debt - Short-term - Other (residual),IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DUG_ST_USD,XEXD7305,EXD: Public External Debt - Short-term - Other sectors creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DUG_S_USD,XEXD7300,EXD: Public External Debt - Short-term (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DUG_USD,XEXD7000,EXD: Public External Debt (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DUILAA_USD,XEXD8111,EXD: Public and Publicly Guaranteed External Debt - Interest in arrears (long-term) - Arrears,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DUILAO_USD,XEXD8112,EXD: Public and Publicly Guaranteed External Debt - Interest in arrears (long-term) - Other,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DUILA_USD,XEXD8110,EXD: Public and Publicly Guaranteed External Debt - Interest in arrears (long-term) (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DUIL_USD,XEXD8100,EXD: Public and Publicly Guaranteed External Debt - Interest in arrears (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DUUGDC_L_USD,XEXD8221,EXD: Public and Publicly Guaranteed External Debt - Use of credit - Debt creating flows - Long-term,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DUUGDC_S_USD,XEXD8222,EXD: Public and Publicly Guaranteed External Debt - Use of credit - Debt creating flows - Short-term,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DUUGDC_USD,XEXD8220,EXD: Public and Publicly Guaranteed External Debt - Use of credit - Debt creating flows (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DUUGFC_L_USD,XEXD8231,EXD: Public and Publicly Guaranteed External Debt - Use of credit - Financial corporations - Long-term,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DUUGFC_S_USD,XEXD8232,EXD: Public and Publicly Guaranteed External Debt - Use of credit - Financial corporations - Short-term,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DUUGFC_USD,XEXD8230,EXD: Public and Publicly Guaranteed External Debt - Use of credit - Financial corporations (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DUUGUC_USD,XEXD8210,EXD: Public and Publicly Guaranteed External Debt - Use of credit (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DUUG_USD,XEXD8200,EXD: Public and Publicly Guaranteed External Debt - Use of credit,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DU_LC_USD,XEXD8301,EXD: Public and Publicly Guaranteed External Debt - Long-term - Central bank creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DU_LD_USD,XEXD8302,EXD: Public and Publicly Guaranteed External Debt - Long-term - Deposit-taking corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DU_LL_USD,XEXD8303,EXD: Public and Publicly Guaranteed External Debt - Long-term - Other financial corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DU_LO_USD,XEXD8304,EXD: Public and Publicly Guaranteed External Debt - Long-term - Other (residual),IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DU_LS_USD,XEXD8305,EXD: Public and Publicly Guaranteed External Debt - Long-term - General government creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DU_LT_USD,XEXD8306,EXD: Public and Publicly Guaranteed External Debt - Long-term - Other sectors creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DU_L_USD,XEXD8300,EXD: Public and Publicly Guaranteed External Debt - Long-term (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DU_SC_USD,XEXD8401,EXD: Public and Publicly Guaranteed External Debt - Short-term - Central bank creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DU_SD_USD,XEXD8402,EXD: Public and Publicly Guaranteed External Debt - Short-term - Deposit-taking corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DU_SL_USD,XEXD8403,EXD: Public and Publicly Guaranteed External Debt - Short-term - Other financial corporations creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DU_SO_USD,XEXD8404,EXD: Public and Publicly Guaranteed External Debt - Short-term - Other (residual),IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DU_ST_USD,XEXD8405,EXD: Public and Publicly Guaranteed External Debt - Short-term - Other sectors creditors,IMF External Debt Statistics (EXD),QE,6/1/2015,3/1/2017,8,110,0,0,0,X,mean,boj_extdebt.csv
+DU_S_USD,XEXD8400,EXD: Public and Publicly Guaranteed External Debt - Short-term (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+DU_USD,XEXD8000,EXD: Public and Publicly Guaranteed External Debt (Total),IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+D_L_USD,XEXD0010,EXD: Total External Debt - Long-term,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+D_S_USD,XEXD0020,EXD: Total External Debt - Short-term,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+D_USD,XEXD0000,EXD: Total External Debt,IMF External Debt Statistics (EXD),QE,6/1/2015,9/1/2025,42,8,0,0,0,X,mean,boj_extdebt.csv
+EDNA_USD_XDC_RATE,MXRT0101,Nominal Exchange Rate (USD per XDC),,MS,1/1/2010,3/1/2026,195,2,0,0,0,M,mean,boj_forex.csv
+EDNE_USD_XDC_RATE,MXRT0102,End-of-Period Exchange Rate (USD per XDC),,MS,1/1/2010,3/1/2026,195,2,0,0,0,M,mean,boj_forex.csv
+ENDA_XDC_USD_RATE,MXRT0201,Nominal Exchange Rate (XDC per USD),,MS,1/1/2010,3/1/2026,195,2,0,0,0,M,mean,boj_forex.csv
+ENDE_XDC_USD_RATE,MXRT0202,End-of-Period Exchange Rate (XDC per USD),,MS,1/1/2010,3/1/2026,195,2,0,0,0,M,mean,boj_forex.csv
+accommodation_food_service_activities,RGDP0001,GDP: Accommodation & Food Service Activities,,QE,3/1/2015,12/1/2025,44,5,0,1,0,R,mean,boj_gdp.csv
+agriculture_forestry_fishing,RGDP0002,"GDP: Agriculture, Forestry & Fishing",,QE,3/1/2015,12/1/2025,44,5,0,1,0,R,mean,boj_gdp.csv
+construction,RGDP0003,GDP: Construction,,QE,3/1/2015,12/1/2025,44,5,0,1,0,R,mean,boj_gdp.csv
+education_health_other_services,RGDP0004,"GDP: Education, Health & Other Services",,QE,3/1/2015,12/1/2025,44,5,0,1,0,R,mean,boj_gdp.csv
+electricity_water_supply_waste_management,RGDP0005,"GDP: Electricity, Water Supply & Waste Management",,QE,3/1/2015,12/1/2025,44,5,0,1,0,R,mean,boj_gdp.csv
+financial_insurance_activities,RGDP0006,GDP: Financial & Insurance Activities,,QE,3/1/2015,12/1/2025,44,5,0,1,0,R,mean,boj_gdp.csv
+food_beverages_tobacco,RGDP0007,"GDP: Food, Beverages & Tobacco",,QE,3/1/2015,12/1/2025,44,5,0,1,0,R,mean,boj_gdp.csv
+information_communication,RGDP0008,GDP: Information & Communication,,QE,3/1/2015,12/1/2025,44,5,0,1,0,R,mean,boj_gdp.csv
+manufacturing,RGDP0009,GDP: Manufacturing,,QE,3/1/2015,12/1/2025,44,5,0,1,0,R,mean,boj_gdp.csv
+mining_quarrying,RGDP0010,GDP: Mining & Quarrying,,QE,3/1/2015,12/1/2025,44,5,0,1,0,R,mean,boj_gdp.csv
+other_manufacturing,RGDP0011,GDP: Other Manufacturing,,QE,3/1/2015,12/1/2025,44,5,0,1,0,R,mean,boj_gdp.csv
+public_administration_defence,RGDP0012,GDP: Public Administration & Defence,,QE,3/1/2015,12/1/2025,44,5,0,1,0,R,mean,boj_gdp.csv
+real_estate_business_activities,RGDP0013,GDP: Real Estate & Business Activities,,QE,3/1/2025,12/1/2025,4,5,0,1,0,R,mean,boj_gdp.csv
+real_estate_business_services,RGDP0014,GDP: Real Estate & Business Services,,QE,3/1/2015,12/1/2024,40,17,0,1,0,R,mean,boj_gdp.csv
+transport_storage,RGDP0015,GDP: Transport & Storage,,QE,3/1/2015,12/1/2025,44,5,0,1,0,R,mean,boj_gdp.csv
+wholesale_retail_trade_repair_of_motor_vehicles_installation_of_machinery_equipment,RGDP0016,GDP: Wholesale & Retail Trade; Repair of Motor Vehicles & Installation of Machinery & Equipment,,QE,3/1/2015,12/1/2025,44,5,0,1,0,R,mean,boj_gdp.csv
+JAM_GGO_GADLD_T_CB_XDC,FFIN1001,Government Operations: Domestic Financing - Bank (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+JAM_GGO_GADLD_T_NFS_XDC,FFIN1002,Government Operations: Domestic Financing - Non Bank (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+JAM_GGO_GADLD_T_XDC,FFIN1000,Government Operations: Domestic Financing (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+JAM_GGO_GADLF_T_XDC,FFIN2000,Government Operations: Foreign Financing (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+JAM_GGO_GADL_T_XDC,FFIN0000,Government Operations: Financing (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+JAM_GGO_GEI_XDC,FEXP1001,Government Operations: Interest (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+JAM_GGO_GEOMK_XDC,FEXP2000,Government Operations: Capital Expenditure (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+JAM_GGO_GEOP_XDC,FEXP1002,Government Operations: All other current expenditure (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+JAM_GGO_GE_XDC,FEXP1000,Government Operations: Current Expenditure (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+JAM_GGO_GRG_XDC,FREV0002,Government Operations: Grants (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+JAM_GGO_GRNT_XDC,FREV1200,Government Operations: Non-Tax Revenue (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+JAM_GGO_GROTK_XDC,FREV2000,Government Operations: Capital Revenue (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+JAM_GGO_GRR_XDC,FREV1000,Government Operations: Current Revenue (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+JAM_GGO_GRS_XDC,FREV1102,Government Operations: Social Contributions (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+JAM_GGO_GRTI_XDC,FREV1101,Government Operations: Taxes (detailed) (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+JAM_GGO_GRTOT_XDC,FREV0000,Government Operations: Total Revenue (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+JAM_GGO_GRT_XDC,FREV1100,Government Operations: Tax Revenue (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+JAM_GGO_GR_XDC,FREV0001,Government Operations: Revenue and Grants (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+JAM_GGO_GXCBG_XDC,FBAL0000,Government Operations: Overall Balance (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+JAM_GGO_GXCNL_XDC,FEXP0002,Government Operations: Lending Minus Repayments (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+JAM_GGO_GXN_XDC,FEXP0001,Government Operations: Expenditure and Lending Minus Repayments (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+JAM_GGO_GX_XDC,FEXP0000,Government Operations: Total Expenditure (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,1,0,0,F,mean,boj_gengov.csv
+primary_balance,FBAL1000,Government Operations: Primary Balance (JMD Millions),,MS,12/1/2019,12/1/2024,6,17,,0,0,F,mean,boj_gengov.csv
+IADFDC_BP6_USD,XIIP1310,IIP: Assets - Financial derivatives - Deposit-taking corporations (except central bank),International Investment Position (IIP),QE,3/1/2012,9/1/2025,53,8,0,0,0,X,mean,boj_iip.csv
+IADFG_BP6_USD,XIIP1320,IIP: Assets - Financial derivatives - General government,International Investment Position (IIP),QE,6/1/2015,9/1/2025,38,8,0,0,0,X,mean,boj_iip.csv
+IADFOF_BP6_USD,XIIP1331,IIP: Assets - Financial derivatives - Other sectors - Other financial corporations,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IADFONF_BP6_USD,XIIP1332,"IIP: Assets - Financial derivatives - Other sectors - Non-financial corporations, households, and NPISHs",International Investment Position (IIP),QE,3/1/2012,9/1/2013,7,152,0,0,0,X,mean,boj_iip.csv
+IADFO_BP6_USD,XIIP1330,IIP: Assets - Financial derivatives - Other sectors,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IADF_BP6_USD,XIIP1300,IIP: Assets - Financial derivatives (other than reserves) and employee stock options,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAD_BP6_USD,XIIP1100,IIP: Assets - Direct investment,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOCDDC_BP6_USD,XIIP1411,IIP: Assets - Other investment - Currency and deposits - Deposit-taking corporations (except central bank),International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOCDDC_L_BP6_USD,XIIP1412,IIP: Assets - Other investment - Currency and deposits - Deposit-taking corporations (except central bank) - Long-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOCDDC_S_BP6_USD,XIIP1413,IIP: Assets - Other investment - Currency and deposits - Deposit-taking corporations (except central bank) - Short-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOCDOF_BP6_USD,XIIP1415,IIP: Assets - Other investment - Currency and deposits - Other sectors - Other financial corporations,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOCDOF_L_BP6_USD,XIIP1416,IIP: Assets - Other investment - Currency and deposits - Other sectors - Other financial corporations - Long-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOCDOF_S_BP6_USD,XIIP1417,IIP: Assets - Other investment - Currency and deposits - Other sectors - Other financial corporations - Short-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOCDONF_BP6_USD,XIIP1418,"IIP: Assets - Other investment - Currency and deposits - Other sectors - Non-financial corporations, households, and NPISHs",International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOCDONF_S_BP6_USD,XIIP1419,"IIP: Assets - Other investment - Currency and deposits - Other sectors - Non-financial corporations, households, and NPISHs - Short-term",International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOCDO_BP6_USD,XIIP1414,IIP: Assets - Other investment - Currency and deposits - Other sectors,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOCDO_L_BP6_USD,XIIP1420,IIP: Assets - Other investment - Currency and deposits - Other sectors - Long-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOCDO_S_BP6_USD,XIIP1421,IIP: Assets - Other investment - Currency and deposits - Other sectors - Short-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOCD_BP6_USD,XIIP1410,IIP: Assets - Other investment - Currency and deposits,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOLNDC_BP6_USD,XIIP1431,IIP: Assets - Other investment - Loans - Deposit-taking corporations (except central bank),International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOLNDC_L_BP6_USD,XIIP1432,IIP: Assets - Other investment - Loans - Deposit-taking corporations (except central bank) - Long-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOLNDC_S_BP6_USD,XIIP1433,IIP: Assets - Other investment - Loans - Deposit-taking corporations (except central bank) - Short-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOLNO_BP6_USD,XIIP1434,IIP: Assets - Other investment - Loans - Other sectors,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOLNO_L_BP6_USD,XIIP1435,IIP: Assets - Other investment - Loans - Other sectors - Long-term,International Investment Position (IIP),QE,12/1/2013,9/1/2025,48,8,0,0,0,X,mean,boj_iip.csv
+IAOLNO_S_BP6_USD,XIIP1436,IIP: Assets - Other investment - Loans - Other sectors - Short-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOLN_BP6_USD,XIIP1430,IIP: Assets - Other investment - Loans,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOPCOF_BP6_USD,XIIP1472,"IIP: Assets - Other investment - Insurance, pension, and standardized guarantees - Other sectors - Other financial corporations",International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOPCO_BP6_USD,XIIP1471,"IIP: Assets - Other investment - Insurance, pension, and standardized guarantees - Other sectors",International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOPC_BP6_USD,XIIP1470,"IIP: Assets - Other investment - Insurance, pension, and standardized guarantees",International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAORDC_BP6_USD,XIIP1461,IIP: Assets - Other investment - Other accounts receivable/payable - Deposit-taking corporations (except central bank),International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAORDC_L_BP6_USD,XIIP1462,IIP: Assets - Other investment - Other accounts receivable/payable - Deposit-taking corporations (except central bank) - Long-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,34,8,0,0,0,X,mean,boj_iip.csv
+IAORDC_S_BP6_USD,XIIP1463,IIP: Assets - Other investment - Other accounts receivable/payable - Deposit-taking corporations (except central bank) - Short-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAORO_BP6_USD,XIIP1464,IIP: Assets - Other investment - Other accounts receivable/payable - Other sectors,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAORO_L_BP6_USD,XIIP1465,IIP: Assets - Other investment - Other accounts receivable/payable - Other sectors - Long-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAORO_S_BP6_USD,XIIP1466,IIP: Assets - Other investment - Other accounts receivable/payable - Other sectors - Short-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOR_BP6_USD,XIIP1460,IIP: Assets - Other investment - Other accounts receivable/payable,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOTDC_BP6_USD,XIIP1441,IIP: Assets - Other investment - Trade credit and advances - Deposit-taking corporations (except central bank),International Investment Position (IIP),QE,3/1/2012,9/1/2025,52,8,0,0,0,X,mean,boj_iip.csv
+IAOTDC_S_BP6_USD,XIIP1442,IIP: Assets - Other investment - Trade credit and advances - Deposit-taking corporations (except central bank) - Short-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,52,8,0,0,0,X,mean,boj_iip.csv
+IAOTOF_BP6_USD,XIIP1444,IIP: Assets - Other investment - Trade credit and advances - Other sectors - Other financial corporations,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOTOF_L_BP6_USD,XIIP1445,IIP: Assets - Other investment - Trade credit and advances - Other sectors - Other financial corporations - Long-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOTOF_S_BP6_USD,XIIP1446,IIP: Assets - Other investment - Trade credit and advances - Other sectors - Other financial corporations - Short-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOTONF_BP6_USD,XIIP1447,"IIP: Assets - Other investment - Trade credit and advances - Other sectors - Non-financial corporations, households, and NPISHs",International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOTONF_L_BP6_USD,XIIP1448,"IIP: Assets - Other investment - Trade credit and advances - Other sectors - Non-financial corporations, households, and NPISHs - Long-term",International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOTONF_S_BP6_USD,XIIP1449,"IIP: Assets - Other investment - Trade credit and advances - Other sectors - Non-financial corporations, households, and NPISHs - Short-term",International Investment Position (IIP),QE,3/1/2015,9/1/2025,43,8,0,0,0,X,mean,boj_iip.csv
+IAOTO_BP6_USD,XIIP1443,IIP: Assets - Other investment - Trade credit and advances - Other sectors,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOTO_L_BP6_USD,XIIP1450,IIP: Assets - Other investment - Trade credit and advances - Other sectors - Long-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOTO_S_BP6_USD,XIIP1451,IIP: Assets - Other investment - Trade credit and advances - Other sectors - Short-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAOT_BP6_USD,XIIP1440,IIP: Assets - Other investment - Trade credit and advances,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAO_BP6_USD,XIIP1400,IIP: Assets - Other investment,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAPDDC_BP6_USD,XIIP1211,IIP: Assets - Portfolio investment - Debt securities - Deposit-taking corporations (except central bank),International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAPDDC_L_BP6_USD,XIIP1212,IIP: Assets - Portfolio investment - Debt securities - Deposit-taking corporations (except central bank) - Long-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAPDDC_S_BP6_USD,XIIP1213,IIP: Assets - Portfolio investment - Debt securities - Deposit-taking corporations (except central bank) - Short-term,International Investment Position (IIP),QE,6/1/2012,9/1/2025,52,8,0,0,0,X,mean,boj_iip.csv
+IAPDO_BP6_USD,XIIP1214,IIP: Assets - Portfolio investment - Debt securities - Other sectors,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAPDO_L_BP6_USD,XIIP1215,IIP: Assets - Portfolio investment - Debt securities - Other sectors - Long-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAPDO_S_BP6_USD,XIIP1216,IIP: Assets - Portfolio investment - Debt securities - Other sectors - Short-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAPD_BP6_USD,XIIP1210,IIP: Assets - Portfolio investment - Debt securities,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAPEDC_BP6_USD,XIIP1221,IIP: Assets - Portfolio investment - Equity and investment fund shares - Deposit-taking corporations (except central bank),International Investment Position (IIP),QE,3/1/2012,9/1/2025,52,8,0,0,0,X,mean,boj_iip.csv
+IAPEO_BP6_USD,XIIP1222,IIP: Assets - Portfolio investment - Equity and investment fund shares - Other sectors,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAPE_BP6_USD,XIIP1220,IIP: Assets - Portfolio investment - Equity and investment fund shares,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAP_BP6_USD,XIIP1200,IIP: Assets - Portfolio investment,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IARIMF_BP6_USD,XIIP1510,IIP: Assets - Reserve assets - Reserve position in the IMF,International Investment Position (IIP),QE,3/1/2016,9/1/2025,39,8,0,0,0,X,mean,boj_iip.csv
+IAROCDMA_BP6_USD,XIIP1532,IIP: Assets - Reserve assets - Other reserve assets - Currency and deposits - Monetary authorities,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAROCDO_BP6_USD,XIIP1533,IIP: Assets - Reserve assets - Other reserve assets - Currency and deposits - Other entities,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAROCD_BP6_USD,XIIP1531,IIP: Assets - Reserve assets - Other reserve assets - Currency and deposits,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAROSD_BP6_USD,XIIP1535,IIP: Assets - Reserve assets - Other reserve assets - Debt securities,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAROS_BP6_USD,XIIP1534,IIP: Assets - Reserve assets - Other reserve assets - Securities,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IARO_BP6_USD,XIIP1530,IIP: Assets - Reserve assets - Other reserve assets,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IARSDR_BP6_USD,XIIP1520,IIP: Assets - Reserve assets - Special drawing rights,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IAR_BP6_USD,XIIP1500,IIP: Assets - Reserve assets,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IA_BP6_USD,XIIP1000,IIP: Assets - Total,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILD_BP6_USD,XIIP2100,IIP: Liabilities - Direct investment,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILFDC_BP6_USD,XIIP2310,IIP: Liabilities - Financial derivatives - Deposit-taking corporations (except central bank),International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILFO_BP6_USD,XIIP2320,IIP: Liabilities - Financial derivatives - Other sectors,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILF_BP6_USD,XIIP2300,IIP: Liabilities - Financial derivatives (other than reserves) and employee stock options,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOCDDC_BP6_USD,XIIP2411,IIP: Liabilities - Other investment - Currency and deposits - Deposit-taking corporations (except central bank),International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOCDDC_L_BP6_USD,XIIP2412,IIP: Liabilities - Other investment - Currency and deposits - Deposit-taking corporations (except central bank) - Long-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOCDDC_S_BP6_USD,XIIP2413,IIP: Liabilities - Other investment - Currency and deposits - Deposit-taking corporations (except central bank) - Short-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOCD_BP6_USD,XIIP2410,IIP: Liabilities - Other investment - Currency and deposits,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOLNCBIMF_BP6_USD,XIIP2422,IIP: Liabilities - Other investment - Loans - Central bank - IMF credit and loans (excluding reserves),International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOLNCB_BP6_USD,XIIP2421,IIP: Liabilities - Other investment - Loans - Central bank,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOLNDC_BP6_USD,XIIP2423,IIP: Liabilities - Other investment - Loans - Deposit-taking corporations (except central bank),International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOLNDC_L_BP6_USD,XIIP2424,IIP: Liabilities - Other investment - Loans - Deposit-taking corporations (except central bank) - Long-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOLNDC_S_BP6_USD,XIIP2425,IIP: Liabilities - Other investment - Loans - Deposit-taking corporations (except central bank) - Short-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOLNG_BP6_USD,XIIP2426,IIP: Liabilities - Other investment - Loans - General government,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOLNG_L_BP6_USD,XIIP2427,IIP: Liabilities - Other investment - Loans - General government - Long-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOLNOF_BP6_USD,XIIP2429,IIP: Liabilities - Other investment - Loans - Other sectors - Other financial corporations,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOLNOF_L_BP6_USD,XIIP2430,IIP: Liabilities - Other investment - Loans - Other sectors - Other financial corporations - Long-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,53,8,0,0,0,X,mean,boj_iip.csv
+ILOLNOF_S_BP6_USD,XIIP2431,IIP: Liabilities - Other investment - Loans - Other sectors - Other financial corporations - Short-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOLNONF_BP6_USD,XIIP2432,"IIP: Liabilities - Other investment - Loans - Other sectors - Non-financial corporations, households, and NPISHs",International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOLNONF_L_BP6_USD,XIIP2433,"IIP: Liabilities - Other investment - Loans - Other sectors - Non-financial corporations, households, and NPISHs - Long-term",International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOLNO_BP6_USD,XIIP2428,IIP: Liabilities - Other investment - Loans - Other sectors,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOLNO_L_BP6_USD,XIIP2434,IIP: Liabilities - Other investment - Loans - Other sectors - Long-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOLNO_S_BP6_USD,XIIP2435,IIP: Liabilities - Other investment - Loans - Other sectors - Short-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOLN_BP6_USD,XIIP2420,IIP: Liabilities - Other investment - Loans,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOPCB_BP6_USD,XIIP2461,"IIP: Liabilities - Other investment - Insurance, pension, and standardized guarantees - Central bank",International Investment Position (IIP),QE,3/1/2012,3/1/2017,21,110,0,0,0,X,mean,boj_iip.csv
+ILOPCB_L_BP6_USD,XIIP2462,"IIP: Liabilities - Other investment - Insurance, pension, and standardized guarantees - Central bank - Long-term",International Investment Position (IIP),QE,3/1/2012,3/1/2017,21,110,0,0,0,X,mean,boj_iip.csv
+ILOPCO_BP6_USD,XIIP2463,"IIP: Liabilities - Other investment - Insurance, pension, and standardized guarantees - Other sectors",International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOPCPE_BP6_USD,XIIP2464,"IIP: Liabilities - Other investment - Insurance, pension, and standardized guarantees - Pension entitlements",International Investment Position (IIP),QE,6/1/2017,9/1/2025,34,8,0,0,0,X,mean,boj_iip.csv
+ILOPC_BP6_USD,XIIP2460,"IIP: Liabilities - Other investment - Insurance, pension, and standardized guarantees",International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOPDC_BP6_USD,XIIP2451,IIP: Liabilities - Other investment - Other accounts receivable/payable - Deposit-taking corporations (except central bank),International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOPDC_L_BP6_USD,XIIP2452,IIP: Liabilities - Other investment - Other accounts receivable/payable - Deposit-taking corporations (except central bank) - Long-term,International Investment Position (IIP),QE,9/1/2019,9/1/2025,25,8,0,0,0,X,mean,boj_iip.csv
+ILOPDC_S_BP6_USD,XIIP2453,IIP: Liabilities - Other investment - Other accounts receivable/payable - Deposit-taking corporations (except central bank) - Short-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOPO_BP6_USD,XIIP2454,IIP: Liabilities - Other investment - Other accounts receivable/payable - Other sectors,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOPO_L_BP6_USD,XIIP2455,IIP: Liabilities - Other investment - Other accounts receivable/payable - Other sectors - Long-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOPO_S_BP6_USD,XIIP2456,IIP: Liabilities - Other investment - Other accounts receivable/payable - Other sectors - Short-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOP_BP6_USD,XIIP2450,IIP: Liabilities - Other investment - Other accounts receivable/payable,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOSDR_BP6_USD,XIIP2470,IIP: Liabilities - Other investment - Special drawing rights (allocations),International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOTDC_BP6_USD,XIIP2441,IIP: Liabilities - Other investment - Trade credit and advances - Deposit-taking corporations (except central bank),International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOTDC_L_BP6_USD,XIIP2442,IIP: Liabilities - Other investment - Trade credit and advances - Deposit-taking corporations (except central bank) - Long-term,International Investment Position (IIP),QE,6/1/2019,9/1/2025,26,8,0,0,0,X,mean,boj_iip.csv
+ILOTDC_S_BP6_USD,XIIP2443,IIP: Liabilities - Other investment - Trade credit and advances - Deposit-taking corporations (except central bank) - Short-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOTO_BP6_USD,XIIP2444,IIP: Liabilities - Other investment - Trade credit and advances - Other sectors,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOTO_L_BP6_USD,XIIP2445,IIP: Liabilities - Other investment - Trade credit and advances - Other sectors - Long-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOTO_S_BP6_USD,XIIP2446,IIP: Liabilities - Other investment - Trade credit and advances - Other sectors - Short-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILOT_BP6_USD,XIIP2440,IIP: Liabilities - Other investment - Trade credit and advances,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILO_BP6_USD,XIIP2400,IIP: Liabilities - Other investment,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILPDCB_BP6_USD,XIIP2211,IIP: Liabilities - Portfolio investment - Debt securities - Central bank,International Investment Position (IIP),QE,6/1/2017,6/1/2017,1,107,0,0,0,X,mean,boj_iip.csv
+ILPDCB_L_BP6_USD,XIIP2212,IIP: Liabilities - Portfolio investment - Debt securities - Central bank - Long-term,International Investment Position (IIP),QE,6/1/2017,6/1/2017,1,107,0,0,0,X,mean,boj_iip.csv
+ILPDDC_BP6_USD,XIIP2213,IIP: Liabilities - Portfolio investment - Debt securities - Deposit-taking corporations (except central bank),International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILPDDC_L_BP6_USD,XIIP2214,IIP: Liabilities - Portfolio investment - Debt securities - Deposit-taking corporations (except central bank) - Long-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILPDDC_S_BP6_USD,XIIP2215,IIP: Liabilities - Portfolio investment - Debt securities - Deposit-taking corporations (except central bank) - Short-term,International Investment Position (IIP),QE,12/1/2012,9/1/2025,52,8,0,0,0,X,mean,boj_iip.csv
+ILPDG_BP6_USD,XIIP2216,IIP: Liabilities - Portfolio investment - Debt securities - General government,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILPDG_L_BP6_USD,XIIP2217,IIP: Liabilities - Portfolio investment - Debt securities - General government - Long-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILPDG_S_BP6_USD,XIIP2218,IIP: Liabilities - Portfolio investment - Debt securities - General government - Short-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,38,8,0,0,0,X,mean,boj_iip.csv
+ILPDO_BP6_USD,XIIP2219,IIP: Liabilities - Portfolio investment - Debt securities - Other sectors,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILPDO_L_BP6_USD,XIIP2220,IIP: Liabilities - Portfolio investment - Debt securities - Other sectors - Long-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILPDO_S_BP6_USD,XIIP2221,IIP: Liabilities - Portfolio investment - Debt securities - Other sectors - Short-term,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILPD_BP6_USD,XIIP2210,IIP: Liabilities - Portfolio investment - Debt securities,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILPEDC_BP6_USD,XIIP2221,IIP: Liabilities - Portfolio investment - Equity and investment fund shares - Deposit-taking corporations (except central bank),International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILPEOF_BP6_USD,XIIP2223,IIP: Liabilities - Portfolio investment - Equity and investment fund shares - Other sectors - Other financial corporations,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILPEONF_BP6_USD,XIIP2224,"IIP: Liabilities - Portfolio investment - Equity and investment fund shares - Other sectors - Non-financial corporations, households, and NPISHs",International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILPEO_BP6_USD,XIIP2222,IIP: Liabilities - Portfolio investment - Equity and investment fund shares - Other sectors,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILPE_BP6_USD,XIIP2220,IIP: Liabilities - Portfolio investment - Equity and investment fund shares,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+ILP_BP6_USD,XIIP2200,IIP: Liabilities - Portfolio investment,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+IL_BP6_USD,XIIP2000,IIP: Liabilities - Total,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+I_BP6_USD,XIIP0000,IIP: Net international investment position,International Investment Position (IIP),QE,3/1/2012,9/1/2025,55,8,0,0,0,X,mean,boj_iip.csv
+estimated_gross_official_reserves_in_weeks_of_goods_imports,MRES0101,International Reserves: Estimated Gross Official Reserves in weeks of Goods Imports,,MS,9/1/1992,3/1/2026,402,2,,0,0,M,mean,boj_iirr.csv
+estimated_gross_official_reserves_in_weeks_of_goods_services_imports,MRES0102,International Reserves: Estimated Gross Official Reserves in weeks of Goods & Services Imports,,MS,12/1/2000,3/1/2026,304,2,,0,0,M,mean,boj_iirr.csv
+foreign_assets_imf_reserve_position,MRES0201,International Reserves: Foreign Assets - IMF Reserve Position (USD Millions),,MS,3/1/2016,3/1/2026,121,2,,0,0,M,mean,boj_iirr.csv
+foreign_assetscurrency_deposits,MRES0202,International Reserves: Foreign Assets - Currency & Deposits (USD Millions),,MS,3/1/2011,3/1/2026,181,2,,0,0,M,mean,boj_iirr.csv
+foreign_assetssecurities,MRES0203,International Reserves: Foreign Assets - Securities (USD Millions),,MS,3/1/2011,3/1/2026,181,2,,0,0,M,mean,boj_iirr.csv
+foreign_assetsspecial_drawing_rights,MRES0204,International Reserves: Foreign Assets - Special Drawing Rights (USD Millions),,MS,3/1/2011,3/1/2026,181,2,,0,0,M,mean,boj_iirr.csv
+foreign_assetstotal_foreign_assets,MRES0200,International Reserves: Foreign Assets - Total (USD Millions),,MS,9/1/1992,3/1/2026,403,2,,0,0,M,mean,boj_iirr.csv
+foreign_liabilitiesimf,MRES0301,International Reserves: Foreign Liabilities - IMF (USD Millions),,MS,9/1/1992,3/1/2026,344,2,,0,0,M,mean,boj_iirr.csv
+foreign_liabilitiesother,MRES0302,International Reserves: Foreign Liabilities - Other* (USD Millions),,MS,9/1/1992,3/1/2026,403,2,,0,0,M,mean,boj_iirr.csv
+foreign_liabilitiestotal,MRES0300,International Reserves: Foreign Liabilities - Total (USD Millions),,MS,9/1/1992,3/1/2026,403,2,,0,0,M,mean,boj_iirr.csv
+nir,MRES0000,International Reserves: NIR (USD Millions),,MS,1/1/1992,3/1/2026,411,2,,0,0,M,mean,boj_iirr.csv
+FII_PA,MFXI0001,Foreign Investment: Interbank Rate (% p.a.),,MS,1/1/2010,1/1/2020,121,76,,0,0,M,mean,boj_inr.csv
+FILR_PA,MFXI0002,Foreign Investment: Lending Rate (% p.a.),,MS,1/1/2010,6/1/2016,78,119,,0,0,M,mean,boj_inr.csv
+FILR_WT_PA,MFXI0003,Foreign Investment: Lending Rate - Weighted Average (% p.a.),,MS,1/1/2010,3/1/2026,195,2,,0,0,M,mean,boj_inr.csv
+FISR_MIN_PA,MFXI0004,Foreign Investment: Savings Rate - Minimum (% p.a.),,MS,1/1/2010,3/1/2026,110,2,,0,0,M,mean,boj_inr.csv
+FITB_PA,MFXI0005,Foreign Investment: Treasury Bill Rate (% p.a.),,MS,1/1/2010,3/1/2026,195,2,,0,0,M,mean,boj_inr.csv
+FITD_3M_6M_MAX_PA,MFXI0006,Foreign Investment: Time Deposit 3-6 Months - Maximum Rate (% p.a.),,MS,1/1/2010,6/1/2016,78,119,,0,0,M,mean,boj_inr.csv
+FITD_3M_6M_WT_PA,MFXI0007,Foreign Investment: Time Deposit 3-6 Months - Weighted Average Rate (% p.a.),,MS,1/1/2010,3/1/2026,195,2,,0,0,M,mean,boj_inr.csv
+FPOLM_PA,MFXI0008,Foreign Investment: Policy/Overnight Lending Money Market Rate (% p.a.),,MS,1/1/2010,3/1/2026,195,2,,0,0,M,mean,boj_inr.csv
+int_rate_commercial,MDCR0001,Commercial Banks' Domestic Currency Loan Rates: Commercial Credit (%),,MS,1/1/1980,2/1/2026,554,3,0,0,0,M,mean,boj_interest.csv
+int_rate_instalment,MDCR0002,Commercial Banks' Domestic Currency Loan Rates: Instalment Credit (%),,MS,1/1/1980,2/1/2026,554,3,0,0,0,M,mean,boj_interest.csv
+int_rate_mortgage,MDCR0003,Commercial Banks' Domestic Currency Loan Rates: Mortgage Credit (%),,MS,1/1/1980,2/1/2026,554,3,0,0,0,M,mean,boj_interest.csv
+int_rate_overall,MDCR0000,Commercial Banks' Domestic Currency Loan Rates: Overall Average/Weighted Rate (%),,MS,1/1/1980,2/1/2026,554,3,0,0,0,M,mean,boj_interest.csv
+int_rate_personal,MDCR0004,Commercial Banks' Domestic Currency Loan Rates: Personal Credit (%),,MS,1/1/1980,2/1/2026,554,3,0,0,0,M,mean,boj_interest.csv
+int_rate_topublic_central_gvt,MDCR0005,Commercial Banks' Domestic Currency Loan Rates: Loans to Central Government (%),,MS,1/1/1980,2/1/2026,554,3,0,0,0,M,mean,boj_interest.csv
+int_rate_topublic_local_gvt,MDCR0006,Commercial Banks' Domestic Currency Loan Rates: Loans to Local Government & Other Public Entities (%),,MS,1/1/1980,2/1/2026,554,3,0,0,0,M,mean,boj_interest.csv
+int_rate_fx_commercial,MFXR0001,Commercial Banks' Foreign Currency Loan Rates: Commercial Credit (%),,MS,3/1/1996,2/1/2026,360,3,0,0,0,M,mean,boj_interest_fx.csv
+int_rate_fx_instalment,MFXR0002,Commercial Banks' Foreign Currency Loan Rates: Instalment Credit (%),,MS,3/1/1996,2/1/2026,276,3,0,0,0,M,mean,boj_interest_fx.csv
+int_rate_fx_mortgage,MFXR0003,Commercial Banks' Foreign Currency Loan Rates: Mortgage Credit (%),,MS,7/1/2010,2/1/2026,188,3,0,0,0,M,mean,boj_interest_fx.csv
+int_rate_fx_overall,MFXR0000,Commercial Banks' Foreign Currency Loan Rates: Overall Average/Weighted Rate (%),,MS,3/1/1996,2/1/2026,360,3,0,0,0,M,mean,boj_interest_fx.csv
+int_rate_fx_personal,MFXR0004,Commercial Banks' Foreign Currency Loan Rates: Personal Credit (%),,MS,3/1/1996,2/1/2026,360,3,0,0,0,M,mean,boj_interest_fx.csv
+int_rate_fx_topublic_central_gvt,MFXR0005,Commercial Banks' Foreign Currency Loan Rates: Loans to Central Government (%),,MS,3/1/1996,2/1/2026,331,3,0,0,0,M,mean,boj_interest_fx.csv
+int_rate_fx_topublic_local_gvt,MFXR0006,Commercial Banks' Foreign Currency Loan Rates: Loans to Local Government & Other Public Entities (%),,MS,3/1/1996,2/1/2026,360,3,0,0,0,M,mean,boj_interest_fx.csv
+domestic_currency_30-days_max,MMMR0101,Private Money Market Rates: Domestic Currency - 30-Days - Maximum (%),,MS,6/1/2005,4/1/2026,251,1,,0,0,M,mean,boj_ir.csv
+domestic_currency_30-days_min,MMMR0102,Private Money Market Rates: Domestic Currency - 30-Days - Minimum (%),,MS,6/1/2005,4/1/2026,251,1,,0,0,M,mean,boj_ir.csv
+domestic_currency_interbank_max,MMMR0103,Private Money Market Rates: Domestic Currency - Interbank - Maximum (%),,MS,6/1/2005,4/1/2026,245,1,,0,0,M,mean,boj_ir.csv
+domestic_currency_interbank_min,MMMR0104,Private Money Market Rates: Domestic Currency - Interbank - Minimum (%),,MS,6/1/2005,4/1/2026,245,1,,0,0,M,mean,boj_ir.csv
+domestic_currency_overnight_max,MMMR0105,Private Money Market Rates: Domestic Currency - Overnight - Maximum (%),,MS,6/1/2005,4/1/2026,251,1,,0,0,M,mean,boj_ir.csv
+domestic_currency_overnight_min,MMMR0106,Private Money Market Rates: Domestic Currency - Overnight - Minimum (%),,MS,6/1/2005,4/1/2026,251,1,,0,0,M,mean,boj_ir.csv
+us_currency_30-days_max,MMMR0201,Private Money Market Rates: US Currency - 30-Days - Maximum (%),,MS,6/1/2005,4/1/2026,237,1,,0,0,M,mean,boj_ir.csv
+us_currency_30-days_min,MMMR0202,Private Money Market Rates: US Currency - 30-Days - Minimum (%),,MS,6/1/2005,4/1/2026,237,1,,0,0,M,mean,boj_ir.csv
+us_currency_overnight_max,MMMR0203,Private Money Market Rates: US Currency - Overnight - Maximum (%),,MS,6/1/2005,3/1/2026,179,2,,0,0,M,mean,boj_ir.csv
+us_currency_overnight_min,MMMR0204,Private Money Market Rates: US Currency - Overnight - Minimum (%),,MS,6/1/2005,3/1/2026,179,2,,0,0,M,mean,boj_ir.csv
+LE_PE_NUM,LEMP0000,Employment,,QE,3/1/2024,3/1/2026,9,2,0,0,0,L,mean,boj_labor.csv
+LLF_PE_NUM,LLAB0000,Labor Force,,QE,3/1/2024,3/1/2026,9,2,0,0,0,L,mean,boj_labor.csv
+LUR_RATE,LUNR0000,Unemployment Rate,,QE,3/1/2024,3/1/2026,9,2,0,0,0,L,mean,boj_labor.csv
+LU_PE_NUM,LUNP0000,Unemployment,,QE,3/1/2024,3/1/2026,9,2,0,0,0,L,mean,boj_labor.csv
+mb_da_net,MMBA0101,Monetary Base: Net Domestic Assets (JMD Millions),,MS,1/1/2008,2/1/2026,218,3,,0,0,M,mean,boj_mb.csv
+mb_da_net_claims_gov,MMBA0102,Monetary Base: Net Claims on Central Government (JMD Millions),,MS,1/1/2008,2/1/2026,218,3,,0,0,M,mean,boj_mb.csv
+mb_da_net_credit_cb,MMBA0103,Monetary Base: Net Other Credit to Commercial Banks (JMD Millions),,MS,1/1/2008,2/1/2026,218,3,,0,0,M,mean,boj_mb.csv
+mb_da_omo,MMBA0104,Monetary Base: Open Market Operations (JMD Millions),,MS,1/1/2008,2/1/2026,218,3,,0,0,M,mean,boj_mb.csv
+mb_da_other,MMBA0105,Monetary Base: Other Domestic Assets (JMD Millions),,MS,1/1/2008,2/1/2026,218,3,,0,0,M,mean,boj_mb.csv
+mb_fx_assets,MMBA0201,Monetary Base: Foreign Assets (JMD Millions),,MS,1/1/2008,2/1/2026,218,3,1,0,0,M,mean,boj_mb.csv
+mb_fx_liabilities,MMBA0202,Monetary Base: Foreign Liabilities (JMD Millions),,MS,1/1/2008,2/1/2026,218,3,1,0,0,M,mean,boj_mb.csv
+mb_fx_nir,MMBA0203,Monetary Base: Net International Reserves (JMD Millions),,MS,1/1/2008,2/1/2026,218,3,1,0,0,M,mean,boj_mb.csv
+monetary_base,MMBA0000,Monetary Base: Total (JMD Millions),,MS,1/1/2008,2/1/2026,218,3,,0,0,M,mean,boj_mb.csv
+TMG_CIF_USD,XMIM0000,"Total Merchandise Imports (CIF, USD)",,MS,1/1/2014,12/1/2025,144,5,0,0,0,X,mean,boj_mertrade.csv
+TXG_FOB_USD,XMEX0000,"Total Merchandise Exports (FOB, USD)",,MS,1/1/2014,12/1/2025,144,5,0,0,0,X,mean,boj_mertrade.csv
+ms_cur,MMSU0101,Money Supply: Currency in Circulation (JMD Millions),,MS,1/1/1993,2/1/2026,398,3,,0,0,M,mean,boj_ms.csv
+ms_dd,MMSU0102,Money Supply: Local Currency Demand Deposits (JMD Millions),,MS,1/1/1993,2/1/2026,398,3,,0,0,M,mean,boj_ms.csv
+ms_fxdep,MMSU0301,Money Supply: Foreign Currency Deposits - Demand (JMD Millions),,MS,3/1/1998,2/1/2026,336,3,,0,0,M,mean,boj_ms.csv
+ms_fxdep.1,MMSU0302,Money Supply: Foreign Currency Deposits - Savings (JMD Millions),,MS,3/1/1998,2/1/2026,336,3,,0,0,M,mean,boj_ms.csv
+ms_fxdep.2,MMSU0303,Money Supply: Foreign Currency Deposits - Time (JMD Millions),,MS,3/1/1998,2/1/2026,336,3,,0,0,M,mean,boj_ms.csv
+ms_fxdep.3,MMSU0300,Money Supply: Foreign Currency Deposits - Total (JMD Millions),,MS,1/1/1993,2/1/2026,398,3,,0,0,M,mean,boj_ms.csv
+ms_m1,MMSU0301,Money Supply: M1* (JMD Millions),,MS,3/1/1998,2/1/2026,336,3,,0,0,M,mean,boj_ms.csv
+ms_m1j,MMSU0302,Money Supply: M1J (JMD Millions),,MS,1/1/1993,2/1/2026,398,3,,0,0,M,mean,boj_ms.csv
+ms_m2,MMSU0401,Money Supply: M2* (JMD Millions),,MS,1/1/1993,2/1/2026,398,3,,0,0,M,mean,boj_ms.csv
+ms_m2j,MMSU0402,Money Supply: M2J (JMD Millions),,MS,1/1/1993,2/1/2026,398,3,,0,0,M,mean,boj_ms.csv
+ms_sd,MMSU0201,Money Supply: Local Currency Savings Deposits (JMD Millions),,MS,1/1/1993,2/1/2026,398,3,,0,0,M,mean,boj_ms.csv
+ms_td,MMSU0202,Money Supply: Local Currency Time Deposits (JMD Millions),,MS,1/1/1993,2/1/2026,398,3,,0,0,M,mean,boj_ms.csv
+payments_jmm,MPAY1001,Payments System in JM Millions,,MS,2/1/2009,2/1/2026,205,3,1,0,0,M,mean,boj_payment_systems.csv
+payments_usdm,MPAY1000,Payment System in USD Millions,,MS,2/1/2009,2/1/2026,205,3,0,0,0,M,mean,boj_payment_systems.csv
+payments_vol,MPAY2000,Payment System Volume,,MS,2/1/2009,2/1/2026,205,3,0,0,0,M,mean,boj_payment_systems.csv
+policy_rate,MIPR0000,Interest Policy Rate,,MS,4/1/1994,2/1/2026,383,3,0,0,0,M,mean,boj_policy_rate.csv
+tbill_rate_12m,MTBR0001,T-Bill Rate 12 month,,MS,1/1/1988,10/1/2008,52,211,0,0,0,M,mean,boj_tbill.csv
+tbill_rate_1m,MTBR0002,T-Bill Rate 1 month,,MS,9/1/1993,3/1/2017,91,110,0,0,0,M,mean,boj_tbill.csv
+tbill_rate_3m,MTBR0003,T-Bill Rate 3 month,,MS,1/1/1979,4/1/2026,396,1,0,0,0,M,mean,boj_tbill.csv
+tbill_rate_6m,MTBR0004,T-Bill Rate 6 month,,MS,6/1/1987,4/1/2026,407,1,0,0,0,M,mean,boj_tbill.csv
+tbill_rate_9m,MTBR0005,T-Bill Rate 9 month,,MS,12/1/1988,4/1/2026,100,1,0,0,0,M,mean,boj_tbill.csv
+exports_can,XEMP0001,Exports Canada,,MS,1/1/2007,10/1/2025,226,7,0,0,0,X,sum,canada_exports.csv
+imports_can,XIMP0001,Imports Canada,,MS,1/1/2007,10/1/2025,226,7,0,0,0,X,sum,canada_imports.csv
+exp_main,XEMP0000,Exports Main Partners,,MS,1/1/1985,11/1/2025,491,6,0,0,0,X,sum,composite XEXP
+imp_main,XIMP0000,Imports Main Partners,,MS,1/1/1985,11/1/2025,491,6,0,0,0,X,sum,composite XIMP
+ntl_airport_mean,UNTL1001,Daily Night Time Lights: Airports,,MS,1/1/2012,4/1/2026,166,1,0,0,1,U,sum,data_ntl.csv
+ntl_airport_meanw30,UNTL3001,Daily Night Time Lights: Airports 3-month moving avg,,MS,1/1/2012,4/1/2026,166,1,0,0,1,U,sum,data_ntl.csv
+ntl_consumption_mean,UNTL1002,Daily Night Time Lights: Consumption Establishments,,MS,1/1/2012,4/1/2026,166,1,0,0,1,U,sum,data_ntl.csv
+ntl_consumption_meanw30,UNTL3002,Daily Night Time Lights: Consumption Establishments 3-month moving avg,,MS,1/1/2012,4/1/2026,166,1,0,0,1,U,sum,data_ntl.csv
+ntl_cultural_mean,UNTL1003,Daily Night Time Lights: Cultural Locations,,MS,1/1/2012,4/1/2026,166,1,0,0,1,U,sum,data_ntl.csv
+ntl_cultural_meanw30,UNTL3003,Daily Night Time Lights: Cultural Locations 3-month moving avg,,MS,1/1/2012,4/1/2026,166,1,0,0,1,U,sum,data_ntl.csv
+ntl_distillery_mean,UNTL1004,Daily Night Time Lights: Distilleries,,MS,1/1/2012,4/1/2026,166,1,0,0,1,U,sum,data_ntl.csv
+ntl_distillery_meanw30,UNTL3004,Daily Night Time Lights: Distilleries 3-month moving avg,,MS,1/1/2012,4/1/2026,166,1,0,0,1,U,sum,data_ntl.csv
+ntl_hotel_mean,UNTL1005,Daily Night Time Lights: Hotels,,MS,1/1/2012,4/1/2026,166,1,0,0,1,U,sum,data_ntl.csv
+ntl_hotel_meanw30,UNTL3005,Daily Night Time Lights: Hotels 3-month moving avg,,MS,1/1/2012,4/1/2026,166,1,0,0,1,U,sum,data_ntl.csv
+ntl_industrial_mean,UNTL1006,Daily Night Time Lights: Manufacture,,MS,1/1/2012,4/1/2026,166,1,0,0,1,U,sum,data_ntl.csv
+ntl_industrial_meanw30,UNTL3006,Daily Night Time Lights: Manufacture 3-month moving avg,,MS,1/1/2012,4/1/2026,166,1,0,0,1,U,sum,data_ntl.csv
+ntl_mean,UNTL1000,Daily Night Time Lights,,MS,1/1/2012,4/1/2026,166,1,0,0,1,U,sum,data_ntl.csv
+ntl_mean_shp,UNTL0000,Daily Night Time Lights,,MS,1/1/2012,4/1/2026,166,1,0,0,1,U,sum,data_ntl.csv
+ntl_meanw30,UNTL3000,Daily Night Time Lights 3-month moving avg,,MS,1/1/2012,4/1/2026,166,1,0,0,1,U,sum,data_ntl.csv
+ntl_port_mean,UNTL1007,Daily Night Time Lights: Ports,,MS,1/1/2012,4/1/2026,166,1,0,0,1,U,sum,data_ntl.csv
+ntl_port_meanw30,UNTL3007,Daily Night Time Lights: Ports 3-month moving avg,,MS,1/1/2012,4/1/2026,166,1,0,0,1,U,sum,data_ntl.csv
+ntl_supermarket_mean,UNTL1008,Daily Night Time Lights: Supermarkets,,MS,1/1/2012,4/1/2026,166,1,0,0,1,U,sum,data_ntl.csv
+ntl_supermarket_meanw30,UNTL3008,Daily Night Time Lights: Supermarkets 3-month moving avg,,MS,1/1/2012,4/1/2026,166,1,0,0,1,U,sum,data_ntl.csv
+ntl_sum,UNTL0001,Daily Night Time Lights: Sum of Island Shape,,MS,1/1/2012,4/1/2026,166,1,,,,,,data_ntl_shape.csv
+brent price,XOIL0000,Brent Oil Price,,MS,5/1/1987,4/1/2026,468,1,0,0,0,X,mean,eia_brent.csv
+exp_eu,XEMP0002,Exports EU,,MS,1/1/1988,1/1/2026,457,4,0,0,0,X,sum,eu_trade.csv
+imp_eu,XIMP0002,Imports EU,,MS,1/1/1988,1/1/2026,457,4,0,0,0,X,sum,eu_trade.csv
+fred_DEXUSEU,XFED0001,Exchange Rate US-EU,,MS,1/1/1999,4/1/2026,328,1,0,0,0,X,mean,fred_data.csv
+fred_DEXUSUK,XFED0002,Exchange Rate US-UK,,MS,1/1/1971,4/1/2026,664,1,0,0,0,X,mean,fred_data.csv
+fred_DJIA,XFED0003,DowJones Stock,,MS,4/1/2016,4/1/2026,121,1,0,0,0,X,mean,fred_data.csv
+fred_EXCAUS,XFED0004,Exchange Rate Canada-US,,MS,1/1/1971,3/1/2026,663,2,0,0,0,X,mean,fred_data.csv
+fred_NASDAQCOM,XFED0005,Nasdaq Stock,,MS,2/1/1971,4/1/2026,663,1,0,0,0,X,mean,fred_data.csv
+fred_SP500,XFED0006,SP500 Stock,,MS,4/1/2016,4/1/2026,121,1,0,0,0,X,mean,fred_data.csv
+gtrends_airbnb_jamaica_worldwide,UGTR0001,Google Trends: Airbnb (JM),,MS,1/1/2010,4/1/2026,159,1,0,0,1,U,mean,gtrends.csv
+gtrends_amazon_jm,UGTR0002,Google Trends: Amazon (JM),,MS,1/1/2005,4/1/2026,253,1,0,0,1,U,mean,gtrends.csv
+gtrends_apple_jm,UGTR0003,Google Trends: Apple (JM),,MS,6/1/2004,4/1/2026,251,1,0,0,1,U,mean,gtrends.csv
+gtrends_blue_mountains_jm,UGTR0004,Google Trends: Blue Mountains (JM),,MS,12/1/2008,4/1/2026,138,1,0,0,1,U,mean,gtrends.csv
+gtrends_bob_marley_museum_jm,UGTR0005,Google Trends: Bob Marley Museum (JM),,MS,5/1/2007,4/1/2026,156,1,0,0,1,U,mean,gtrends.csv
+gtrends_burger_king_jm,UGTR0006,Google Trends: Burger King (JM),,MS,2/1/2010,4/1/2026,184,1,0,0,1,U,mean,gtrends.csv
+gtrends_caribbeanjobs_com_jm,UGTR0007,Google Trends: Caribbean Jobs (JM),,MS,9/1/2004,4/1/2026,177,1,0,0,1,U,mean,gtrends.csv
+gtrends_citi_jamaica,UGTR0008,Google Trends: Citi (JM),,MS,1/1/2004,1/1/2026,265,4,0,0,1,U,mean,gtrends.csv
+gtrends_crave_jm,UGTR0009,Google Trends: Crave (JM),,MS,4/1/2013,4/1/2026,114,1,0,0,1,U,mean,gtrends.csv
+gtrends_credit_cards_jm,UGTR0010,Google Trends: Credit Cards (JM),,MS,3/1/2008,4/1/2026,174,1,0,0,1,U,mean,gtrends.csv
+gtrends_doordash_jm,UGTR0011,Google Trends: Doordash (JM),,MS,12/1/2020,4/1/2026,43,1,0,0,1,U,mean,gtrends.csv
+gtrends_flights_kingston_worldwide,UGTR0012,Google Trends: Flights Kingston (W),,MS,2/1/2004,4/1/2026,259,1,0,0,1,U,mean,gtrends.csv
+gtrends_flights_miami_jm,UGTR0041,Google Trends: Miami (JM),,MS,3/1/2010,4/1/2026,139,1,0,0,1,U,mean,gtrends.csv
+gtrends_honda_jm,UGTR0013,Google Trends: Honda (JM),,MS,1/1/2004,4/1/2026,268,1,0,0,1,U,mean,gtrends.csv
+gtrends_hotels_kingston_worldwide,UGTR0014,Google Trends: Hotels Kingston (W),,MS,1/1/2004,4/1/2026,268,1,0,0,1,U,mean,gtrends.csv
+gtrends_island_grill_jamaica,UGTR0015,Google Trends: Island Grill (JM),,MS,1/1/2004,1/1/2026,265,4,0,0,1,U,mean,gtrends.csv
+gtrends_jacars_net_jm,UGTR0016,Google Trends: Jacars.net (JM),,MS,5/1/2012,4/1/2026,166,1,0,0,1,U,mean,gtrends.csv
+gtrends_jamaica_flights_jamaica,UGTR0017,Google Trends: Jamaica Flights (JM),,MS,1/1/2004,1/1/2026,265,4,0,0,1,U,mean,gtrends.csv
+gtrends_jamaica_flights_worldwide,UGTR0018,Google Trends: Jamaica Flights (W),,MS,1/1/2004,4/1/2026,268,1,0,0,1,U,mean,gtrends.csv
+gtrends_jmmb_jm,UGTR0019,Google Trends: JMMB (JM),,MS,5/1/2005,4/1/2026,244,1,0,0,1,U,mean,gtrends.csv
+gtrends_jn_bank_jm,UGTR0020,Google Trends: JN Bank (JM),,MS,9/1/2011,4/1/2026,148,1,0,0,1,U,mean,gtrends.csv
+gtrends_kfc_jamaica,UGTR0021,Google Trends: KFC (JM),,MS,1/1/2004,1/1/2026,265,4,0,0,1,U,mean,gtrends.csv
+gtrends_linkedin_jm,UGTR0022,Google Trends: Linkedin (JM),,MS,11/1/2009,4/1/2026,187,1,0,0,1,U,mean,gtrends.csv
+gtrends_macy_s_jm,UGTR0023,Google Trends: Macy's (JM),,MS,1/1/2016,4/1/2026,124,1,0,0,1,U,mean,gtrends.csv
+gtrends_maxie_jm,UGTR0024,Google Trends: Maxie (JM),,MS,7/1/2011,4/1/2026,144,1,0,0,1,U,mean,gtrends.csv
+gtrends_montego_bay_jm,UGTR0025,Google Trends: Montego Bay (JM),,MS,7/1/2004,4/1/2026,256,1,0,0,1,U,mean,gtrends.csv
+gtrends_montego_bay_resorts_worldwide,UGTR0026,Google Trends: Montego Bay Resorts Jamaica (W),,MS,1/1/2004,4/1/2026,259,1,0,0,1,U,mean,gtrends.csv
+gtrends_ncb_jm,UGTR0027,Google Trends: NCB (JM),,MS,8/1/2004,4/1/2026,253,1,0,0,1,U,mean,gtrends.csv
+gtrends_ocho_rios_jm,UGTR0028,Google Trends: Ocho Rios (JM),,MS,4/1/2004,4/1/2026,248,1,0,0,1,U,mean,gtrends.csv
+gtrends_pizza_hut_jm,UGTR0029,Google Trends: Pizza Hut (JM),,MS,8/1/2007,4/1/2026,194,1,0,0,1,U,mean,gtrends.csv
+gtrends_pricesmart_jm,UGTR0030,Google Trends: Price Smart (JM),,MS,12/1/2009,4/1/2026,193,1,0,0,1,U,mean,gtrends.csv
+gtrends_restaurants_jm,UGTR0031,Google Trends: Restaurants (JM),,MS,11/1/2006,4/1/2026,220,1,0,0,1,U,mean,gtrends.csv
+gtrends_sagicor_jamaica,UGTR0032,Google Trends: Sagicor (JM),,MS,1/1/2004,1/1/2026,265,4,0,0,1,U,mean,gtrends.csv
+gtrends_samsung_jamaica,UGTR0033,Google Trends: Samsung (JM),,MS,1/1/2004,1/1/2026,265,4,0,0,1,U,mean,gtrends.csv
+gtrends_scotiabank_jamaica,UGTR0034,Google Trends: ScotiaBank (JM),,MS,1/1/2004,1/1/2026,265,4,0,0,1,U,mean,gtrends.csv
+gtrends_shein_jm,UGTR0035,Google Trends: Shein (JM),,MS,8/1/2016,4/1/2026,114,1,0,0,1,U,mean,gtrends.csv
+gtrends_shoppers_fair_jamaica,UGTR0036,Google Trends: Shoppers Fair (JM),,MS,1/1/2004,1/1/2026,265,4,0,0,1,U,mean,gtrends.csv
+gtrends_toyota_jamaica_jm,UGTR0038,Google Trends: Toyota Jamaica (JM),,MS,3/1/2006,4/1/2026,232,1,0,0,1,U,mean,gtrends.csv
+gtrends_toyota_jm,UGTR0037,Google Trends: Toyota (JM),,MS,1/1/2004,4/1/2026,268,1,0,0,1,U,mean,gtrends.csv
+gtrends_treasure_beach_jm,UGTR0039,Google Trends: Treasure Beach (JM),,MS,3/1/2008,4/1/2026,187,1,0,0,1,U,mean,gtrends.csv
+gtrends_uber_eats_jamaica,UGTR0040,Google Trends: Uber Eats (JM),,MS,1/1/2004,1/1/2026,265,4,0,0,1,U,mean,gtrends.csv
+jse_index,REXC0001,Jamaica Exchange Index,,MS,4/1/2021,4/1/2026,61,1,0,0,0,R,mean,jamstockex_jse.csv
+jse_volume,REXC0002,Jamaica Exchange Volume,,MS,4/1/2021,4/1/2026,61,1,0,0,0,R,sum,jamstockex_jse.csv
+exp_uk,XEMP0003,Exports UK,,MS,1/1/2018,12/1/2025,96,5,0,0,0,X,sum,uk_trade.csv
+imp_uk,XIMP0003,Imports UK,,MS,1/1/2018,12/1/2025,96,5,0,0,0,X,sum,uk_trade.csv
+USA_exp_JM,XEMP0004,Exports USA,,MS,1/1/1985,2/1/2026,494,3,0,0,0,X,sum,uscensus_trade.csv
+USA_imp_JM,XIMP0004,Imports USA,,MS,1/1/1985,2/1/2026,494,3,0,0,0,X,sum,uscensus_trade.csv
+gtrends_mean,UGTR0000,Google Trends Mean,,MS,1/1/2004,4/1/2026,268,1,0,0,1,U,mean,gtrends.csv
