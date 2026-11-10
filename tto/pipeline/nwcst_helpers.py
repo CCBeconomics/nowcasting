@@ -1,9 +1,8 @@
 """
-nwcst_helpers.py -- Trinidad production pipeline (2026-10-22). The kit module (CCBeconomics/nowcasting, tto/activity,
-1 Aug 2026 lineage) with three Jamaica beta16 functions: fit_enet and fit_lasso (penalties by time-series CV instead of
-alpha = 1e-5) and fit_dt (min_leaf parameter for DT4). Everything else, including the GDP-lag and PCA fixes, is the kit's.
-"""
-"""
+nwcst_helpers.py -- the model library of the Trinidad and Tobago nowcasting pipeline: the six screens, the data
+helpers, and fit_/predict_/oos_ for every estimator. fit_enet and fit_lasso choose their penalties by time-series CV;
+fit_dt takes a min_leaf parameter (the depth-4 tree uses 4). Functions nothing calls are parked outside the package.
+
 nwcst_helpers.py  —  nowcasting model library (factors, LARS ranking, data
 shaping, and fit/predict/oos for OLS, OLSR, ENET, LASSO, DT, RF, GBT, LSTM).
 
@@ -53,97 +52,6 @@ except Exception:
 target_variable = "RGDP0000"
 scaler = StandardScaler()
 
-def estimate_factors(X, r_max=10, criterion='IC1'):
-    '''
-    Information criteria to PCA.
-    Bai and Ng (2002)
-    inputs:
-    - X: df
-    - r_max: max number of factors (should be less than T or N)
-    - criterion: conservative criteria is IC3
-    '''
-    
-    T, N = X.shape
-    r_max = min(r_max, T - 1)  # enforce theoretical max
-    IC_vals = []
-    
-    for r in range(r_max + 1):
-        if r == 0:
-            sigma2_r = np.mean(X.values ** 2)
-        else:
-            pca = PCA(n_components=r)
-            X_scaled = scaler.fit_transform(X)
-            F_hat = pca.fit_transform(X_scaled)
-            Lambda_hat = X_scaled.T @ F_hat / T
-            X_hat = F_hat @ Lambda_hat.T
-            sigma2_r = np.mean((X_scaled - X_hat).values ** 2)
-    
-        if criterion == 'IC1':
-            penalty = r * (N + T) / (N * T) * np.log(N * T / (N + T))
-        elif criterion == 'IC2':
-            penalty = r * (N + T) / (N * T) * np.log(min(N, T))
-        elif criterion == 'IC3':
-            penalty = r * np.log(min(N, T)) / min(N, T)
-        else:
-            raise ValueError("Invalid criterion")
-    
-        IC_vals.append(np.log(sigma2_r) + penalty)
-
-    return np.argmin(IC_vals)
-
-
-
-def evaluate_selection(train, test, target, top_vars, factors=5):
-    """
-    FROZEN EVALUATOR. Scores ANY set of selected variables with exactly the
-    same recipe as the benchmark: standardize -> PCA -> OLS -> out-of-sample
-    RMSE. It is deliberately identical for every selection method, so any
-    difference in RMSE is attributable to the SELECTOR alone, never to the
-    model that scores it (Chinn, Meunier & Stumpner 2023: freeze the
-    evaluation, vary the selection).
-
-    - train / test: quarterly DataFrames, same columns
-    - top_vars: list of selected variable names
-    - factors: number of PCA components (same as the benchmark)
-
-    Scaler and PCA are fitted on TRAIN ONLY and applied to test: without this
-    the test window leaks into the selection and every method looks better
-    than it is.
-    """
-    X_train_raw = train[list(top_vars)]
-    X_test_raw  = test[list(top_vars)]
-    y_train_all = train[target]
-    y_test_all  = test[target]
-
-    # Fit scaler on train only, transform both (no data leakage)
-    X_train_scaled = pd.DataFrame(
-        scaler.fit_transform(X_train_raw), index=X_train_raw.index
-    ).dropna(axis=1)
-    X_test_scaled = pd.DataFrame(
-        scaler.transform(X_test_raw), index=X_test_raw.index
-    )[X_train_scaled.columns]
-
-    # Fit PCA on train only, transform both
-    pca_local = PCA(n_components=factors)
-    X_train_pca = pd.DataFrame(
-        pca_local.fit_transform(X_train_scaled), index=X_train_raw.index,
-        columns=[f"PC_{i}" for i in range(factors)]
-    )
-    X_test_pca = pd.DataFrame(
-        pca_local.transform(X_test_scaled), index=X_test_raw.index,
-        columns=[f"PC_{i}" for i in range(factors)]
-    )
-
-    # Drop quarters without observed GDP, in train and in test
-    obs_mask      = y_train_all.notna()
-    obs_mask_test = y_test_all.notna()
-
-    final_model = LinearRegression()
-    final_model.fit(X_train_pca[obs_mask], y_train_all[obs_mask])
-    y_pred = final_model.predict(X_test_pca[obs_mask_test])
-
-    return float(np.sqrt(np.mean((y_test_all[obs_mask_test].values - y_pred) ** 2)))
-
 
 def lars_variable_ranking(df, target, max_vars=None, test=None, factors=5):
     """
@@ -155,11 +63,24 @@ def lars_variable_ranking(df, target, max_vars=None, test=None, factors=5):
     Returns:
     - selected_vars: ordered list of variable names by entry into the LARS model
     - rmse: out-of-sample RMSE on the test period (or None)
+    Predictors are z-scored on the rows passed in before ranking; the scoring call below uses the original df.
 
     Chinn, M. D., Meunier, B., & Stumpner, S. (2023). Nowcasting world trade with machine learning: a three-step approach (No. w31419). National Bureau of Economic Research.
     """
     df0 = deepcopy(df)
-    
+
+    # Standardise the predictors on the rows being ranked; the target is left as is.
+    # LARS enters the variable with the largest covariance with the current residual, so on an
+    # unscaled panel the entry order follows the series' volatility, not their signal (in a diagnostic
+    # the raw top-10 were the ten most volatile of 398 candidates). Z-scoring makes
+    # the order scale-free, like the other five screens, and restores the assumption of Efron et al.
+    # (2004) that scikit-learn applied itself until its `normalize` option was removed in 1.2. Only
+    # the rows passed in are used (the static panel or the rolling slice strictly before the test
+    # quarter), so nothing leaks from the test period.
+    _x_cols = [c for c in df0.columns if c != target]
+    _sd = df0[_x_cols].std(ddof=0).replace(0, 1.0)        # constant columns stay at zero after centring
+    df0[_x_cols] = (df0[_x_cols] - df0[_x_cols].mean()) / _sd
+
     selected_order = []
     count = 0
     max_vars = max_vars or (df0.shape[1] - 1)
@@ -499,59 +420,6 @@ def rank_ibma(train, target, w=10, pip_drop=0.05, max_iter=200):
     return scores.index.tolist(), scores
 
 
-def deduplicate_correlated(df, threshold=0.85, target=target_variable,
-                           metadata=None, meta_col="ticket"):
-    """Drop one variable from each highly-correlated pair.
-    Priority: (1) keep aggregate tickets (numeric suffix % 100 == 0);
-              (2) keep the variable with more non-null observations.
-
-    Sub-components of the same category (e.g. BOP financial-account
-    sub-accounts) are nearly collinear -- a selector picks several of them
-    without adding information. `metadata` and `meta_col` are parameters here
-    (the notebook copies of this function closed over notebook globals, which
-    a module cannot do).
-    """
-    if metadata is None:
-        raise ValueError("deduplicate_correlated() needs the metadata frame")
-
-    def _is_agg(ticket):
-        nums = re.findall(r'\d+', str(ticket))
-        return bool(nums) and int(nums[-1]) % 100 == 0
-
-    agg_set = set(metadata.loc[metadata[meta_col].apply(_is_agg), meta_col])
-
-    X   = df.drop(columns=[target])
-    obs = X.notna().sum()
-    corr  = X.corr().abs()
-    upper = corr.where(np.triu(np.ones(corr.shape), k=1).astype(bool))
-
-    to_drop = set()
-    for col in upper.columns:
-        if col in to_drop:
-            continue
-        peers = upper.index[upper[col] > threshold].tolist()
-        for peer in peers:
-            if peer in to_drop:
-                continue
-            col_agg  = col  in agg_set
-            peer_agg = peer in agg_set
-            if col_agg and not peer_agg:
-                to_drop.add(peer)
-            elif peer_agg and not col_agg:
-                to_drop.add(col)
-                break
-            elif obs[col] >= obs[peer]:
-                to_drop.add(peer)
-            else:
-                to_drop.add(col)
-                break
-
-    kept = [c for c in df.columns if c not in to_drop]
-    print(f"Removed {len(df.columns) - len(kept)} correlated variables "
-          f"(|r| > {threshold}). {len(kept)} remain.")
-    return df[kept]
-
-
 def gen_lagged_data(metadata, data, last_date, lag):
     # only go up to the last date
     lagged_data = data.loc[data.date <= last_date, :].reset_index(drop=True)
@@ -601,112 +469,10 @@ def ffill_dataset(training, test):
     combined = combined.ffill().bfill()
     return combined.iloc[len(training):].reset_index(drop=True)
 
-def lagged_target(data, total_lags, metadata, target_variable=target_variable) :
-    if total_lags == 0 :
-        return data
-    else :
-        for l in range(1,total_lags+1) :
-            data[f"{target_variable}_l{l}"] = data[target_variable]
-            data.loc[data.index[-metadata[metadata['ticket']==target_variable]['months_lag'].values[0]:], f"{target_variable}_l{l}"] = np.nan
-            data[f"{target_variable}_l{l}"] = data[f"{target_variable}_l{l}"].ffill()
-            data[f"{target_variable}_l{l}"] = data[f"{target_variable}_l{l}"].shift(l)
-            data[f"{target_variable}_l{l}"] = data[f"{target_variable}_l{l}"].fillna(data[f"{target_variable}_l{l}"].mean())
-        return data
-
-
-def lagged_target_q(data, total_lags, metadata, target_variable=target_variable):
-    """Autoregressive GDP lags, QUARTERLY-INDEXED variant (act6_selection).
-
-    Deliberate duplicate of lagged_target() above. The two differ, and both are
-    live -- do not merge them:
-
-      lagged_target()    blanks the last `months_lag` ROWS and always .shift(1).
-                         Used by act8_nwcst's model loop; its numbers are baked
-                         into every output/<date>/ run.
-      lagged_target_q()  converts the publication lag to quarters,
-                         max(1, months_lag // 3), and shifts by l. Correct when
-                         the frame has already been collapsed to quarter-end
-                         rows, which is what act6's walkthrough does.
-    """
-    if total_lags == 0:
-        return data
-    else:
-        for l in range(1, total_lags + 1):
-            data[f"{target_variable}_l{l}"] = data[target_variable]
-            pub_lag_q = max(1, metadata[metadata['ticket'] == target_variable]['months_lag'].values[0] // 3)
-            # // is integer (floor) division; converts monthly publication lag to quarterly
-            data.loc[data.index[-pub_lag_q:], f"{target_variable}_l{l}"] = np.nan
-            data[f"{target_variable}_l{l}"] = data[f"{target_variable}_l{l}"].ffill()
-            data[f"{target_variable}_l{l}"] = data[f"{target_variable}_l{l}"].shift(l)
-            data[f"{target_variable}_l{l}"] = data[f"{target_variable}_l{l}"].fillna(data[f"{target_variable}_l{l}"].mean())
-        return data
-
-
-def gen_aligned_data(metadata, data, last_date, lag, target_variable=target_variable):
-    """Vintage dataset by ALIGNMENT: shift each series by its effective delay.
-
-    Companion (and act8 successor) of gen_lagged_data() above. Where that one
-    blanks the ragged edge and leaves the fill to the caller, this one replaces
-    each series with its own publication-lag-shifted copy,
-
-        d_j = max(0, months_lag_j - lag)        # effective delay, months
-        x~_{j,t} = x_{j, t - d_j}               # latest value published at t
-
-    so EVERY row -- training rows and the prediction row alike -- carries only
-    what was actually available `lag` months around its reference date. Applied
-    to train and test from the same frame, this is what makes the refit
-    coefficients genuinely vintage-specific: the model trains on the same
-    staleness it predicts with, instead of training on final data and
-    predicting on mean-imputed constants.
-
-    `date` and the target are never shifted (the target is y, and
-    flatten_data() keys its row filter off it). d is floored at 0 -- a lag
-    larger than the publication delay never turns into a lead. The only NaNs
-    introduced are the first d_j rows of each column.
-    """
-    aligned = data.loc[data.date <= last_date, :].reset_index(drop=True)
-    for col in aligned.columns:
-        if col in ("date", target_variable):
-            continue
-        pub_lag = metadata.loc[metadata.ticket == col, "months_lag"].values[0]
-        d = max(0, int(pub_lag) - lag)
-        if d:
-            aligned[col] = aligned[col].shift(d)
-    return aligned
-
-
-def lagged_target_v(data, total_lags, metadata, lag, target_variable=target_variable):
-    """Autoregressive GDP lags, VINTAGE-AWARE variant (act8_nwcst).
-
-    Third sibling of lagged_target() / lagged_target_q() above -- same deal,
-    deliberate near-duplicate, do not merge. This one is for the refit-per-
-    vintage act8 loop: the number of quarters to reach the most recent
-    PUBLISHED GDP value depends on the vintage,
-
-        d = max(0, months_lag_y - lag)          # effective delay, months
-        q = max(1, ceil(d / 3))                 # quarters back, never current
-        AR term l = y.shift(q + l - 1)          # on QUARTERLY rows
-
-    Unlike lagged_target(), no blank-then-ffill: the shift is taken directly on
-    the (real, unfilled at quarter rows) target, so an unpublished value is
-    never carried forward into a feature. Leading rows that the shift cannot
-    reach are filled with the column mean, matching the fill style of the
-    other two variants. Expects a frame already collapsed to quarterly rows.
-    """
-    if total_lags == 0:
-        return data
-    pub_lag = metadata.loc[metadata.ticket == target_variable, "months_lag"].values[0]
-    d = max(0, int(pub_lag) - lag)
-    q = max(1, -(-d // 3))                       # ceil(d/3), floored at 1
-    for l in range(1, total_lags + 1):
-        col = data[target_variable].shift(q + l - 1)
-        data[f"{target_variable}_l{l}"] = col.fillna(col.mean())
-    return data
-
 
 def gdp_lag_features(frame, total_lags, y_true, pub_lag_months, mode="vintage", reading_date=None,
                      estimates=None, pseudo=None, target_variable=target_variable):
-    """GDP-lag features built from the REAL prints, not from the frame's (filled) target column (2026-10-25).
+    """GDP-lag features built from the REAL prints, not from the frame's (filled) target column.
 
     frame      : monthly or quarterly frame with a "date" column (first day of the month).
     y_true     : the target series at its quarter-end stamps (data[target].dropna()); pseudo-prints, if any, are in it.
@@ -718,7 +484,7 @@ def gdp_lag_features(frame, total_lags, y_true, pub_lag_months, mode="vintage", 
                     recent published quarter. Training frames: lag l = y(t - l).
     Leading rows the lags cannot reach are filled with the column mean, as the older helpers did.
     Replaces lagged_target() in the model loop, whose blank-then-ffill left the last six quarters of every training
-    window with one frozen value in both lag columns (verified 2026-10-25)."""
+    window with one frozen value in both lag columns ."""
     if total_lags == 0:
         return frame
     y = pd.Series(y_true).dropna().copy(); y.index = pd.to_datetime(y.index)
@@ -733,6 +499,9 @@ def gdp_lag_features(frame, total_lags, y_true, pub_lag_months, mode="vintage", 
     _maxq = max(row_q) if len(row_q) else qd[-1]
     while qd[-1] < _maxq:                                   # extend the quarter axis over the frame (live rows): unknown values
         qd.append(qd[-1] + pd.DateOffset(months=3)); yv.append(np.nan)
+    _minq = min(row_q) if len(row_q) else qd[0]
+    while qd[0] > _minq:                                    # and before the first print (a frame that starts at the sample's
+        qd.insert(0, qd[0] - pd.DateOffset(months=3)); yv.insert(0, np.nan)   # first quarter, whose growth rate does not exist)
     pos = {d: i for i, d in enumerate(qd)}
     rd = pd.Timestamp(reading_date) if reading_date is not None else None
     est = {(pd.Timestamp(k[0]), int(k[1])): float(v) for k, v in (estimates or {}).items()}
@@ -772,6 +541,63 @@ def gdp_lag_features(frame, total_lags, y_true, pub_lag_months, mode="vintage", 
     return frame
 
 
+# called by perform_tab / forecast_table
+
+
+
+def evaluate_selection(train, test, target, top_vars, factors=5):
+    """
+    FROZEN EVALUATOR. Scores ANY set of selected variables with exactly the
+    same recipe as the benchmark: standardize -> PCA -> OLS -> out-of-sample
+    RMSE. It is deliberately identical for every selection method, so any
+    difference in RMSE is attributable to the SELECTOR alone, never to the
+    model that scores it (Chinn, Meunier & Stumpner 2023: freeze the
+    evaluation, vary the selection).
+
+    - train / test: quarterly DataFrames, same columns
+    - top_vars: list of selected variable names
+    - factors: number of PCA components (same as the benchmark)
+
+    Scaler and PCA are fitted on TRAIN ONLY and applied to test: without this
+    the test window leaks into the selection and every method looks better
+    than it is.
+    """
+    X_train_raw = train[list(top_vars)]
+    X_test_raw  = test[list(top_vars)]
+    y_train_all = train[target]
+    y_test_all  = test[target]
+
+    # Fit scaler on train only, transform both (no data leakage)
+    X_train_scaled = pd.DataFrame(
+        scaler.fit_transform(X_train_raw), index=X_train_raw.index
+    ).dropna(axis=1)
+    X_test_scaled = pd.DataFrame(
+        scaler.transform(X_test_raw), index=X_test_raw.index
+    )[X_train_scaled.columns]
+
+    # Fit PCA on train only, transform both
+    pca_local = PCA(n_components=factors)
+    X_train_pca = pd.DataFrame(
+        pca_local.fit_transform(X_train_scaled), index=X_train_raw.index,
+        columns=[f"PC_{i}" for i in range(factors)]
+    )
+    X_test_pca = pd.DataFrame(
+        pca_local.transform(X_test_scaled), index=X_test_raw.index,
+        columns=[f"PC_{i}" for i in range(factors)]
+    )
+
+    # Drop quarters without observed GDP, in train and in test
+    obs_mask      = y_train_all.notna()
+    obs_mask_test = y_test_all.notna()
+
+    final_model = LinearRegression()
+    final_model.fit(X_train_pca[obs_mask], y_train_all[obs_mask])
+    y_pred = final_model.predict(X_test_pca[obs_mask_test])
+
+    return float(np.sqrt(np.mean((y_test_all[obs_mask_test].values - y_pred) ** 2)))
+
+
+
 def vintage_col_names(lags):
     """Map vintage integers -> forecast_table column names, {lag: name}.
 
@@ -787,52 +613,6 @@ def vintage_col_names(lags):
     if lags == [-2, -1, 0, 1, 2]:
         return {l: legacy[l] for l in lags}
     return {l: f"p{l:+d}" for l in lags}
-
-
-def fit_ols_flat(ttrain, metadata, gdp_lags=0, flat_lags=3,
-                 target_variable=target_variable):
-    """OLS that does its own reshaping (act6_selection walkthrough).
-
-    Unlike fit_ols(ytrain, xtrain), which expects matrices that are already
-    flattened and lagged, this one takes the raw rolling training frame and
-    performs the whole recipe: flatten the within-quarter months into extra
-    columns, keep quarter-end rows only, append GDP's own lags, then fit.
-
-    Returns (fitted model, the column names it was trained on).
-    """
-    transformed_train = flatten_data(ttrain, target_variable, flat_lags)
-    # keep only quarter-end months (March=3, June=6, Sep=9, Dec=12) -- GDP is quarterly
-    transformed_train = (transformed_train
-                         .loc[transformed_train.date.dt.month.astype(int).isin([3, 6, 9, 12]), :]
-                         .fillna(transformed_train.mean(numeric_only=True))
-                         .dropna(axis=1)
-                         .reset_index(drop=True))
-    transformed_train = lagged_target_q(transformed_train, gdp_lags, metadata,
-                                        target_variable=target_variable)
-
-    model = LinearRegression()
-    x = transformed_train.drop(["date", target_variable], axis=1)
-    y = transformed_train[target_variable]
-    return model.fit(x, y), x.columns
-
-
-def predict_ols_flat(model, X, train_vars, date, pred_dict, l, metadata,
-                     flat_lags=3, gdp_lags=0,
-                     target_variable=target_variable):
-    """Companion of fit_ols_flat(): applies the SAME reshaping to the test
-    frame, picks the single row for `date`, and appends the nowcast to
-    pred_dict[l]. predict_ols() above assumes X arrives already reshaped.
-    """
-    Xi = flatten_data(X, target_variable, flat_lags)
-    Xi = lagged_target_q(Xi, gdp_lags, metadata, target_variable=target_variable)
-
-    # Select only the single row matching the target date
-    Xi = Xi.loc[Xi['date'] == date, :].drop(["date", target_variable], axis=1)
-    Xi = Xi[train_vars]      # reorder/subset columns to match the training set
-
-    pred = model.predict(Xi)[0]
-    pred_dict[l].append(pred)
-    return pred_dict
 
 
 def perform_tab( pred_values , model_name , specification , values , lags) :
@@ -983,7 +763,7 @@ def fit_enet(
     scale = True,          # accepted for the worker's signature; the CV pipelines always scale
     ) :
 
-    # beta15: alpha and l1_ratio chosen by time-series CV. beta14b used alpha=1e-5 fixed, i.e. unregularised
+    # alpha and l1_ratio chosen by time-series CV (a fixed alpha of 1e-5 would be unregularised)
     # least squares, which on p > n designs produced the -147-type readings of the V+1 cluster.
     model = Pipeline([('scaler', StandardScaler()),
                       ('model', ElasticNetCV(l1_ratio=[0.25, 0.5, 0.75], n_alphas=50,
@@ -1038,7 +818,7 @@ def fit_lasso(
     scale = True,          # accepted for the worker's signature; the CV pipelines always scale
     ) :
 
-    # beta15: alpha chosen by time-series CV (was 1e-5 fixed)
+    # alpha chosen by time-series CV
     model = Pipeline([('scaler', StandardScaler()),
                       ('model', LassoCV(n_alphas=50, cv=TimeSeriesSplit(n_splits=4), max_iter=5000))])
     fit_kwargs = {'model__sample_weight': sample_weight} if sample_weight is not None else {}
@@ -1089,7 +869,7 @@ def fit_dt(
     ModelN = 200 ,
     sample_weight = None,
     seed = None,
-    min_leaf = 2,          # DT4 passes 4 (Jamaica 2026-10-19): >= 4 quarters per leaf blunts memorised shock leaves
+    min_leaf = 2,          # DT4 passes 4: >= 4 quarters per leaf blunts memorised shock leaves
     ) :
     # seed=None leaves random_state unset, so the ModelN members of the bag differ
     # from each other AND from the previous run -- that is what act8 has always
@@ -1134,7 +914,7 @@ def oos_dt(
     new_dates,
     spec = "model" ,
     desired_date = None,
-    label = "DT",            # 2026-10-26: "DT4" when called for the 4-quarter tree (was always "DT", so pool_mask dropped DT4 from the live pool)
+    label = "DT",            # "DT4" when called for the 4-quarter tree (was always "DT", so pool_mask dropped DT4 from the live pool)
     ):
     
     new_data = new_data[train_vars]
