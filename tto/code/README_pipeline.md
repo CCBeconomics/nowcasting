@@ -14,6 +14,7 @@ run to download the data, rebuild the panel and produce the Trinidad and Tobago 
 | 2 | `2_data_build.ipynb` | Merges every `raw/*.csv` into one monthly panel and updates the metadata | `data/data.csv`, `data/meta.csv` |
 | 3 | `run_tto.py` (or `3_nwcst_tto.ipynb`) | The nowcast: seasonal adjustment, the six-screen preselection race, specifications, estimation over nine vintages, the pooled nowcast with its band and the regime watchlist | `output/<date>_tto_<run>/` |
 | 4 | `4_results_tto.ipynb` | Accuracy tables, fan chart and watchlist charts from a finished run (`run_tto.py` runs it at the end) | the same output folder |
+| 5 (optional) | `5_timeseries_models.R` | Classical mixed-frequency benchmarks in R on the same panel and sample: DFM, MIDAS, MF-BVAR and MIDAS-ML | `output/<date>_tto_timeseries/` |
 
 The three step-1 notebooks are independent. Each only adds new dates to what is already in `raw/`.
 
@@ -28,6 +29,7 @@ The three step-1 notebooks are independent. Each only adds new dates to what is 
 | `nwcst_engine.py` | The estimation of one specification (six stages) and the estimator registry. |
 | `nwcst_helpers.py` | Screens, estimators, cross-validation, seasonal adjustment, regime machinery. Not the same file as `activity/nwcst_helpers.py`. |
 | `run_tto.py`, `run_tto_seed.py` | Orchestrator (setup once, three seeds in parallel, merge, post-estimation, charts) and the per-seed runner. |
+| `5_timeseries_models.R` | Optional R benchmarks: DFM, MIDAS, MF-BVAR, MIDAS-ML (see below). |
 
 **Credentials:** `1_data_ntl` needs a free NASA LAADS token in `config_data.py` (`NASA_TOKEN`); without one it works with
 the tiles already on disk. Paste it into your own copy only: never into a file you share.
@@ -65,3 +67,25 @@ Optional environment switches: `TTO_LAUNCH_DATE_STR` fixes the output folder's d
 runs a subset of specifications. The notebook can also be run cell by cell; it reads `TTO_RUN_TAG` from the environment.
 
 The method is described in the slides `s5_methodology.pdf` (the pipeline) and `theory_5_preselection.pdf` (the six screens).
+
+## Time-series benchmarks in R (step 5, optional)
+
+`5_timeseries_models.R` estimates the models of the time-series theory block (`theory_4_timeseries.pdf`) on
+`data/data.csv` and `data/meta.csv`, with the nowcast's training and test windows (training from 2013-Q1, test from
+2023-Q2). It adjusts each series with the classical decomposition, takes growth rates, and then estimates:
+
+- **DFM** (`nowcastDFM`): one monthly factor behind 15 indicators, Kalman-filter nowcasts; also nowcasts the quarters after the last GDP print.
+- **MIDAS** (`midasr`): GDP on six monthly lags of one indicator, one model per indicator, nowcasts averaged.
+- **MF-BVAR** (`mfbvar`): a small monthly VAR with GDP, Minnesota prior, re-estimated every test quarter.
+- **MIDAS-ML** (`midasml`): sparse-group LASSO over every indicator and its monthly lags.
+
+The indicator lists, lags and dates are in the SETTINGS block at the top of the script. From `code/`:
+
+```
+Rscript 5_timeseries_models.R
+```
+
+It takes about a minute and writes the test nowcasts, the test RMSE of each model against the training mean, the DFM
+live nowcasts and a chart to `output/<date>_tto_timeseries/`. These models are a benchmark beside the pipeline: they
+do not enter its pooled nowcast. The packages are those of the R environment check (`install/act0_env_check_R.Rmd`);
+`mfbvar` needs Rtools on Windows; `midasml` is optional (`install.packages("midasml")`), and MIDAS-ML is skipped without it.
