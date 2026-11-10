@@ -54,6 +54,7 @@
 ```
 install/    environment files and the two act0 checks
 activity/   the notebooks (.ipynb) and the two R scripts (act1, act12) you work in, plus config.py
+sols/       worked solutions of the activities, executed, with their outputs
 code/       the production pipeline: data download, build and nowcast (see code/README_pipeline.md)
 data/       inputs shipped with the course (Trinidad and Tobago panel, GDP, lights, Trends, the block datasets)
 raw/        Coordinates.xlsx; downloads land here when you run the activities
